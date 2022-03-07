@@ -1,0 +1,151 @@
+@keyframes gallery {
+    0% {
+        background-image: url(../images/gallery/img1.jpg);
+    }
+    23% {
+        background-image: url(../images/gallery/img1.jpg);
+    }
+    25% {
+        background-image: url(../images/gallery/img2.jpg);
+    }
+    47% {
+        background-image: url(../images/gallery/img2.jpg);
+    }
+    50% {
+        background-image: url(../images/gallery/img3.jpg);
+    }
+    73% {
+        background-image: url(../images/gallery/img3.jpg);
+    }
+    75% {
+        background-image: url(../images/gallery/img4.jpg);
+    }
+    97% {
+        background-image: url(../images/gallery/img4.jpg);
+    }
+    100% {
+        background-image: url(../images/gallery/img1.jpg);
+    }
+}
+
+figure.gallery {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    background-color: black;
+}
+figure.gallery > div {
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 450px;
+    background-position: center center;
+    height: 450px;
+    animation: gallery 20s linear infinite;
+}
+
+main h1 {
+    margin: 0;
+
+    border-style: solid none;
+    border-width: 10px;
+    border-color: #550000;
+
+    padding: 30px 200px;
+    background-color: darkred;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+section.performances {
+    display: flex;
+    margin: 30px 100px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+section.performances > a {
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+    height: 620px;
+    text-align: center;
+
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    transition: all 0.1s ease-out;
+    overflow: hidden;
+    text-decoration: none;
+}
+section.performances > a:hover {
+    box-shadow: 0 0 5px 5px slateblue;
+}
+a.performance img {
+    height: 350px;
+}
+a.performance div.about {
+    height: 270px;
+    overflow: auto;
+}
+a.performance cite.name {
+    display: block;
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: darkred;
+}
+a.performance p.author,
+a.performance p.producer,
+a.performance p.painter {
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+a.performance p.author::before,
+a.performance p.producer::before,
+a.performance p.painter::before {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+a.performance p.description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #333333;
+}
+a.performance p.date {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkred;
+}
+a.performance p.author::before {
+    content: "Аўтар ";
+}
+a.performance p.producer::before {
+    content: "Рэжысёр ";
+}
+a.performance p.painter::before {
+    content: "Мастак ";
+}
+a.go-to-all-performances {
+    background-color: lightyellow;
+}
+a.go-to-all-performances > p.arrow {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 110px;
+    color: slateblue;
+}
+a.go-to-all-performances > p.all-performances {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+    color: darkred;
+}
