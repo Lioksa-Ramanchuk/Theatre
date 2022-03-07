@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<performances xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="performances.xsd">
+    <performance>
+        <name>Паўлінка</name>
+        <age>12</age>
+        <description>сцэны са шляхоцкага жыцця</description>
+        <author>Янка Купала</author>
+        <producer>Л.Літвінаў</producer>
+        <painter>Б.Малкін</painter>
+        <duration>2 гадзіны</duration>
+        <date>30.02.2022 а 18:00</date>
+        <image>images/performances/paulinka.jpg</image>
+    </performance>
+</performances>
