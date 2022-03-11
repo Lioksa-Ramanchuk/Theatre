@@ -1,0 +1,295 @@
+@keyframes gallery-anim {
+    0% {
+        background-image: url(../../images/gallery/img1.jpg);
+    }
+    23% {
+        background-image: url(../../images/gallery/img1.jpg);
+    }
+    25% {
+        background-image: url(../../images/gallery/img2.jpg);
+    }
+    47% {
+        background-image: url(../../images/gallery/img2.jpg);
+    }
+    50% {
+        background-image: url(../../images/gallery/img3.jpg);
+    }
+    73% {
+        background-image: url(../../images/gallery/img3.jpg);
+    }
+    75% {
+        background-image: url(../../images/gallery/img4.jpg);
+    }
+    97% {
+        background-image: url(../../images/gallery/img4.jpg);
+    }
+    100% {
+        background-image: url(../../images/gallery/img1.jpg);
+    }
+}
+
+figure.gallery {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    background-color: black;
+
+    > div {
+        display: block;
+        width: 100%;
+        height: 450px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        animation: gallery-anim 20s linear infinite;
+        overflow: hidden;
+    }
+}
+
+main {
+    > h1 {
+        margin: 0;
+
+        border-style: solid none;
+        border-width: 10px;
+        border-color: #550000;
+
+        padding: 15px 15%;
+        background-color: darkred;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        color: white;
+    }
+
+    section {
+        margin: 25px 7% 35px 7%;
+
+        %go-to-all {
+            border-radius: 10px;
+            padding: 15px;
+            background-color: darkred;
+            text-align: center;
+        
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 25px;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &.performances-section {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+
+            > a {
+                &.performance {
+                    display: block;
+                    margin: 20px;
+                    padding: 10px;
+                    width: 250px;
+                    height: 620px;
+                    text-align: center;
+                
+                    border: 3px solid lightgrey;
+                    border-radius: 10px;
+                    transition: all 0.1s ease-out;
+                    overflow: hidden;
+                    text-decoration: none;
+
+                    &:hover {
+                        box-shadow: 0 0 5px 5px slateblue;
+                    }
+
+                    img {
+                        height: 350px;
+                        max-width: 250px;
+                    }
+
+                    div.about {
+                        height: 270px;
+                        overflow: auto;
+                    }
+
+                    p.name {
+                        display: block;
+                        margin: 20px 10px;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-style: italic;
+                        font-size: 30px;
+                        color: darkred;
+                    }
+                    
+                    %performance-p-style {
+                        margin: 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: black;
+
+                        &::before {
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: normal;
+                        }
+                    }
+
+                    p.author {
+                        @extend %performance-p-style;
+                    
+                        &::before {
+                            content: "Аўтар ";
+                        }
+                    }
+
+                    p.producer {
+                        @extend %performance-p-style;
+                    
+                        &::before {
+                            content: "Рэжысёр ";
+                        }
+                    }
+
+                    p.painter {
+                        @extend %performance-p-style;
+                    
+                        &::before {
+                            content: "Мастак ";
+                        }
+                    }
+                    
+                    p.description {
+                        margin: 20px 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 15px;
+                        font-style: italic;
+                        color: #333333;
+                    }
+                    
+                    p.date {
+                        margin: 20px 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: darkred;
+                    }
+                }
+
+                &.all-performances {
+                    flex: 1 1 100%;
+                    margin: 20px;
+                    @extend %go-to-all;
+                }
+            }
+        }
+
+        %p-text-style {
+            margin: 10px 0;
+            text-indent: 30px;
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            color: black;
+        }
+
+        &.news-section {
+            article.news {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: stretch;
+                margin: 20px;
+                padding: 10px;
+            
+                border: 3px solid lightgrey;
+                border-radius: 10px;
+                box-shadow: inset 0 0 2px 3px slateblue;
+                transition: all 0.1s ease-out;
+                text-decoration: none;
+
+                figure {
+                    flex: 1 1 100px;
+                    margin: 15px;
+                    text-align: center;
+
+                    img {
+                        max-height: 200px;
+                        max-width: 200px;
+                        vertical-align: middle;
+                    }
+                }
+
+                article.news-text {
+                    flex: 6 1 300px;
+                    margin: 15px 20px;
+
+                    p {
+                        @extend %p-text-style;
+
+                        &.cancelled,
+                        &.deferred {
+                            text-indent: 0;
+                            text-align: center;
+                            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            font-size: 35px;
+                            font-weight: bold;
+                            color: orangered;
+                            
+                            &::before{
+                                content: "! ";
+                            }
+                            &::after{
+                                content: " !";
+                            }
+                        }
+                    }
+                }
+            }
+
+            a.all-news {
+                display: block;
+                margin: 20px 20px 50px 20px;
+                @extend %go-to-all;
+            }
+        }
+
+        &.about-us {
+            figure {
+                text-align: center;
+                
+                img {
+                    max-width: 100%;
+                    max-height: 400px;
+                }
+            }
+
+            h2.name {
+                text-align: center;
+
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: darkred;
+            }
+
+            article.text-about-us {
+                margin: 20px;
+
+                p {
+                    @extend %p-text-style;
+                }
+            }
+
+            a.all-history {
+                display: block;
+                margin: 20px 20px 50px 20px;
+                @extend %go-to-all;
+            }
+        }
+    }
+}

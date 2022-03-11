@@ -3,8 +3,8 @@
     <head>
         <title>Афіша | Тэатр</title>
 
-        <link rel="stylesheet" href="styles/general.css"/>
-        <link rel="stylesheet" href="styles/performances.css"/>
+        <link rel="stylesheet" href="styles/CSS/general.css"/>
+        <link rel="stylesheet" href="styles/CSS/performances.css"/>
     </head>
 
     <body>
@@ -12,14 +12,22 @@
             <header>
                 <nav class="nav">
                     <ul>
-                        <li><a href="theatre.html">Галоўная</a></li>
-                        <li class="you-are-here"><a href="theatre-performances.html">Спектаклі</a></li>
-                        <li><a href="theatre.html">Навіны</a></li>
-                        <li><a href="theatre.html">Квіткі</a></li>
-                        <li><a href="theatre.html">Трупа</a></li>
-                        <li><a href="theatre.html">Гісторыя</a></li>
-                        <li><a href="theatre.html">Кантакты</a></li>
-                        <li><img class="logo" src="images/test_logo.png" alt="logo"/></li>
+                        <input type="checkbox" id="show-menu"/>
+
+                        <li class="menu-button">
+                            <label for="show-menu"></label>
+                        </li>
+
+                        <li class="menu-option"><a href="theatre.html">Галоўная</a></li>
+                        <li class="menu-option you-are-here"><a href="theatre-performances.html">Спектаклі</a></li>
+                        <li class="menu-option"><a href="theatre.html">Навіны</a></li>
+                        <li class="menu-option"><a href="theatre.html">Трупа</a></li>
+                        <li class="menu-option"><a href="theatre.html">Гісторыя</a></li>
+                        <li class="menu-option"><a href="theatre.html">Кантакты</a></li>
+
+                        <li class="logo">
+                            <img src="images/logo.svg" alt="logo"/>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -31,7 +39,7 @@
                     <div class="performance">
                         <img src="images/performances/paulinka.jpg" alt="paulinka"/>
                         <div class="about">
-                            <cite class="name">Паўлінка (12+)</cite>
+                            <p class="name">Паўлінка (12+)</cite>
                             <p class="description">сцэны са шляхоцкага жыцця</p>
                             <p class="author-before">Аўтар</p>
                             <p class="author">Янка Купала</p>

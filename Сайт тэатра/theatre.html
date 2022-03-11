@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Тэатр</title>
+        <title>Тэатр «Дабрадзеі»</title>
 
-        <link rel="stylesheet" href="styles/general.css"/>
-        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel="stylesheet" href="styles/CSS/general.css"/>
+        <link rel="stylesheet" href="styles/CSS/main.css"/>
     </head>
 
     <body>
@@ -12,14 +12,22 @@
             <header>
                 <nav class="nav">
                     <ul>
-                        <li class="you-are-here"><a href="theatre.html">Галоўная</a></li>
-                        <li><a href="theatre-performances.html">Спектаклі</a></li>
-                        <li><a href="theatre.html">Навіны</a></li>
-                        <li><a href="theatre.html">Квіткі</a></li>
-                        <li><a href="theatre.html">Трупа</a></li>
-                        <li><a href="theatre.html">Гісторыя</a></li>
-                        <li><a href="theatre.html">Кантакты</a></li>
-                        <li><img class="logo" src="images/test_logo.png" alt="logo"/></li>
+                        <input type="checkbox" id="show-menu"/>
+
+                        <li class="menu-button">
+                            <label for="show-menu"></label>
+                        </li>
+
+                        <li class="menu-option you-are-here"><a href="theatre.html">Галоўная</a></li>
+                        <li class="menu-option"><a href="theatre-performances.html">Спектаклі</a></li>
+                        <li class="menu-option"><a href="theatre.html">Навіны</a></li>
+                        <li class="menu-option"><a href="theatre.html">Трупа</a></li>
+                        <li class="menu-option"><a href="theatre.html">Гісторыя</a></li>
+                        <li class="menu-option"><a href="theatre.html">Кантакты</a></li>
+
+                        <li class="logo">
+                            <img src="images/logo.svg" alt="logo"/>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -30,22 +38,11 @@
 
             <main>
                 <h1>Спектаклі</h1>
-                <section class="performances">
+                <section class="performances-section">
                     <a href="#" class="performance">
                         <img src="images/performances/paulinka.jpg" alt="paulinka"/>
                         <div class="about">
-                            <cite class="name">Паўлінка (12+)</cite>
-                            <p class="author">Янка Купала</p>
-                            <p class="description">сцэны са шляхоцкага жыцця</p>
-                            <p class="producer">Л.Літвінаў</p>
-                            <p class="painter">Б.Малкін</p>
-                            <p class="date">30.02.2022 а 18:00</p>
-                        </div>
-                    </a>
-                    <a href="#" class="performance">
-                        <img src="images/performances/paulinka.jpg" alt="paulinka"/>
-                        <div class="about">
-                            <cite class="name">Паўлінка (12+)</cite>
+                            <p class="name">Паўлінка (12+)</p>
                             <p class="author">Янка Купала</p>
                             <p class="description">сцэны са шляхоцкага жыцця</p>
                             <p class="producer">Л.Літвінаў</p>
@@ -57,7 +54,7 @@
                     <a href="#" class="performance">
                         <img src="images/performances/paulinka.jpg" alt="paulinka"/>
                         <div class="about">
-                            <cite class="name">Паўлінка (12+)</cite>
+                            <p class="name">Паўлінка (12+)</p>
                             <p class="author">Янка Купала</p>
                             <p class="description">сцэны са шляхоцкага жыцця</p>
                             <p class="producer">Л.Літвінаў</p>
@@ -66,15 +63,93 @@
                         </div>
                     </a>
 
-                    <a href="theatre-performances.html" class="go-to-all-performances">
-                        <p class="arrow">></p>
-                        <p class="all-performances">Усе паказы</p>
+                    <a href="#" class="performance">
+                        <img src="images/performances/paulinka.jpg" alt="paulinka"/>
+                        <div class="about">
+                            <p class="name">Паўлінка (12+)</p>
+                            <p class="author">Янка Купала</p>
+                            <p class="description">сцэны са шляхоцкага жыцця</p>
+                            <p class="producer">Л.Літвінаў</p>
+                            <p class="painter">Б.Малкін</p>
+                            <p class="date">30.02.2022 а 18:00</p>
+                        </div>
                     </a>
+
+                    <a href="#" class="performance">
+                        <img src="images/performances/paulinka.jpg" alt="paulinka"/>
+                        <div class="about">
+                            <p class="name">Паўлінка (12+)</p>
+                            <p class="author">Янка Купала</p>
+                            <p class="description">сцэны са шляхоцкага жыцця</p>
+                            <p class="producer">Л.Літвінаў</p>
+                            <p class="painter">Б.Малкін</p>
+                            <p class="date">30.02.2022 а 18:00</p>
+                        </div>
+                    </a>
+                    
+                    <a href="theatre-performances.html" class="all-performances">Усе паказы</a>
+                </section>
+                
+
+                <h1>Навіны</h1>
+                <section class="news-section">
+                    <article class="news">
+                        <figure>
+                            <img src="images/news/news1.jpg" alt="news1"/>
+                        </figure>
+
+                        <article class="news-text">
+                            <p class="cancelled">АДМЕНА</p>
+                            <p>Паказ спектакля «Першы», які прызначаны на 5 чэрвеня 2022 года, адмяняецца. На паказ «Першы» 10 чэрвеня адбудзецца замена на спектакль «Радзіва Прудок». Квіткі будуць дзейныя.</p>
+                            <p>Пры немагчымасці наведаць спектакль квіткі можна здаць у касу тэатра да 4 чэрвеня 2022 г. (з 10:00 да 20:00 гадзін у касу тэатра па адрасе: вул. Энгельса 7а).</p>
+                            <p>Просім прабачэння за створаныя нязручнасці.</p>
+                        </article>
+                    </article>
+
+                    <article class="news">
+                        <figure>
+                            <img src="images/news/news2.jpg" alt="news2"/>
+                        </figure>
+
+                        <article class="news-text">
+                            <p class="deferred">ПЕРАНОС</p>
+                            <p>Дарагія гледачы, вымушаны паведаміць, што прэм'ера спектакля «En souvenir de Шагал», запланаваная на 14, 15, 26 і 27 чэрвеня, пераносіцца на 29 і 31 чэрвеня па тэхнічных прычынах.</p>
+                            <p>З улікам занятасці пастановачнай групы і немагчымасці ўнясення зменаў у дзеючы рэпертуар тэатра на чэрвень, прэм'ера па ўзаемнай дамоўленасці тэатра «Дабрадзеі» і пастановачнай групы адбудзецца 29 і 31 чэрвеня.
+                            <p>Набытыя квіткі неабходна вярнуць у касу тэатра (вул. Энгельса, 7а). Здача квіткоў на даты 13, 14 і 15 чэрвеня  будзе ажыццяўляцца да 21 чэрвеня 2022 г., на  26 і 27 чэрвеня – да 31 чэрвеня 2022 г.</p>
+                            <p>Прыносім свае шчырыя прабачэнні, сябры.</p>
+                        </article>
+                    </article>
+
+                    <a href="theatre-news.html" class="all-news">Усе навіны</a>
+                </section>
+
+
+                <h1>Пра нас</h1>
+                <section class="about-us">
+                    <figure>
+                        <img src="images/theatre.jpg" alt="theatre"/>
+                    </figure>
+
+                    <h2 class="name">Тэатр «Дабрадзеі»</h2>
+
+                    <article class="text-about-us">
+                        <p>Беларускі тэатр «Дабрадзеі» - адзін з найстарэйшых тэатраў Беларусі.</p>
+                        <p>Заснаваны ў верасні 1920 года намаганнямі першага мастацкага кіраўніка Фларыяна Ждановіча. Купалаўскі тэатр на працягу многіх гадоў паспяхова захоўвае найлепшыя дасягненні айчыннага тэатральнага мастацтва, а таксама спалучае традыцыйныя каштоўнасці з устаноўкай на няспынны мастацкі пошук і творчы эксперымент.</p>
+                        <p>Рэпертуар тэатра налічвае каля 25 пастановак розных жанраў і форм паводле п’ес айчынных класікаў, а таксама сучасных аўтараў, дзеля чаго актыўна супрацоўнічае з найлепшымі драматургамі, мастакамі і рэжысёрамі.</p>                    </article>
+
+                    <a href="theatre-history.html" class="all-history">Гісторыя тэатра</a>
                 </section>
             </main>
 
             <footer>
-                Сувязь: +375-255-47-46-02
+                <figure>
+                    <img src="images/logo.svg" alt="logo"/>
+                </figure>
+
+                <address>
+                    <p>Інфармацыя па набыцці квіткоў: <nobr>+375 (17) 367-17-17</nobr></p>
+                    <p>Адрас:<wbr/> вул. Энгельса 7а, Мінск, 220030,<wbr/> Рэспубліка Беларусь</p>
+                </address>
             </footer>
         </div>
     </body>

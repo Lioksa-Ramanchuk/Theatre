@@ -1,0 +1,131 @@
+main h1 {
+    margin: 30px;
+
+    padding: 10px 200px;
+    background-color: white;
+
+    border-style: solid none;
+    border-width: 10px;
+    border-color: darkred;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: darkred;
+}
+
+section.performances {
+    margin: 30px 100px;
+    
+    div.performance {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 20px;
+        padding: 10px;
+        
+        img {
+            display: block;
+            margin: 30px;
+            width: 20%;
+            min-width: 150px;
+            max-width: 250px;
+            height: fit-content;
+        }
+
+        div.about {
+            display: grid;
+            grid-template-areas: "name name"
+                                 "desc desc"
+                                 "authb auth"
+                                 "prodb prod"
+                                 "paintb paint"
+                                 "durb dur"
+                                 "date date"
+                                 "buy-a-ticket buy-a-ticket";
+            margin: 30px;
+
+            p, button {
+                margin: 12px;
+            }
+
+            p {
+                &.name {
+                    display: block;
+                    grid-area: name;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-style: italic;
+                    font-size: 30px;
+                    color: darkred;
+                }
+
+                &.description {
+                    grid-area: desc;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 17px;
+                    font-style: italic;
+                    color: #333333;
+                }
+    
+                &.author-before,
+                &.producer-before,
+                &.painter-before,
+                &.duration-before {
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 17px;
+                    font-style: italic;
+                    color: #444444;
+                }
+
+                &.author,
+                &.producer,
+                &.painter,
+                &.duration {
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: black;
+                }
+
+                &.author-before {
+                    grid-area: authb;
+                }
+                &.author {
+                    grid-area: auth;
+                }
+
+                &.producer-before {
+                    grid-area: prodb;
+                }
+                &.producer {
+                    grid-area: prod;
+                }
+
+                &.painter-before {
+                    grid-area: paintb;
+                }
+                &.painter {
+                    grid-area: paint;
+                }
+
+                &.duration-before {
+                    grid-area: durb;
+                }
+                &.duration {
+                    grid-area: dur;
+                }
+
+                &.date {
+                    grid-area: date;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: darkred;
+                }
+            }
+
+            button {
+                grid-area: buy-a-ticket;
+            }
+        }
+    }
+}

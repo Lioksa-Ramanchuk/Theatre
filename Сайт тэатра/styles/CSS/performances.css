@@ -1,0 +1,81 @@
+main h1 {
+  margin: 30px;
+  padding: 10px 200px;
+  background-color: white;
+  border-style: solid none;
+  border-width: 10px;
+  border-color: darkred;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  color: darkred; }
+
+section.performances {
+  margin: 30px 100px; }
+  section.performances div.performance {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 20px;
+    padding: 10px; }
+    section.performances div.performance img {
+      display: block;
+      margin: 30px;
+      width: 20%;
+      min-width: 150px;
+      max-width: 250px;
+      height: fit-content; }
+    section.performances div.performance div.about {
+      display: grid;
+      grid-template-areas: "name name" "desc desc" "authb auth" "prodb prod" "paintb paint" "durb dur" "date date" "buy-a-ticket buy-a-ticket";
+      margin: 30px; }
+      section.performances div.performance div.about p, section.performances div.performance div.about button {
+        margin: 12px; }
+      section.performances div.performance div.about p.name {
+        display: block;
+        grid-area: name;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 30px;
+        color: darkred; }
+      section.performances div.performance div.about p.description {
+        grid-area: desc;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-style: italic;
+        color: #333333; }
+      section.performances div.performance div.about p.author-before, section.performances div.performance div.about p.producer-before, section.performances div.performance div.about p.painter-before, section.performances div.performance div.about p.duration-before {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        font-style: italic;
+        color: #444444; }
+      section.performances div.performance div.about p.author, section.performances div.performance div.about p.producer, section.performances div.performance div.about p.painter, section.performances div.performance div.about p.duration {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        font-weight: bold;
+        color: black; }
+      section.performances div.performance div.about p.author-before {
+        grid-area: authb; }
+      section.performances div.performance div.about p.author {
+        grid-area: auth; }
+      section.performances div.performance div.about p.producer-before {
+        grid-area: prodb; }
+      section.performances div.performance div.about p.producer {
+        grid-area: prod; }
+      section.performances div.performance div.about p.painter-before {
+        grid-area: paintb; }
+      section.performances div.performance div.about p.painter {
+        grid-area: paint; }
+      section.performances div.performance div.about p.duration-before {
+        grid-area: durb; }
+      section.performances div.performance div.about p.duration {
+        grid-area: dur; }
+      section.performances div.performance div.about p.date {
+        grid-area: date;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: darkred; }
+      section.performances div.performance div.about button {
+        grid-area: buy-a-ticket; }
+
+/*# sourceMappingURL=performances.css.map */

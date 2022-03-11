@@ -1,0 +1,42 @@
+<svg viewBox="0 0 140 90" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text.name {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            fill: darkred;
+            text-anchor: middle;
+        }
+    </style>
+
+    <g id="logo">
+        <path d="M10,60 a60,50,0,0,1,120,0 h-120" fill="darkred" stroke-width="2" stroke="white"/>
+        <rect x="10" y="60" width="120" height="20" fill="white" stroke-width="2" stroke="white"/>
+
+        <path
+            d="M62.5,52.5 a5,5,0,0,0,5,-5 v-20 h-15 a5,5,0,0,0,-5,5 v-10 h45 v10 a5,5,0,0,0,-5,-5 h-15 v20 a5,5,0,0,0,5,5 h-15 z"
+            stroke-width="1"
+            stroke="white"
+            fill="white"
+        />
+
+        <path
+            d="M35,37.5 q12.5,10,25,0 q-12.5,20,-25,0 z"
+            stroke-width="1"
+            stroke="white"
+            fill="white"
+        />
+
+        <path
+            d="M80,47.5 q12.5,-10,25,0 q-12.5,-20,-25,0 z"
+            stroke-width="1"
+            stroke="white"
+            fill="white"
+        />
+        
+        <text x="70" y="77" class="name">
+            ДАБРАДЗЕІ
+        </text>
+    </g>
+</svg>
