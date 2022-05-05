@@ -1,0 +1,96 @@
+main {
+    section.main__news {
+        margin: 3vw 10vw;
+
+        article.news-block {
+            margin: 3vw 1vw;
+            padding: 1vw;
+        
+            border: 0.8vw outset;
+
+            &:nth-of-type(even) {
+                border-color:brown;
+            }
+            &:nth-of-type(odd) {
+                border-color:cornflowerblue;
+            }
+            
+            figure {
+                margin: 0 0 1vw 2vw;
+                float: right;
+                text-align: center;
+
+                img {
+                    width: 15vw;
+                }
+            }
+
+            p {
+                margin: 1vw;
+                text-indent: 3vw;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: justify;
+                font-size: 1.5vw;
+                color: black;
+
+                &.news-block__title {
+                    margin-bottom: 2vw;
+                    text-indent: 0;
+                    text-align: center;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 2.5vw;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: darkred;
+                }
+
+                &.news-block__date {
+                    clear: both;
+                    margin: 1.7vw;
+                    text-align: right;
+                    text-decoration: overline;
+                    font-size: 1.7vw;
+                    color: #444444;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    main section.main__news {
+        margin: 25px 10px;
+
+        article.news-block {
+            margin: 25px 10px;
+            padding: 10px;
+        
+            border-width: 5px;
+            
+            figure {
+                margin: 10px;
+                float: none;
+
+                img {
+                    width: 60%;
+                }
+            }
+
+            p {
+                margin: 10px;
+                text-indent: 25px;
+                font-size: 20px;
+
+                &.news-block__title {
+                    margin-bottom: 20px;
+                    font-size: 25px;
+                }
+
+                &.news-block__date {
+                    margin: 30px 10px 10px 10px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<!-- Форма обратной связи, вставляемая на страницы "Главная" и "Контакты" -->
+<form class='feedback-form' autocomplete='off' onsubmit="alert('Дзякуй за паведамленне! Мы адкажам вам у бліжэйшы час.')">
+    <!-- Поле ввода имени -->
+    <label for='main__feedback-section__name'>Імя</label>
+    <input type='text' class='main__feedback-section__name' required
+        placeholder='Увядзіце сваё імя.'
+        oninvalid="this.setCustomValidity('Увядзіце сваё імя.')"
+        oninput="this.setCustomValidity('')"/>
+
+    <!-- Поле ввода e-mail -->
+    <label for='main__feedback-section__e-mail'>E-mail</label>
+    <input type='email' class='main__feedback-section__e-mail' required
+        placeholder='Увядзіце адрас сваёй электроннай пошты.'
+        oninvalid="this.setCustomValidity('Увядзіце адрас электроннай пошты.')"
+        oninput="this.setCustomValidity('')"/>
+
+    <!-- Поле ввода сообщения -->
+    <label for='main__feedback-section__textarea' id='main__feedback-section__textarea-label'>Паведамленне</label>
+    <textarea rows='10' class='main__feedback-section__textarea' required
+        placeholder='Увядзіце паведамленне.'
+        oninvalid="this.setCustomValidity('Увядзіце паведамленне.')"
+        oninput="this.setCustomValidity('')"></textarea>
+
+    <!-- Кнопка для отправки формы -->
+    <input type='submit' value='Даслаць'></input>
+</form>

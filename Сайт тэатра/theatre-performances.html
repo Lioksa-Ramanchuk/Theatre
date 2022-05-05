@@ -1,66 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Афіша | Тэатр</title>
+        <title>Спектаклі | Тэатр «Дабрадзеі»</title>
 
-        <link rel="stylesheet" href="styles/CSS/general.css"/>
-        <link rel="stylesheet" href="styles/CSS/performances.css"/>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1'/>
+
+        <!-- Стили для шапки и подвала сайта -->
+        <link rel='stylesheet' href='styles/CSS/general.css'/>
+        <!-- Собственные стили страницы "Представления"-->
+        <link rel='stylesheet' href='styles/CSS/performances.css'/>
     </head>
 
     <body>
-        <div class="container">
-            <header>
-                <nav class="nav">
-                    <ul>
-                        <input type="checkbox" id="show-menu"/>
+        <!-- Шапку вставляет JavaScript-код general_script.js -->
+        <header></header>
 
-                        <li class="menu-button">
-                            <label for="show-menu"></label>
-                        </li>
+        <main>
+            <!-- Заголовок страницы -->
+            <h1 class='main__heading'>Спектаклі</h1>
+            <hr class='main__heading-line'/>
 
-                        <li class="menu-option"><a href="theatre.html">Галоўная</a></li>
-                        <li class="menu-option you-are-here"><a href="theatre-performances.html">Спектаклі</a></li>
-                        <li class="menu-option"><a href="theatre.html">Навіны</a></li>
-                        <li class="menu-option"><a href="theatre.html">Трупа</a></li>
-                        <li class="menu-option"><a href="theatre.html">Гісторыя</a></li>
-                        <li class="menu-option"><a href="theatre.html">Кантакты</a></li>
+            <!-- Раздел с блоками представлений -->
+            <section class='main__performances'></section>
+        </main>
 
-                        <li class="logo">
-                            <img src="images/logo.svg" alt="logo"/>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+        <!-- Подвал вставляет JavaScript-код general_script.js -->
+        <footer></footer>
 
-            <main>
-                <h1>Спектаклі</h1>
-                
-                <section class="performances">
-                    <div class="performance">
-                        <img src="images/performances/paulinka.jpg" alt="paulinka"/>
-                        <div class="about">
-                            <p class="name">Паўлінка (12+)</cite>
-                            <p class="description">сцэны са шляхоцкага жыцця</p>
-                            <p class="author-before">Аўтар</p>
-                            <p class="author">Янка Купала</p>
-                            <p class="producer-before">Рэжысёр</p>
-                            <p class="producer">Л.Літвінаў</p>
-                            <p class="painter-before">Мастак</p>
-                            <p class="painter">Б.Малкін</p>
-                            <p class="duration-before">Працягласць</p>
-                            <p class="duration">2 гадзіны</p>
-                            <p class="date">30.02.2022 а 18:00</p>
-
-                            <button class="buy-a-ticket">Заказаць квіток</button>
-                        </div>
-                    </div>
-                    <hr/>
-                </section>
-            </main>
-
-            <footer>
-                Сувязь: +375-255-47-46-02
-            </footer>
-        </div>
+        <!-- Вставляет шапку и подвал -->
+        <script src='scripts/general_script.js'></script>
+        <!-- Вставляет блоки представлений из performances_info.xml на основе performances_perf_block.html -->
+        <script src='scripts/performances_script.js'></script>
     </body>
 </html>

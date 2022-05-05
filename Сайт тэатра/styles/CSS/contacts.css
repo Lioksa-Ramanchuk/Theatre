@@ -1,0 +1,79 @@
+main h2 {
+  margin: 3vw 0 2vw 0;
+  padding: 1vw 7vw 1vw 13vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: -webkit-gradient(linear, left top, right top, color-stop(90%, darkred), to(transparent));
+  background: linear-gradient(to right, darkred 90%, transparent);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1vw;
+  font-size: 2vw;
+}
+main section {
+  margin: 3vw 10vw;
+}
+main section.main__contacts iframe.main__contacts__map {
+  float: right;
+  width: 50%;
+  height: 15vw;
+  border: none;
+}
+main section.main__contacts div.main__contacts__clear_both {
+  clear: both;
+}
+main section.main__contacts h2 {
+  margin-left: -10vw;
+}
+main section.main__contacts p {
+  margin: 1vw;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5vw;
+}
+main section.main__contacts p.main__contacts__post {
+  margin: 2vw 0 0.5vw 0;
+}
+main section.main__contacts p.main__contacts__person {
+  margin: 0.5vw 0 2vw 0;
+}
+main section.main__contacts p.main__contacts__person span.main__contacts__person__name {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  main h2 {
+    margin: 35px 0 20px 0;
+    padding: 8px 0 8px 0px;
+    text-align: center;
+    width: 100vw;
+    background: darkred;
+    letter-spacing: 1px;
+    font-size: 25px;
+  }
+  main section.main__contacts {
+    margin: 25px 20px;
+  }
+  main section.main__contacts iframe.main__contacts__map {
+    float: none;
+    width: 100%;
+    height: 150px;
+  }
+  main section.main__contacts h2 {
+    margin-left: -20px;
+  }
+  main section.main__contacts p {
+    margin: 10px;
+    font-size: 20px;
+  }
+  main section.main__contacts p.main__contacts__post {
+    margin: 25px 0 3px 0;
+  }
+  main section.main__contacts p.main__contacts__person {
+    margin: 3px 0 25px 0;
+  }
+  main section.main__feedback {
+    margin: 25px 10px;
+  }
+}

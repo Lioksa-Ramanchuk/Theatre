@@ -1,0 +1,64 @@
+main section.main__history {
+    margin: 3vw 10vw;
+
+    p {
+        margin: 1vw;
+        text-align: justify;
+        text-indent: 2vw;
+        font-size: 1.5vw;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    figure {
+        margin: 0 0 1vw 1vw;
+        float: right;
+        text-align: center;
+
+        img {
+            width: 21vw;
+        }
+
+        figcaption {
+            width: 21vw;
+            padding: 0.1vw 1vw;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-size: 1.4vw;
+            color: #444444;
+        }
+    }
+}
+
+footer {
+    clear: both;
+}
+
+@media (max-width: 800px) {
+    main section.main__history {
+        margin: 25px 10px;
+    
+        p {
+            margin: 10px;
+            text-indent: 25px;
+            font-size: 20px;
+        }
+    
+        figure {
+            float: none;
+            margin: 15px;
+    
+            img {
+                margin: 5px;
+                width: 80%;
+            }
+    
+            figcaption {
+                text-align: center;
+                width: 100%;
+                padding: 1px 10px;
+                font-size: 18px;
+            }
+        }
+    }
+}

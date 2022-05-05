@@ -1,49 +1,52 @@
-@keyframes gallery-anim {
-    0% {
-        background-image: url(../../images/gallery/img1.jpg);
-    }
-    23% {
-        background-image: url(../../images/gallery/img1.jpg);
-    }
-    25% {
-        background-image: url(../../images/gallery/img2.jpg);
-    }
-    47% {
-        background-image: url(../../images/gallery/img2.jpg);
-    }
-    50% {
-        background-image: url(../../images/gallery/img3.jpg);
-    }
-    73% {
-        background-image: url(../../images/gallery/img3.jpg);
-    }
-    75% {
-        background-image: url(../../images/gallery/img4.jpg);
-    }
-    97% {
-        background-image: url(../../images/gallery/img4.jpg);
-    }
-    100% {
-        background-image: url(../../images/gallery/img1.jpg);
-    }
-}
-
 figure.gallery {
     display: block;
+    position: relative;
     margin: 0;
     padding: 0;
-    height: fit-content;
-    background-color: black;
+    width: 100%;
+    height: 35vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
-    > div {
-        display: block;
-        width: 100%;
-        height: 450px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        animation: gallery-anim 20s linear infinite;
-        overflow: hidden;
+    %gallery__button {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+
+        padding: 2vw;
+        line-height: 6vw;
+        margin-top: -5vw;
+
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+        font-size: 3.5vw;
+        user-select: none;
+        -webkit-user-select: none;
+        transition: background-color 0.1s linear;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    > button {
+        $gallery__button_radius: 2vw;
+
+        &.gallery__prev-button {
+            @extend %gallery__button;
+            border-radius: 0 $gallery__button_radius $gallery__button_radius 0;
+            left: 0;
+        }
+
+        &.gallery__next-button {
+            @extend %gallery__button;
+            border-radius: $gallery__button_radius 0 0 $gallery__button_radius;
+            right: 0;
+        }
     }
 }
 
@@ -52,244 +55,372 @@ main {
         margin: 0;
 
         border-style: solid none;
-        border-width: 10px;
+        border-width: 0.6vw;
         border-color: #550000;
 
-        padding: 15px 15%;
+        padding: 0.7vw 15vw;
         background-color: darkred;
 
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
+        font-size: 3vw;
+        letter-spacing: 0.1vw;
         color: white;
     }
 
     section {
-        margin: 25px 7% 35px 7%;
+        margin: 3vw 10vw;
 
-        %go-to-all {
-            border-radius: 10px;
-            padding: 15px;
+        %section__button_style {
+            box-sizing: border-box;
+            border: 0.5vw solid #660000;
+            border-radius: 10vw;
             background-color: darkred;
             text-align: center;
         
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
-            font-style: italic;
-            font-size: 25px;
+            font-size: 2vw;
             text-decoration: none;
             color: white;
+            
+            transition: 0.1s ease-out;
+            cursor: pointer;
 
             &:hover {
+                background-color: #A00000;
                 text-decoration: underline;
             }
         }
 
-        &.performances-section {
+        &#main__performances-section {
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-start;
+            justify-content: space-around;
+            align-items: stretch;
 
             > a {
-                &.performance {
+                &.main__performances-section__performance-block {
                     display: block;
-                    margin: 20px;
-                    padding: 10px;
-                    width: 250px;
-                    height: 620px;
+                    margin: 2vw;
+                    padding: 1vw;
+                    flex: 1 1 250px;
+                    max-width: 25vw;
                     text-align: center;
                 
-                    border: 3px solid lightgrey;
-                    border-radius: 10px;
+                    border: 0.3vw solid lightgrey;
+                    border-radius: 1vw;
                     transition: all 0.1s ease-out;
-                    overflow: hidden;
                     text-decoration: none;
 
                     &:hover {
-                        box-shadow: 0 0 5px 5px slateblue;
+                        background-color: lightyellow;
+                        box-shadow: 0 0 0.5vw 0.5vw slateblue;
+
+                        img {
+                            width: 80%;
+                        }
                     }
 
                     img {
-                        height: 350px;
-                        max-width: 250px;
+                        width: 60%;
+                        transition: all 0.3s ease-out;
                     }
 
-                    div.about {
-                        height: 270px;
-                        overflow: auto;
-                    }
-
-                    p.name {
+                    p.main__performances-section__performance-block__name {
                         display: block;
-                        margin: 20px 10px;
+                        margin: 1vw;
                         font-family: 'Times New Roman', Times, serif;
                         font-style: italic;
-                        font-size: 30px;
+                        font-size: 2vw;
                         color: darkred;
                     }
                     
-                    %performance-p-style {
-                        margin: 10px;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-size: 15px;
+                    p.main__performances-section__performance-block__author {
+                        margin: 1vw;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-size: 1.5vw;
                         font-weight: bold;
                         color: black;
-
-                        &::before {
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: normal;
-                        }
                     }
 
-                    p.author {
-                        @extend %performance-p-style;
-                    
-                        &::before {
-                            content: "Аўтар ";
-                        }
-                    }
-
-                    p.producer {
-                        @extend %performance-p-style;
-                    
-                        &::before {
-                            content: "Рэжысёр ";
-                        }
-                    }
-
-                    p.painter {
-                        @extend %performance-p-style;
-                    
-                        &::before {
-                            content: "Мастак ";
-                        }
-                    }
-                    
-                    p.description {
-                        margin: 20px 10px;
+                    p.main__performances-section__performance-block__description {
+                        margin: 2vw 1vw;
                         font-family: Arial, Helvetica, sans-serif;
-                        font-size: 15px;
+                        font-size: 1.5vw;
                         font-style: italic;
                         color: #333333;
                     }
                     
-                    p.date {
-                        margin: 20px 10px;
+                    p.main__performances-section__performance-block__date {
+                        margin: 2vw 1vw 1vw 1vw;
                         font-family: Arial, Helvetica, sans-serif;
-                        font-size: 20px;
+                        font-size: 1.5vw;
                         font-weight: bold;
                         color: darkred;
                     }
                 }
 
-                &.all-performances {
+                &#main__performances-section__link-to-performances {
                     flex: 1 1 100%;
-                    margin: 20px;
-                    @extend %go-to-all;
+                    padding: 1vw;
+                    @extend %section__button_style;
+                    font-style: italic;
                 }
             }
         }
 
-        %p-text-style {
-            margin: 10px 0;
-            text-indent: 30px;
-            text-align: justify;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 25px;
-            color: black;
-        }
-
-        &.news-section {
-            article.news {
-                display: flex;
-                flex-flow: row wrap;
-                align-items: stretch;
-                margin: 20px;
-                padding: 10px;
+        &#main__news-section {
+            article.news-block {
+                margin: 2vw;
+                padding: 2vw;
             
-                border: 3px solid lightgrey;
-                border-radius: 10px;
-                box-shadow: inset 0 0 2px 3px slateblue;
-                transition: all 0.1s ease-out;
-                text-decoration: none;
-
+                border: 0.2vw solid lightgray;
+                border-radius: 1vw;
+                box-shadow: inset 0 0 0.4vw 0.4vw darkred;
+                
                 figure {
-                    flex: 1 1 100px;
-                    margin: 15px;
+                    margin: 0 0 0 2vw;
+                    float: right;
                     text-align: center;
 
                     img {
-                        max-height: 200px;
-                        max-width: 200px;
-                        vertical-align: middle;
+                        max-width: 15vw;
                     }
                 }
 
-                article.news-text {
-                    flex: 6 1 300px;
-                    margin: 15px 20px;
+                p {
+                    margin: 1vw;
+                    text-indent: 3vw;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    text-align: justify;
+                    font-size: 1.5vw;
+                    color: black;
 
-                    p {
-                        @extend %p-text-style;
+                    &.news-block__title {
+                        margin-bottom: 2vw;
+                        text-indent: 0;
+                        text-align: center;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-size: 2.5vw;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: darkred;
+                    }
 
-                        &.cancelled,
-                        &.deferred {
-                            text-indent: 0;
-                            text-align: center;
-                            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                            font-size: 35px;
-                            font-weight: bold;
-                            color: orangered;
-                            
-                            &::before{
-                                content: "! ";
-                            }
-                            &::after{
-                                content: " !";
-                            }
-                        }
+                    &.news-block__date {
+                        clear: both;
+                        margin: 1.7vw;
+                        text-align: right;
+                        text-decoration: overline;
+                        font-size: 1.7vw;
+                        color: #444444;
                     }
                 }
             }
 
-            a.all-news {
+            a#main__news-section__link-to-news {
                 display: block;
-                margin: 20px 20px 50px 20px;
-                @extend %go-to-all;
+                padding: 1vw;
+                @extend %section__button_style;
+                font-style: italic;
             }
         }
 
-        &.about-us {
+        &#main__about-us-section {
             figure {
+                margin: 1.5vw;
                 text-align: center;
                 
                 img {
-                    max-width: 100%;
-                    max-height: 400px;
+                    max-height: 30vw;
                 }
             }
 
-            h2.name {
-                margin: 20px;
+            h2.main__about-us__title {
+                margin: 1.5vw;
                 text-align: center;
 
-                font-size: 30px;
-                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7vw;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: bold;
                 color: darkred;
             }
 
-            article.text-about-us {
-                margin: 20px;
+            article.main__about-us__article {
+                margin: 2vw;
 
                 p {
-                    @extend %p-text-style;
+                    margin: 1vw 0;
+                    text-indent: 3vw;
+                    text-align: justify;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-size: 1.5vw;
+                    color: black;
                 }
             }
 
-            a.all-history {
+            a#main__about-us__link-to-history {
                 display: block;
-                margin: 20px 20px 50px 20px;
-                @extend %go-to-all;
+                padding: 1vw;
+                @extend %section__button_style;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    figure.gallery {
+        height: 300px;
+    
+        %gallery__button {
+            padding: 20px;
+            line-height: 40px;
+            margin-top: -40px;
+            font-size: 25px;
+        }
+    
+        > button {
+            $gallery__button_radius: 15px;
+
+            &.gallery__prev-button {
+                border-radius: 0 $gallery__button_radius $gallery__button_radius 0;
+            }
+    
+            &.gallery__next-button {
+                border-radius: $gallery__button_radius 0 0 $gallery__button_radius;
+            }
+        }
+    }
+    
+    main {
+        > h1 {
+            border-width: 6px;
+            padding: 6px 10px;
+            font-size: 30px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+    
+        section {
+            margin: 25px 20px;
+    
+            %section__button_style {
+                border-width: 5px;
+                border-radius: 100px;
+                font-size: 25px;
+            }
+    
+            &#main__performances-section {
+                > a {
+                    &.main__performances-section__performance-block {
+                        margin: 15px;
+                        padding: 10px;
+                        flex: 1 1 250px;
+                        max-width: 230px;
+                    
+                        border-width: 0.3vw;
+                        border-radius: 1vw;
+    
+                        &:hover {
+                            box-shadow: 0 0 5px 5px slateblue;
+                        }
+    
+                        p.main__performances-section__performance-block__name {
+                            margin: 10px;
+                            font-size: 30px;
+                        }
+                        
+                        p.main__performances-section__performance-block__author {
+                            margin: 10px;
+                            font-size: 18px;
+                        }
+    
+                        p.main__performances-section__performance-block__description {
+                            margin: 20px 10px;
+                            font-size: 18px;
+                        }
+                        
+                        p.main__performances-section__performance-block__date {
+                            margin: 20px 10px 10px 10px;
+                            font-size: 22px;
+                        }
+                    }
+    
+                    &#main__performances-section__link-to-performances {
+                        padding: 10px;
+                    }
+                }
+            }
+    
+            &#main__news-section {
+                article.news-block {
+                    margin: 20px 10px;
+                    padding: 15px;
+                    border-width: 3px;
+                
+                    border-radius: 10px;
+                    box-shadow: inset 0 0 5px 5px darkred;
+                    
+                    figure {
+                        margin: 10px;
+                        float: none;
+    
+                        img {
+                            max-width: 60%;
+                        }
+                    }
+    
+                    p {
+                        margin: 10px;
+                        text-indent: 25px;
+                        font-size: 20px;
+    
+                        &.news-block__title {
+                            margin-bottom: 20px;
+                            font-size: 25px;
+                        }
+    
+                        &.news-block__date {
+                            margin: 30px 10px 10px 10px;
+                            font-size: 25px;
+                        }
+                    }
+                }
+    
+                a#main__news-section__link-to-news {
+                    padding: 10px;
+                }
+            }
+    
+            &#main__about-us-section {
+                figure {
+                    margin: 10px;
+                    
+                    img {
+                        width: 80%;
+                        max-height: none;
+                    }
+                }
+    
+                h2.main__about-us__title {
+                    margin: 20px;    
+                    font-size: 25px;
+                }
+    
+                article.main__about-us__article {
+                    margin: 20px;
+    
+                    p {
+                        margin: 10px;
+                        text-indent: 25px;
+                        font-size: 20px;    
+                    }
+                }
+    
+                a#main__about-us__link-to-history {
+                    padding: 10px;
+                }
             }
         }
     }

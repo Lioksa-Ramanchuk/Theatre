@@ -1,0 +1,108 @@
+form.feedback-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6vw auto;
+  grid-template-columns: 6vw auto;
+  font-size: 1.5vw;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+form.feedback-form input[type=submit] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0.5vw solid #660000;
+  border-radius: 10vw;
+  background-color: darkred;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+}
+form.feedback-form input[type=submit]:hover {
+  background-color: #A00000;
+  text-decoration: underline;
+}
+form.feedback-form label {
+  margin: 0.5vw;
+}
+form.feedback-form label.main__feedback-section__textarea-label {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+  margin-top: 1vw;
+}
+form.feedback-form input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0.5vw 0;
+  font-size: 1.3vw;
+  width: 100%;
+}
+form.feedback-form input.main__feedback-section__name, form.feedback-form input.main__feedback-section__e-mail {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+}
+form.feedback-form input[type=submit] {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5vw 2vw;
+}
+form.feedback-form input[type=submit]:hover {
+  background-color: #A00000;
+  text-decoration: underline;
+}
+form.feedback-form textarea {
+  margin: 0.5vw 0;
+  resize: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+  font-size: 1.3vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 800px) {
+  form.feedback-form {
+    -ms-grid-columns: 80px auto;
+    grid-template-columns: 80px auto;
+    font-size: 20px;
+  }
+  form.feedback-form input[type=submit] {
+    border-width: 5px;
+    border-radius: 100px;
+    font-size: 25px;
+  }
+  form.feedback-form label {
+    margin: 5px;
+  }
+  form.feedback-form label.main__feedback-section__textarea-label {
+    margin-top: 10px;
+  }
+  form.feedback-form input {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  form.feedback-form input[type=submit] {
+    padding: 5px 25px;
+  }
+  form.feedback-form textarea {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+}

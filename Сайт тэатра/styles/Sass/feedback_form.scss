@@ -1,0 +1,108 @@
+form.feedback-form {
+    display: grid;
+    grid-template-columns: 6vw auto;
+    font-size: 1.5vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    %section__button_style {
+        box-sizing: border-box;
+        border: 0.5vw solid #660000;
+        border-radius: 10vw;
+        background-color: darkred;
+        text-align: center;
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 2vw;
+        text-decoration: none;
+        color: white;
+        
+        transition: 0.1s ease-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #A00000;
+            text-decoration: underline;
+        }
+    }
+
+    label {
+        margin: 0.5vw;
+        
+        &.main__feedback-section__textarea-label {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin-top: 1vw;
+        }
+    }
+    input {
+        box-sizing: border-box;
+        margin: 0.5vw 0;
+        font-size: 1.3vw;
+        width: 100%;
+        
+        &.main__feedback-section__name,
+        &.main__feedback-section__e-mail {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        &[type='submit'] {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            @extend %section__button_style;
+            width: fit-content;
+            padding: 0.5vw 2vw;
+
+            &:hover {
+                background-color: #A00000;
+                text-decoration: underline;
+            }
+        }
+    }
+    textarea {
+        margin: 0.5vw 0;
+        resize: none;
+        height: fit-content;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        font-size: 1.3vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+@media (max-width: 800px) {
+    form.feedback-form {
+        grid-template-columns: 80px auto;
+        font-size: 20px;
+
+        %section__button_style {
+            border-width: 5px;
+            border-radius: 100px;
+            font-size: 25px;
+        }
+
+        label {
+            margin: 5px;
+            
+            &.main__feedback-section__textarea-label {
+                margin-top: 10px;
+            }
+        }
+        input {
+            margin: 5px 0;
+            font-size: 18px;
+
+            &[type='submit'] {
+                padding: 5px 25px;
+            }
+        }
+        textarea {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+    }
+}

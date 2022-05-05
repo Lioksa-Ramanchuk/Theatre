@@ -1,0 +1,74 @@
+//=== Текущая вкладка меню ===
+
+document.querySelector('a#menu__page-link-to-contacts').classList.add('you-are-here')
+
+
+//=== Для запросов ===
+
+if (window.XMLHttpRequest)
+{ // для IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest()
+}
+else
+{ // для IE6, IE5
+    xmlhttp = new ActiveXObject('Microsoft.XMLHTTP')
+}
+
+
+//=== Получение контактов ===
+
+xmlhttp.open('GET','../xml/contacts.xml', false)
+xmlhttp.send()
+xmlDocContacts = xmlhttp.responseXML
+
+
+//=== Вставка труппы на страницу ===
+
+let nDepartments = xmlDocContacts.querySelectorAll('department').length
+for (let i = 0; i < nDepartments; i++)
+{
+    let xmlDepartment = xmlDocContacts.querySelectorAll('department')[i]
+    let newDepartment = document.createElement('h2')
+    newDepartment.innerHTML = xmlDepartment.querySelector('department-name').childNodes[0].nodeValue
+    
+    document.querySelector('section.main__contacts').appendChild(newDepartment)
+    
+    let nContacts = xmlDepartment.querySelectorAll('contact').length
+    for (let j = 0; j < nContacts; j++)
+    {
+        let xmlContact = xmlDepartment.querySelectorAll('contact')[j]
+
+        if (xmlContact.querySelector('post')) {
+            let pPost = document.createElement('p')
+            pPost.classList.add('main__contacts__post')
+            pPost.innerHTML = xmlContact.querySelector('post').childNodes[0].nodeValue
+            document.querySelector('section.main__contacts').appendChild(pPost)
+        }
+
+        let pPerson = document.createElement('p')
+        pPerson.classList.add('main__contacts__person')
+        pPerson.innerHTML = "<span class='main__contacts__person__name'>" + xmlContact.querySelector('name').childNodes[0].nodeValue + '</span'
+        
+        if (xmlContact.querySelector('phone')) {
+            if (xmlContact.querySelector('post'))
+                pPerson.innerHTML += ','
+            else
+                pPerson.innerHTML += ':'
+
+            pPerson.innerHTML += ' <nobr>' + xmlContact.querySelector('phone').childNodes[0].nodeValue + '</nobr>'
+        }
+        
+        if (xmlContact.querySelector('instrument')) {
+            pPerson.innerHTML += ' — ' + xmlContact.querySelector('instrument').childNodes[0].nodeValue + '</nobr>'
+        }
+        
+        document.querySelector('section.main__contacts').appendChild(pPerson)
+    }
+}
+
+
+//== Форма обратной связи ===
+
+xmlhttp.open('GET','../feedback_form.html', false)
+xmlhttp.send()
+document.querySelector('section.main__feedback').innerHTML = xmlhttp.responseText
