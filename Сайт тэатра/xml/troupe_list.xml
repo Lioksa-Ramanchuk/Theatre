@@ -2,118 +2,118 @@
 
 <troupe-list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="troupe_list_schema.xsd">
-    <staff>
+    <person>
         <image>../images/troupe/ala_jeljasevic.jpg</image>
         <name>Ала Ельяшэвіч</name>
-    </staff>
+    </person>
 
-    <staff>
+    <person>
         <image>../images/troupe/alies_kisialiou.jpg</image>
         <name>Алесь Кісялёў</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/anastasija_varankova.jpg</image>
         <name>Анастасія Варанкова</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/anton_nikisyn.jpg</image>
         <name>Антон Нікішын</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/artur_cycura.jpg</image>
         <name>Артур Цыцура</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/hienadz_ausiannikau_.jpg</image>
         <name>Генадзь Аўсяннікаў</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/illia_kruk.jpg</image>
         <name>Ілля Крук</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/ivan_aksioncyk.jpg</image>
         <name>Іван Аксёнчык</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/julija_aucynina.jpg</image>
         <name>Юлія Аўчыніна</name>
-    </staff>
+    </person>
 
-    <staff>
+    <person>
         <image>../images/troupe/kaciaryna_kacan.jpg</image>
         <name>Кацярына Качан</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/marharyta_harbacova.jpg</image>
         <name>Маргарыта Гарбачова</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/maryja_zacharevic.jpg</image>
         <name>Марына Захарэвіч</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/michail_svita.jpg</image>
         <name>Міхаіл Світа</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/nadzieja_azaranka.jpg</image>
         <name>Надзея Азаранка</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/sviatlana_hulievic.jpg</image>
         <name>Святлана Гулевіч</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/taisa_uviadzienskaja.jpg</image>
         <name>Таіса Увядзенская</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/tamara_mironava.jpg</image>
         <name>Тамара Міронава</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/tamara_nikalajeva_apijok.jpg</image>
         <name>Тамара Нікалаева-Апіёк</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/uladzimir_ivanou.jpg</image>
         <name>Уладзімір Іваноў</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/uladzimir_rahaucou.jpg</image>
         <name>Уладзімір Рагаўцоў</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/vasil_susycki.jpg</image>
         <name>Васіль Сушыцкі</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/volha_niafiodava.jpg</image>
         <name>Вольга Няфёдава</name>
-    </staff>
+    </person>
     
-    <staff>
+    <person>
         <image>../images/troupe/zinaida_zubkova.jpg</image>
         <name>Зінаіда Зубкова</name>
-    </staff>
+    </person>
 </troupe-list>

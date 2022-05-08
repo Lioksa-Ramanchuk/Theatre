@@ -3,7 +3,6 @@
 <performances xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="performances_info_schema.xsd">
     <performance>
-        <reference>paulinka</reference>
         <image>../images/performances/paulinka.jpg</image>
         <name>Паўлінка</name>
         <age>12</age>
@@ -20,7 +19,6 @@ xsi:noNamespaceSchemaLocation="performances_info_schema.xsd">
     </performance>
 
     <performance>
-        <reference>cornaja_panna_niasviza</reference>
         <image>../images/performances/cornaja_panna_niasviza.jpg</image>
         <name>Чорная панна Нясвіжа</name>
         <age>12</age>
@@ -37,7 +35,6 @@ xsi:noNamespaceSchemaLocation="performances_info_schema.xsd">
     </performance>
 
     <performance>
-        <reference>historyja_sakaladnaha_dreva</reference>
         <image>../images/performances/historyja_sakaladnaha_dreva.jpg</image>
         <name>Гісторыя шакаладнага дрэва</name>
         <age>0</age>
@@ -54,7 +51,6 @@ xsi:noNamespaceSchemaLocation="performances_info_schema.xsd">
     </performance>
     
     <performance>
-        <reference>vecar</reference>
         <image>../images/performances/vecar.jpg</image>
         <name>Вечар</name>
         <age>12</age>
@@ -71,7 +67,6 @@ xsi:noNamespaceSchemaLocation="performances_info_schema.xsd">
     </performance>
     
     <performance>
-        <reference>zanicba</reference>
         <image>../images/performances/zanicba.jpg</image>
         <name>Жаніцьба</name>
         <age>12</age>
@@ -88,7 +83,6 @@ xsi:noNamespaceSchemaLocation="performances_info_schema.xsd">
     </performance>
 
     <performance>
-        <reference>cas_zyccia</reference>
         <image>../images/performances/cas_zyccia.jpg</image>
         <name>Час жыцця</name>
         <age>12</age>

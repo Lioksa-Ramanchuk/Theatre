@@ -10,10 +10,8 @@ main {
         letter-spacing: 0.1vw;
         font-size: 2vw;
     }
-    
     section {
         margin: 3vw 10vw;
-
         &.main__contacts {
             iframe.main__contacts__map {
                 float: right;
@@ -21,26 +19,21 @@ main {
                 height: 15vw;
                 border: none;
             }
-
-            div.main__contacts__clear_both {
+            div.main__contacts__div_clear_both {
                 clear: both;
             }
-
             h2 {
                 margin-left: -10vw;
             }
-
             p {
                 margin: 1vw;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 font-size: 1.5vw;
-
                 &.main__contacts__post {
                     margin: 2vw 0 0.5vw 0;
                 }
                 &.main__contacts__person {
                     margin: 0.5vw 0 2vw 0;
-
                     span.main__contacts__person__name {
                         font-weight: bold;
                     }
@@ -61,25 +54,20 @@ main {
             letter-spacing: 1px;
             font-size: 25px;
         }
-        
         section {
             &.main__contacts {
-                margin: 25px 20px;
-            
+                margin: 25px 15px;
                 iframe.main__contacts__map {
                     float: none;
                     width: 100%;
-                    height: 150px;
+                    height: 200px;
                 }
-
                 h2 {
-                    margin-left: -20px;
+                    margin-left: -15px;
                 }
-            
                 p {
                     margin: 10px;
                     font-size: 20px;
-            
                     &.main__contacts__post {
                         margin: 25px 0 3px 0;
                     }
@@ -88,9 +76,8 @@ main {
                     }
                 }
             }
-
             &.main__feedback {
-                margin: 25px 10px;
+                margin: 25px 15px;
             }
         }
     }

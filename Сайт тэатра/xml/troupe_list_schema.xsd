@@ -4,7 +4,7 @@
     <xs:element name="image" type="xs:string"></xs:element>
     <xs:element name="name" type="xs:string"></xs:element>
 
-    <xs:element name="staff">
+    <xs:element name="person">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="image"></xs:element>
@@ -16,7 +16,7 @@
     <xs:element name="troupe-list">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="staff" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="person" maxOccurs="unbounded"></xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

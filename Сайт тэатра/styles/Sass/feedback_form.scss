@@ -1,34 +1,13 @@
 form.feedback-form {
     display: grid;
     grid-template-columns: 6vw auto;
+    align-items: center;
     font-size: 1.5vw;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    %section__button_style {
-        box-sizing: border-box;
-        border: 0.5vw solid #660000;
-        border-radius: 10vw;
-        background-color: darkred;
-        text-align: center;
-    
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 2vw;
-        text-decoration: none;
-        color: white;
-        
-        transition: 0.1s ease-out;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #A00000;
-            text-decoration: underline;
-        }
-    }
 
     label {
         margin: 0.5vw;
-        
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
         &.main__feedback-section__textarea-label {
             grid-column-start: 1;
             grid-column-end: 3;
@@ -38,33 +17,28 @@ form.feedback-form {
     input {
         box-sizing: border-box;
         margin: 0.5vw 0;
-        font-size: 1.3vw;
+        padding: 0.5vw;
         width: 100%;
         
         &.main__feedback-section__name,
         &.main__feedback-section__e-mail {
             grid-column-start: 2;
             grid-column-end: 3;
+            font-size: 1.3vw;
         }
 
         &[type='submit'] {
             grid-column-start: 1;
             grid-column-end: 3;
 
-            @extend %section__button_style;
             width: fit-content;
             padding: 0.5vw 2vw;
-
-            &:hover {
-                background-color: #A00000;
-                text-decoration: underline;
-            }
         }
     }
     textarea {
         margin: 0.5vw 0;
+        padding: 0.5vw;
         resize: none;
-        height: fit-content;
 
         grid-column-start: 1;
         grid-column-end: 3;
@@ -79,12 +53,6 @@ form.feedback-form {
         grid-template-columns: 80px auto;
         font-size: 20px;
 
-        %section__button_style {
-            border-width: 5px;
-            border-radius: 100px;
-            font-size: 25px;
-        }
-
         label {
             margin: 5px;
             
@@ -93,8 +61,11 @@ form.feedback-form {
             }
         }
         input {
-            margin: 5px 0;
-            font-size: 18px;
+            &.main__feedback-section__name,
+            &.main__feedback-section__e-mail {
+                margin: 5px 0;
+                font-size: 18px;
+            }
 
             &[type='submit'] {
                 padding: 5px 25px;

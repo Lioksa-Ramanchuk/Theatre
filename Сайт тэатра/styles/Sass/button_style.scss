@@ -1,0 +1,32 @@
+.button-style {
+    display: block;
+    box-sizing: border-box;
+    border: 0.5vw solid darkred;
+    border-radius: 10vw;
+    padding: 1vw;
+    background-color: indianred;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    text-decoration: none;
+    color: white;
+    
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: palevioletred;
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 800px) {
+    .button-style {
+        border-width: 5px;
+        border-radius: 100px;
+        padding: 10px;
+        font-size: 25px;
+    }
+}

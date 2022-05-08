@@ -21,7 +21,7 @@ main section.main__contacts iframe.main__contacts__map {
   height: 15vw;
   border: none;
 }
-main section.main__contacts div.main__contacts__clear_both {
+main section.main__contacts div.main__contacts__div_clear_both {
   clear: both;
 }
 main section.main__contacts h2 {
@@ -53,15 +53,15 @@ main section.main__contacts p.main__contacts__person span.main__contacts__person
     font-size: 25px;
   }
   main section.main__contacts {
-    margin: 25px 20px;
+    margin: 25px 15px;
   }
   main section.main__contacts iframe.main__contacts__map {
     float: none;
     width: 100%;
-    height: 150px;
+    height: 200px;
   }
   main section.main__contacts h2 {
-    margin-left: -20px;
+    margin-left: -15px;
   }
   main section.main__contacts p {
     margin: 10px;
@@ -74,6 +74,6 @@ main section.main__contacts p.main__contacts__person span.main__contacts__person
     margin: 3px 0 25px 0;
   }
   main section.main__feedback {
-    margin: 25px 10px;
+    margin: 25px 15px;
   }
 }

@@ -1,6 +1,6 @@
 <svg viewBox="0 0 144 94" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <style>
-        text.name {
+        text.logo__name {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 17px;
             font-weight: bold;
@@ -14,10 +14,10 @@
         <!-- Внешний чёрный контур -->
         <path d="M10,62 a62,52,0,0,1,124,0 v22 h-124 v-22 z" fill="none" stroke-width="2" stroke="black"/>
 
-        <!-- Полукруг -->
+        <!-- Белый полукруг -->
         <path d="M12,62 a60,50,0,0,1,120,0 h-120 z" fill="darkred" stroke-width="2" stroke="white"/>
 
-        <!-- Прямоугольник для текста-->
+        <!-- Белый прямоугольник для текста-->
         <rect x="12" y="62" width="120" height="20" fill="white" stroke-width="2" stroke="white"/>
 
         <!-- Буква "Т" -->
@@ -44,8 +44,8 @@
             fill="white"
         />
         
-        <!-- Текст -->
-        <text x="72" y="78" class="name">
+        <!-- Название -->
+        <text x="72" y="78" class="logo__name">
             ДАБРАДЗЕІ
         </text>
     </g>

@@ -24,142 +24,72 @@ main section.main__performances article.main__performances__performance figure {
 main section.main__performances article.main__performances__performance figure img {
   width: 20vw;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 250px;
-          flex: 2 1 250px;
-  display: inline-block;
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid {
+  -webkit-box-flex: 5;
+      -ms-flex: 5 1 250px;
+          flex: 5 1 250px;
   margin: 1vw 2vw;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "name name" "desc desc" "authb auth" "dirb dir" "paintb paint" "durb dur" "priceb price" "date date" "buy-a-ticket buy-a-ticket";
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid button {
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid p, main section.main__performances article.main__performances__performance div.main__performances__performance__grid button {
   margin: 0.65vw;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__name {
-  -ms-grid-row: 1;
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__name {
   -ms-grid-column: 1;
+      grid-column-start: 1;
   -ms-grid-column-span: 2;
-  grid-area: name;
+  grid-column-end: 3;
   text-align: center;
   font-size: 2.5vw;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   color: darkred;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__description {
-  -ms-grid-row: 2;
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__description {
   -ms-grid-column: 1;
+      grid-column-start: 1;
   -ms-grid-column-span: 2;
-  grid-area: desc;
+  grid-column-end: 3;
   text-align: center;
   font-size: 1.5vw;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   color: #333333;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__author-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__director-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__painter-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__duration-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__price-before {
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__author-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__director-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__painter-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__duration-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__price-before {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.6vw;
   font-style: italic;
   color: #444444;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__author, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__director, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__painter, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__duration, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__price {
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__author, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__director, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__painter, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__duration, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__price {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.6vw;
   font-weight: bold;
   color: black;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__author-before {
-  -ms-grid-row: 3;
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__date {
   -ms-grid-column: 1;
-  grid-area: authb;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__author {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: auth;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__director-before {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: dirb;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__director {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  grid-area: dir;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__painter-before {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: paintb;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__painter {
-  -ms-grid-row: 5;
-  -ms-grid-column: 2;
-  grid-area: paint;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__duration-before {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  grid-area: durb;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__duration {
-  -ms-grid-row: 6;
-  -ms-grid-column: 2;
-  grid-area: dur;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__price-before {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
-  grid-area: priceb;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__price {
-  -ms-grid-row: 7;
-  -ms-grid-column: 2;
-  grid-area: price;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__date {
-  -ms-grid-row: 8;
-  -ms-grid-column: 1;
+      grid-column-start: 1;
   -ms-grid-column-span: 2;
-  grid-area: date;
+  grid-column-end: 3;
   font-size: 2vw;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: darkred;
 }
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid button {
-  -ms-grid-row: 9;
+main section.main__performances article.main__performances__performance div.main__performances__performance__grid button {
   -ms-grid-column: 1;
+      grid-column-start: 1;
   -ms-grid-column-span: 2;
-  grid-area: buy-a-ticket;
+  grid-column-end: 3;
   -ms-grid-row-align: center;
       align-self: center;
   padding: 0.5vw 2vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 0.5vw solid #660000;
-  border-radius: 10vw;
-  background-color: darkred;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 2vw;
-  text-decoration: none;
-  color: white;
-  -webkit-transition: 0.1s ease-out;
-  transition: 0.1s ease-out;
-  cursor: pointer;
-}
-main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid button:hover {
-  background-color: #A00000;
-  text-decoration: underline;
 }
 main section.main__performances hr.main__performances__separator {
   height: 0.3vw;
@@ -168,7 +98,7 @@ main section.main__performances hr.main__performances__separator {
 
 @media (max-width: 800px) {
   main section.main__performances {
-    margin: 25px 10px;
+    margin: 25px 15px;
   }
   main section.main__performances article.main__performances__performance {
     -webkit-box-orient: vertical;
@@ -187,32 +117,28 @@ main section.main__performances hr.main__performances__separator {
     height: 250px;
     width: auto;
   }
-  main section.main__performances article.main__performances__performance div.main__performances__performance__info {
+  main section.main__performances article.main__performances__performance div.main__performances__performance__grid {
     margin: 8px 20px;
   }
-  main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid button {
+  main section.main__performances article.main__performances__performance div.main__performances__performance__grid p, main section.main__performances article.main__performances__performance div.main__performances__performance__grid button {
     margin: 7px;
   }
-  main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__name {
+  main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__name {
     font-size: 30px;
   }
-  main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__description {
+  main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__description {
     font-size: 17px;
   }
-  main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__author-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__director-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__painter-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__duration-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__price-before, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__author, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__director, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__painter, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__duration, main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__price {
+  main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__author-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__director-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__painter-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__duration-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__price-before, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__author, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__director, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__painter, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__duration, main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__price {
     font-size: 17px;
   }
-  main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid p.main__performances__performance__info__grid__date {
+  main section.main__performances article.main__performances__performance div.main__performances__performance__grid p.main__performances__performance__grid__date {
     font-size: 27px;
   }
-  main section.main__performances article.main__performances__performance div.main__performances__performance__info div.main__performances__performance__info__grid button {
+  main section.main__performances article.main__performances__performance div.main__performances__performance__grid button {
     padding: 5px 10px;
-    border-width: 4px;
-    border-radius: 100px;
-    font-size: 20px;
   }
   main section.main__performances hr.main__performances__separator {
     height: 3px;
-    background-color: #444444;
   }
 }

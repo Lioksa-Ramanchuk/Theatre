@@ -40,16 +40,16 @@ main section.main__troupe figure figcaption {
 
 @media (max-width: 800px) {
   main section.main__troupe {
-    margin: 25px 10px;
+    margin: 25px 15px;
   }
   main section.main__troupe figure {
     margin: 20px;
-    width: 170px;
+    width: 200px;
     border-width: 5px;
   }
   main section.main__troupe figure img {
-    height: 220px;
-    width: 170px;
+    height: 270px;
+    width: 200px;
   }
   main section.main__troupe figure figcaption {
     padding: 5px;

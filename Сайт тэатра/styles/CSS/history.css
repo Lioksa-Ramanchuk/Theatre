@@ -14,10 +14,10 @@ main section.main__history figure {
   text-align: center;
 }
 main section.main__history figure img {
-  width: 21vw;
+  width: 25vw;
 }
 main section.main__history figure figcaption {
-  width: 21vw;
+  width: 25vw;
   padding: 0.1vw 1vw;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -28,11 +28,12 @@ main section.main__history figure figcaption {
 
 footer {
   clear: both;
+  margin-top: 5vw;
 }
 
 @media (max-width: 800px) {
   main section.main__history {
-    margin: 25px 10px;
+    margin: 25px 15px;
   }
   main section.main__history p {
     margin: 10px;
@@ -48,9 +49,12 @@ footer {
     width: 80%;
   }
   main section.main__history figure figcaption {
-    text-align: center;
     width: 100%;
     padding: 1px 10px;
     font-size: 18px;
+  }
+
+  footer {
+    margin-top: 50px;
   }
 }

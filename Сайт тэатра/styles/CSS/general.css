@@ -1,9 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
 }
 
 header {
@@ -32,21 +29,17 @@ header nav > ul.menu input[type=checkbox]#menu__show-menu {
 }
 header nav > ul.menu li {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 150px;
-          flex: 1 1 150px;
+      -ms-flex: 1 1 10vw;
+          flex: 1 1 10vw;
   display: block;
   height: 4vw;
   background-color: #333333;
   border-style: solid;
   border-width: 0.2vw 0.1vw;
   border-color: #444444;
-  text-align: center;
 }
-header nav > ul.menu li.menu__button-for-show-menu {
+header nav > ul.menu li.menu__button-to-show-menu {
   display: none;
-}
-header nav > ul.menu li.menu__button-for-show-menu > label {
-  cursor: pointer;
 }
 header nav > ul.menu li.menu__page-link a {
   display: block;
@@ -55,6 +48,7 @@ header nav > ul.menu li.menu__page-link a {
   padding: 1vw;
   -webkit-transition: background-color 0.1s ease-out;
   transition: background-color 0.1s ease-out;
+  text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.6vw;
   font-weight: bold;
@@ -81,10 +75,7 @@ header nav > ul.menu li.menu__logo {
   background-size: contain;
 }
 
-main {
-  margin: 0;
-}
-main > h1.main__heading {
+h1.main__heading {
   margin: 1vw;
   padding: 1vw;
   text-align: center;
@@ -93,7 +84,8 @@ main > h1.main__heading {
   font-size: 3vw;
   color: darkred;
 }
-main > hr.main__heading-line {
+
+hr.main__heading-line {
   width: 25vw;
   height: 0;
   border-width: 0;
@@ -113,7 +105,7 @@ footer {
       justify-content: space-around;
   margin: 0;
   padding: 1.5vw;
-  background-color: #222222;
+  background-color: #333333;
   color: white;
 }
 footer figure {
@@ -128,6 +120,7 @@ footer p {
   text-align: center;
   font-style: italic;
   font-size: 1.5vw;
+  font-family: "Times New Roman", Times, serif;
 }
 
 @media (max-width: 800px) {
@@ -142,7 +135,7 @@ footer p {
     height: 40px;
     border-width: 2px 1px;
   }
-  header nav > ul.menu li.menu__button-for-show-menu {
+  header nav > ul.menu li.menu__button-to-show-menu {
     display: block;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100px;
@@ -151,9 +144,9 @@ footer p {
         -ms-flex-order: -2;
             order: -2;
   }
-  header nav > ul.menu li.menu__button-for-show-menu label {
+  header nav > ul.menu li.menu__button-to-show-menu label {
+    cursor: pointer;
     display: block;
-    width: 100%;
     height: 100%;
     background-image: url("../../images/menu_button_hidden.svg");
     background-size: contain;
@@ -183,17 +176,18 @@ footer p {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  header nav > ul.menu input[type=checkbox]#menu__show-menu:checked ~ li.menu__button-for-show-menu label {
+  header nav > ul.menu input[type=checkbox]#menu__show-menu:checked ~ li.menu__button-to-show-menu label {
     background-image: url("../../images/menu_button_shown.svg");
   }
 
-  main > h1.main__heading {
+  h1.main__heading {
     margin: 7px;
     padding: 7px;
     letter-spacing: 4px;
     font-size: 30px;
   }
-  main > hr.main__heading-line {
+
+  hr.main__heading-line {
     width: 250px;
     -webkit-box-shadow: 0 0 2px 1px darkred;
             box-shadow: 0 0 2px 1px darkred;

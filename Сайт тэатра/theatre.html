@@ -10,6 +10,8 @@
         <link rel='stylesheet' href='styles/CSS/general.css'/>
         <!-- Собственные стили страницы "Главная"-->
         <link rel='stylesheet' href='styles/CSS/main.css'/>
+        <!-- Стили кнопок -->
+        <link rel='stylesheet' href='styles/CSS/button_style.css'/>
         <!-- Стили формы обратной связи-->
         <link rel='stylesheet' href='styles/CSS/feedback_form.css'/>
     </head>
@@ -20,43 +22,48 @@
 
         <!-- Галерея изображений из gallery_images.xml -->
         <figure class='gallery'>
-            <button class='gallery__prev-button' onclick='plusSlides(-1)'>&#10094;</button>
-            <button class='gallery__next-button' onclick='plusSlides(1)'>&#10095;</button>
+            <button class='gallery__prev-button' onclick='nextImage(-1)'>&#10094;</button>
+            <button class='gallery__next-button' onclick='nextImage(1)'>&#10095;</button>
         </figure>
 
         <main>
-            <!-- Раздел со спектаклями -->
             <h1>Спектаклі</h1>
+            <!-- Раздел с представлениями -->
             <section id='main__performances-section'>
-                <a href='theatre-performances.html' id='main__performances-section__link-to-performances'>Усе паказы</a>
+                <!-- Сюда будут вставляться блоки представлений -->
+                <a href='theatre-performances.html' class='button-style' id='main__performances-section__link-to-performances'>Усе паказы</a>
             </section>
 
-            <!-- Раздел с новостями -->
             <h1>Навіны</h1>
-            <section id='main__news-section'>                    
-                <a href='theatre-news.html' id='main__news-section__link-to-news'>Усе навіны</a>
+            <!-- Раздел с новостями -->
+            <section id='main__news-section'>  
+                <!-- Сюда будут вставляться блоки новостей -->                  
+                <a href='theatre-news.html' class='button-style' id='main__news-section__link-to-news'>Усе навіны</a>
             </section>
 
-            <!-- Раздел с краткой историей театра -->
             <h1>Пра нас</h1>
+            <!-- Раздел с краткой историей театра -->
             <section id='main__about-us-section'>
-                <figure>
-                    <img src='images/theatre.jpg' alt='theatre'/>
-                </figure>
+                <figure><img src='images/theatre.jpg' alt='theatre'/></figure>
 
                 <h2 class='main__about-us__title'>Тэатр «Дабрадзеі»</h2>
 
                 <article class='main__about-us__article'>
-                    <p>Беларускі тэатр «Дабрадзеі» — адзін з найстарэйшых тэатраў Беларусі.</p>
-                    <p>Заснаваны ў верасні 1920 года намаганнямі першага мастацкага кіраўніка Фларыяна Ждановіча. Тэатр «Дабрадзеі» на працягу многіх гадоў паспяхова захоўвае найлепшыя дасягненні айчыннага тэатральнага мастацтва, а таксама спалучае традыцыйныя каштоўнасці з устаноўкай на няспынны мастацкі пошук і творчы эксперымент.</p>
-                    <p>Рэпертуар тэатра налічвае каля 25 пастановак розных жанраў і форм паводле п’ес айчынных класікаў, а таксама сучасных аўтараў, дзеля чаго актыўна супрацоўнічае з найлепшымі драматургамі, мастакамі і рэжысёрамі.</p>
+                    <p>Беларускі тэатр «Дабрадзеі» — адзін з найстарэйшых тэатраў Беларусі.
+                    </p>
+                    <p>Заснаваны ў верасні 1920 года намаганнямі першага мастацкага кіраўніка Фларыяна Ждановіча. Тэатр «Дабрадзеі» на працягу многіх гадоў паспяхова захоўвае найлепшыя дасягненні айчыннага тэатральнага мастацтва, а таксама спалучае традыцыйныя каштоўнасці з устаноўкай на няспынны мастацкі пошук і творчы эксперымент.
+                    </p>
+                    <p>Рэпертуар тэатра налічвае каля 25 пастановак розных жанраў і форм паводле п’ес айчынных класікаў, а таксама сучасных аўтараў, дзеля чаго актыўна супрацоўнічае з найлепшымі драматургамі, мастакамі і рэжысёрамі.
+                    </p>
                 </article>
-                <a href='theatre-history.html' id='main__about-us__link-to-history'>Гісторыя тэатра</a>
+                <a href='theatre-history.html' class='button-style' id='main__about-us__link-to-history'>Гісторыя тэатра</a>
             </section>
             
-            <!-- Раздел с формой обратной связи -->
             <h1>Напісаць нам</h1>
-            <section id='main__feedback-section'></section>
+            <!-- Раздел с формой обратной связи -->
+            <section id='main__feedback-section'>
+                <!-- Сюда будет вставляться форма обратной связи -->
+            </section>
         </main>
 
         <!-- Подвал вставляет JavaScript-код general_script.js -->

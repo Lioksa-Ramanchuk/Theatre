@@ -1,3 +1,4 @@
+<!-- Фоновое изображение кнопки выпадания меню при свёрнутом состоянии меню -->
 <svg viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <rect id="menu-rect" x="0" y="0" width="70" height="10" fill="white"/>

@@ -1,170 +1,105 @@
-main {
-    section.main__performances {
-        margin: 3vw 10vw;
+main section.main__performances {
+    margin: 3vw 10vw;
+    
+    article.main__performances__performance {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        margin: -3vw 1vw 1vw 1vw;
+        padding: 5vw 1vw 1vw 1vw;
         
-        article.main__performances__performance {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-around;
-            margin: -3vw 1vw 1vw 1vw;
-            padding: 5vw 1vw 1vw 1vw;
-            
-            figure {
-                flex: 1 1 250px;
-                margin: 1.5vw;
-                text-align: center;
+        figure {
+            flex: 1 1 250px;
+            margin: 1.5vw;
+            text-align: center;
 
-                img {
-                    width: 20vw;
-                }
-            }
-
-            div.main__performances__performance__info {
-                flex: 2 1 250px;
-                display: inline-block;
-                margin: 1vw 2vw;
-
-                div.main__performances__performance__info__grid {
-                    display: grid;
-                    grid-template-areas: "name name"
-                                         "desc desc"
-                                         "authb auth"
-                                         "dirb dir"
-                                         "paintb paint"
-                                         "durb dur"
-                                         "priceb price"
-                                         "date date"
-                                         "buy-a-ticket buy-a-ticket";
-
-                    p, button {
-                        margin: 0.65vw;
-                    }
-
-                    p {
-                        &.main__performances__performance__info__grid__name {
-                            grid-area: name;
-                            text-align: center;
-                            font-size: 2.5vw;
-                            font-family: 'Times New Roman', Times, serif;
-                            font-style: italic;
-                            color: darkred;
-                        }
-
-                        &.main__performances__performance__info__grid__description {
-                            grid-area: desc;
-                            text-align: center;
-                            font-size: 1.5vw;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-style: italic;
-                            color: #333333;
-                        }
-            
-                        &.main__performances__performance__info__grid__author-before,
-                        &.main__performances__performance__info__grid__director-before,
-                        &.main__performances__performance__info__grid__painter-before,
-                        &.main__performances__performance__info__grid__duration-before,
-                        &.main__performances__performance__info__grid__price-before {
-                            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                            font-size: 1.6vw;
-                            font-style: italic;
-                            color: #444444;
-                        }
-
-                        &.main__performances__performance__info__grid__author,
-                        &.main__performances__performance__info__grid__director,
-                        &.main__performances__performance__info__grid__painter,
-                        &.main__performances__performance__info__grid__duration,
-                        &.main__performances__performance__info__grid__price {
-                            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                            font-size: 1.6vw;
-                            font-weight: bold;
-                            color: black;
-                        }
-
-                        &.main__performances__performance__info__grid__author-before {
-                            grid-area: authb;
-                        }
-                        &.main__performances__performance__info__grid__author {
-                            grid-area: auth;
-                        }
-
-                        &.main__performances__performance__info__grid__director-before {
-                            grid-area: dirb;
-                        }
-                        &.main__performances__performance__info__grid__director {
-                            grid-area: dir;
-                        }
-
-                        &.main__performances__performance__info__grid__painter-before {
-                            grid-area: paintb;
-                        }
-                        &.main__performances__performance__info__grid__painter {
-                            grid-area: paint;
-                        }
-
-                        &.main__performances__performance__info__grid__duration-before {
-                            grid-area: durb;
-                        }
-                        &.main__performances__performance__info__grid__duration {
-                            grid-area: dur;
-                        }
-                        
-                        &.main__performances__performance__info__grid__price-before {
-                            grid-area: priceb;
-                        }
-                        &.main__performances__performance__info__grid__price {
-                            grid-area: price;
-                        }
-
-                        &.main__performances__performance__info__grid__date {
-                            grid-area: date;
-                            font-size: 2vw;
-                            text-align: center;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: bold;
-                            color: darkred;
-                        }
-                    }
-
-                    button {
-                        grid-area: buy-a-ticket;
-                        align-self: center;
-                        
-                        padding: 0.5vw 2vw;
-                        box-sizing: border-box;
-                        border: 0.5vw solid #660000;
-                        border-radius: 10vw;
-                        background-color: darkred;
-                        text-align: center;
-                    
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        font-size: 2vw;
-                        text-decoration: none;
-                        color: white;
-                        
-                        transition: 0.1s ease-out;
-                        cursor: pointer;
-
-                        &:hover {
-                            background-color: #A00000;
-                            text-decoration: underline;
-                        }
-                    }
-                }
+            img {
+                width: 20vw;
             }
         }
 
-        hr.main__performances__separator {
-            height: 0.3vw;
-            background-color: #444444;
+        div.main__performances__performance__grid {
+            flex: 5 1 250px;
+            margin: 1vw 2vw;
+            display: grid;
+            grid-template-columns: auto auto;
+
+            p, button {
+                margin: 0.65vw;
+            }
+
+            p {
+                &.main__performances__performance__grid__name {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    text-align: center;
+                    font-size: 2.5vw;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-style: italic;
+                    color: darkred;
+                }
+
+                &.main__performances__performance__grid__description {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    text-align: center;
+                    font-size: 1.5vw;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-style: italic;
+                    color: #333333;
+                }
+    
+                &.main__performances__performance__grid__author-before,
+                &.main__performances__performance__grid__director-before,
+                &.main__performances__performance__grid__painter-before,
+                &.main__performances__performance__grid__duration-before,
+                &.main__performances__performance__grid__price-before {
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-size: 1.6vw;
+                    font-style: italic;
+                    color: #444444;
+                }
+
+                &.main__performances__performance__grid__author,
+                &.main__performances__performance__grid__director,
+                &.main__performances__performance__grid__painter,
+                &.main__performances__performance__grid__duration,
+                &.main__performances__performance__grid__price {
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-size: 1.6vw;
+                    font-weight: bold;
+                    color: black;
+                }
+
+                &.main__performances__performance__grid__date {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    font-size: 2vw;
+                    text-align: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    color: darkred;
+                }
+            }
+
+            button {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                align-self: center;
+                padding: 0.5vw 2vw;
+            }
         }
+    }
+
+    hr.main__performances__separator {
+        height: 0.3vw;
+        background-color: #444444;
     }
 }
 
 @media (max-width: 800px) {
     main section.main__performances {
-        margin: 25px 10px;
+        margin: 25px 15px;
         
         article.main__performances__performance {
             flex-flow: column nowrap;
@@ -180,54 +115,48 @@ main {
                 }
             }
 
-            div.main__performances__performance__info {
+            div.main__performances__performance__grid {
                 margin: 8px 20px;
 
-                div.main__performances__performance__info__grid {
-                    p, button {
-                        margin: 7px;
+                p, button {
+                    margin: 7px;
+                }
+
+                p {
+                    &.main__performances__performance__grid__name {
+                        font-size: 30px;
                     }
 
-                    p {
-                        &.main__performances__performance__info__grid__name {
-                            font-size: 30px;
-                        }
-
-                        &.main__performances__performance__info__grid__description {
-                            font-size: 17px;
-                        }
-            
-                        &.main__performances__performance__info__grid__author-before,
-                        &.main__performances__performance__info__grid__director-before,
-                        &.main__performances__performance__info__grid__painter-before,
-                        &.main__performances__performance__info__grid__duration-before,
-                        &.main__performances__performance__info__grid__price-before,
-                        &.main__performances__performance__info__grid__author,
-                        &.main__performances__performance__info__grid__director,
-                        &.main__performances__performance__info__grid__painter,
-                        &.main__performances__performance__info__grid__duration,
-                        &.main__performances__performance__info__grid__price {
-                            font-size: 17px;
-                        }
-
-                        &.main__performances__performance__info__grid__date {
-                            font-size: 27px;
-                        }
+                    &.main__performances__performance__grid__description {
+                        font-size: 17px;
+                    }
+        
+                    &.main__performances__performance__grid__author-before,
+                    &.main__performances__performance__grid__director-before,
+                    &.main__performances__performance__grid__painter-before,
+                    &.main__performances__performance__grid__duration-before,
+                    &.main__performances__performance__grid__price-before,
+                    &.main__performances__performance__grid__author,
+                    &.main__performances__performance__grid__director,
+                    &.main__performances__performance__grid__painter,
+                    &.main__performances__performance__grid__duration,
+                    &.main__performances__performance__grid__price {
+                        font-size: 17px;
                     }
 
-                    button {
-                        padding: 5px 10px;
-                        border-width: 4px;
-                        border-radius: 100px;
-                        font-size: 20px;
+                    &.main__performances__performance__grid__date {
+                        font-size: 27px;
                     }
+                }
+
+                button {
+                    padding: 5px 10px;
                 }
             }
         }
 
         hr.main__performances__separator {
             height: 3px;
-            background-color: #444444;
         }
     }
 }
