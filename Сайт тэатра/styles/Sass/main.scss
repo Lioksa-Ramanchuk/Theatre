@@ -25,7 +25,6 @@ figure.gallery {
         font-weight: bold;
         font-size: 3.5vw;
         user-select: none;
-        -webkit-user-select: none;
         transition: background-color 0.1s linear;
         
         &:hover {
@@ -94,6 +93,7 @@ main {
                     padding: 1vw;
                     flex: 1 1 250px;
                     max-width: 25vw;
+                    min-width: 15vw;
                     text-align: center;
                     @extend %block-link;
 
@@ -102,7 +102,7 @@ main {
                     }
 
                     img {
-                        width: 60%;
+                        width: 70%;
                         transition: all 0.3s ease-out;
                     }
 
@@ -142,7 +142,6 @@ main {
 
                 &#main__performances-section__link-to-performances {
                     flex: 1 1 100%;
-                    font-style: italic;
                 }
             }
         }
@@ -184,10 +183,6 @@ main {
                         }
                     }
                 }
-
-                &#main__news-section__link-to-news {
-                    font-style: italic;
-                }
             }
         }
 
@@ -223,15 +218,11 @@ main {
                     color: black;
                 }
             }
-
-            a#main__about-us__link-to-history {
-                font-style: italic;
-            }
         }
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     figure.gallery {
         height: 300px;
     
@@ -275,11 +266,15 @@ main {
             }
     
             &#main__performances-section a.main__performances-section__performance-block {
-                margin: 20px 5px;
+                margin: 20px;
                 padding: 10px;
                 flex: 1 1 250px;
                 max-width: 300px;
+                min-width: 100px;
 
+                &:hover img {
+                    width: 80%;
+                }
                 img {
                     width: 80%;
                 }

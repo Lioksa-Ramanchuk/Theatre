@@ -38,18 +38,18 @@ main section.main__troupe figure figcaption {
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   main section.main__troupe {
     margin: 25px 15px;
   }
   main section.main__troupe figure {
     margin: 20px;
-    width: 200px;
+    width: 196px;
     border-width: 5px;
   }
   main section.main__troupe figure img {
-    height: 270px;
-    width: 200px;
+    height: 280px;
+    width: 196px;
   }
   main section.main__troupe figure figcaption {
     padding: 5px;

@@ -42,7 +42,7 @@ main section.main__contacts p.main__contacts__person span.main__contacts__person
   font-weight: bold;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   main h2 {
     margin: 35px 0 20px 0;
     padding: 8px 0 8px 0px;

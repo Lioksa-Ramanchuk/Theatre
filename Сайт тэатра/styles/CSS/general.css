@@ -123,7 +123,7 @@ footer p {
   font-family: "Times New Roman", Times, serif;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   header {
     position: relative;
   }

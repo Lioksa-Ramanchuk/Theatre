@@ -22,10 +22,10 @@ figure.gallery > button.gallery__next-button, figure.gallery > button.gallery__p
   color: white;
   font-weight: bold;
   font-size: 3.5vw;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
@@ -90,13 +90,14 @@ main section#main__performances-section > a.main__performances-section__performa
       -ms-flex: 1 1 250px;
           flex: 1 1 250px;
   max-width: 25vw;
+  min-width: 15vw;
   text-align: center;
 }
 main section#main__performances-section > a.main__performances-section__performance-block:hover img {
   width: 80%;
 }
 main section#main__performances-section > a.main__performances-section__performance-block img {
-  width: 60%;
+  width: 70%;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -133,7 +134,6 @@ main section#main__performances-section > a#main__performances-section__link-to-
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  font-style: italic;
 }
 main section#main__news-section > a.main__news-section__news-block {
   margin: 2vw;
@@ -165,9 +165,6 @@ main section#main__news-section > a.main__news-section__news-block p.main__news-
   font-size: 1.7vw;
   color: #444444;
 }
-main section#main__news-section > a#main__news-section__link-to-news {
-  font-style: italic;
-}
 main section#main__about-us-section figure {
   margin: 1.5vw;
   text-align: center;
@@ -194,11 +191,8 @@ main section#main__about-us-section article.main__about-us__article p {
   font-size: 1.5vw;
   color: black;
 }
-main section#main__about-us-section a#main__about-us__link-to-history {
-  font-style: italic;
-}
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   figure.gallery {
     height: 300px;
   }
@@ -234,12 +228,16 @@ main section#main__about-us-section a#main__about-us__link-to-history {
             box-shadow: 0 0 5px 5px slateblue;
   }
   main section#main__performances-section a.main__performances-section__performance-block {
-    margin: 20px 5px;
+    margin: 20px;
     padding: 10px;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 250px;
             flex: 1 1 250px;
     max-width: 300px;
+    min-width: 100px;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block:hover img {
+    width: 80%;
   }
   main section#main__performances-section a.main__performances-section__performance-block img {
     width: 80%;

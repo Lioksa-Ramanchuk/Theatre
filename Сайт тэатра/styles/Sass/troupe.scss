@@ -33,18 +33,18 @@ main section.main__troupe {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     main section.main__troupe {
         margin: 25px 15px;
 
         figure {
             margin: 20px;
-            width: 200px;
+            width: 196px;
             border-width: 5px;
 
             img {
-                height: 270px;
-                width: 200px;
+                height: 280px;
+                width: 196px;
             }
 
             figcaption {

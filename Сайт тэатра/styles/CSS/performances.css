@@ -96,7 +96,7 @@ main section.main__performances hr.main__performances__separator {
   background-color: #444444;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   main section.main__performances {
     margin: 25px 15px;
   }

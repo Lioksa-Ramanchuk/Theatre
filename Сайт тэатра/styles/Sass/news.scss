@@ -30,7 +30,7 @@ main section.main__news {
         }
         
         figure {
-            margin: 0 0 0 2vw;
+            margin: 0 0 0.5vw 2vw;
             float: right;
             text-align: center;
 
@@ -62,7 +62,7 @@ main section.main__news {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     main section.main__news {
         margin: 25px 15px;
 
