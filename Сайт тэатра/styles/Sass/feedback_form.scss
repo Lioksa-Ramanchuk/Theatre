@@ -64,6 +64,7 @@ form.feedback-form {
             &.main__feedback-section__name,
             &.main__feedback-section__e-mail {
                 margin: 5px 0;
+                padding: 5px;
                 font-size: 18px;
             }
 
@@ -73,6 +74,7 @@ form.feedback-form {
         }
         textarea {
             margin: 5px 0;
+            padding: 5px;
             font-size: 18px;
         }
     }
