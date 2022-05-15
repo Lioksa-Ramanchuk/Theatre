@@ -9,7 +9,7 @@ figure.gallery {
   background-size: cover;
   background-position: center center;
 }
-figure.gallery > button.gallery__next-button, figure.gallery > button.gallery__prev-button {
+figure.gallery > button {
   display: inline-block;
   cursor: pointer;
   position: absolute;
@@ -29,7 +29,7 @@ figure.gallery > button.gallery__next-button, figure.gallery > button.gallery__p
   -webkit-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-figure.gallery > button.gallery__next-button:hover, figure.gallery > button.gallery__prev-button:hover {
+figure.gallery > button:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 figure.gallery > button.gallery__prev-button {
@@ -53,23 +53,7 @@ main > h1 {
   letter-spacing: 0.1vw;
   color: white;
 }
-main section {
-  margin: 3vw 10vw;
-}
-main section#main__news-section > a.main__news-section__news-block, main section#main__performances-section > a.main__performances-section__performance-block {
-  display: block;
-  border: 0.3vw solid lightgrey;
-  border-radius: 1vw;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  text-decoration: none;
-}
-main section#main__news-section > a.main__news-section__news-block:hover, main section#main__performances-section > a.main__performances-section__performance-block:hover {
-  background-color: lightyellow;
-  -webkit-box-shadow: 0 0 0.5vw 0.5vw slateblue;
-          box-shadow: 0 0 0.5vw 0.5vw slateblue;
-}
-main section#main__performances-section {
+main section#main__news-section, main section#main__performances-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,12 +67,29 @@ main section#main__performances-section {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-main section#main__performances-section > a.main__performances-section__performance-block {
-  margin: 2vw;
+main section {
+  margin: 1vw 10vw 3vw 10vw;
+}
+main section#main__news-section > a.main__news-section__news-block, main section#main__performances-section > a.main__performances-section__performance-block {
+  display: block;
+  margin: 1.5vw 2vw;
   padding: 1vw;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 250px;
           flex: 1 1 250px;
+  border: 0.3vw solid lightgrey;
+  border-radius: 1vw;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+main section#main__news-section > a.main__news-section__news-block:hover, main section#main__performances-section > a.main__performances-section__performance-block:hover {
+  background-color: lightyellow;
+  -webkit-box-shadow: 0 0 0.3vw 0.3vw pink;
+          box-shadow: 0 0 0.3vw 0.3vw pink;
+  border-color: pink;
+}
+main section#main__performances-section > a.main__performances-section__performance-block {
   max-width: 25vw;
   min-width: 15vw;
   text-align: center;
@@ -102,7 +103,7 @@ main section#main__performances-section > a.main__performances-section__performa
   transition: all 0.3s ease-out;
 }
 main section#main__performances-section > a.main__performances-section__performance-block p {
-  margin: 1vw;
+  margin: 1vw 0;
 }
 main section#main__performances-section > a.main__performances-section__performance-block p.main__performances-section__performance-block__name {
   font-family: "Times New Roman", Times, serif;
@@ -135,15 +136,11 @@ main section#main__performances-section > a#main__performances-section__link-to-
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
 }
-main section#main__news-section > a.main__news-section__news-block {
-  margin: 2vw;
-  padding: 2vw;
-}
 main section#main__news-section > a.main__news-section__news-block h2.main__news-section__news-block__title {
-  margin: 1vw;
+  margin: 1vw 0;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: bold;
   text-transform: uppercase;
   color: darkred;
@@ -151,19 +148,24 @@ main section#main__news-section > a.main__news-section__news-block h2.main__news
 main section#main__news-section > a.main__news-section__news-block p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+main section#main__news-section > a.main__news-section__news-block p.main__news-section__news-block__date {
+  margin: 0;
+  text-align: right;
+  text-decoration: underline;
+  font-size: 1.7vw;
+  color: #666666;
+}
 main section#main__news-section > a.main__news-section__news-block p.main__news-section__news-block__text {
   margin: 1vw;
   text-indent: 3vw;
   text-align: justify;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
   color: black;
 }
-main section#main__news-section > a.main__news-section__news-block p.main__news-section__news-block__date {
-  margin: 1.7vw 0 0 0;
-  text-align: right;
-  text-decoration: overline;
-  font-size: 1.7vw;
-  color: #444444;
+main section#main__news-section > a#main__news-section__link-to-news {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 main section#main__about-us-section figure {
   margin: 1.5vw;
@@ -185,113 +187,199 @@ main section#main__about-us-section article.main__about-us__article {
 }
 main section#main__about-us-section article.main__about-us__article p {
   margin: 1vw 0;
-  text-indent: 3vw;
+  text-indent: 6vw;
   text-align: justify;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5vw;
   color: black;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   figure.gallery {
-    height: 300px;
+    height: 45vw;
+  }
+  figure.gallery > button {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 45vw;
+    padding: 18vw 9vw;
+    line-height: 9vw;
+    margin-top: 0;
+    font-size: 5.5vw;
+  }
+  figure.gallery > button:hover {
+    background-color: rgba(0, 0, 0, 0);
   }
   figure.gallery > button.gallery__prev-button, figure.gallery > button.gallery__next-button {
-    padding: 20px;
-    line-height: 40px;
-    margin-top: -40px;
-    font-size: 25px;
-  }
-  figure.gallery > button.gallery__prev-button {
-    border-radius: 0 15px 15px 0;
-  }
-  figure.gallery > button.gallery__next-button {
-    border-radius: 15px 0 0 15px;
+    border-radius: 0;
   }
 
   main > h1 {
-    border-width: 6px;
-    padding: 6px 10px;
-    font-size: 30px;
-    letter-spacing: 1px;
+    border-width: 1.3vw;
+    font-size: 7vw;
     text-align: center;
   }
   main section {
-    margin: 25px 15px;
+    margin: 2vw 7vw 5vw 7vw;
   }
   main section#main__performances-section > a.main__performances-section__performance-block, main section#main__news-section > a.main__news-section__news-block {
-    border-width: 3px;
-    border-radius: 15px;
+    margin: 2vw;
+    padding: 2vw;
+    border-width: 0.6vw;
+    border-radius: 2.5vw;
   }
   main section#main__performances-section > a.main__performances-section__performance-block:hover, main section#main__news-section > a.main__news-section__news-block:hover {
-    -webkit-box-shadow: 0 0 5px 5px slateblue;
-            box-shadow: 0 0 5px 5px slateblue;
+    -webkit-box-shadow: 0 0 0.6vw 0.6vw pink;
+            box-shadow: 0 0 0.6vw 0.6vw pink;
   }
   main section#main__performances-section a.main__performances-section__performance-block {
-    margin: 20px;
-    padding: 10px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 250px;
-            flex: 1 1 250px;
-    max-width: 300px;
-    min-width: 100px;
+    max-width: 75vw;
   }
   main section#main__performances-section a.main__performances-section__performance-block:hover img {
-    width: 80%;
+    width: 90%;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block img {
+    width: 90%;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block p {
+    margin: 2vw 0;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__name {
+    font-size: 4vw;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__author {
+    font-size: 2.7vw;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__description {
+    margin-top: 3vw;
+    font-size: 3vw;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__date {
+    margin-top: 3vw;
+    font-size: 3.5vw;
+  }
+  main section#main__news-section a.main__news-section__news-block {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  main section#main__news-section a.main__news-section__news-block h2.main__news-section__news-block__title {
+    margin: 2vw 0;
+    font-size: 4.5vw;
+  }
+  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__date {
+    font-size: 3.5vw;
+  }
+  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__text {
+    font-size: 3vw;
+  }
+  main section#main__about-us-section figure {
+    margin: -2vw -7vw 3vw -7vw;
+  }
+  main section#main__about-us-section figure img {
+    width: 100vw;
+  }
+  main section#main__about-us-section h2.main__about-us__title {
+    font-size: 6vw;
+  }
+  main section#main__about-us-section article.main__about-us__article {
+    margin: 3vw 0;
+  }
+  main section#main__about-us-section article.main__about-us__article p {
+    text-indent: 4vw;
+    font-size: 3vw;
+  }
+}
+@media (max-width: 767px) {
+  figure.gallery {
+    height: 50vw;
+  }
+  figure.gallery > button {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 50vw;
+    padding: 20vw 10vw;
+    line-height: 10vw;
+    margin-top: 0;
+    font-size: 6vw;
+  }
+  figure.gallery > button:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  figure.gallery > button.gallery__prev-button, figure.gallery > button.gallery__next-button {
+    border-radius: 0;
+  }
+
+  main > h1 {
+    border-width: 2vw;
+    font-size: 10vw;
+    text-align: center;
+  }
+  main section {
+    margin: 2vw 5vw 8vw 5vw;
+  }
+  main section#main__performances-section > a.main__performances-section__performance-block, main section#main__news-section > a.main__news-section__news-block {
+    margin: 3vw;
+    padding: 3vw;
+    border-width: 1vw;
+    border-radius: 5vw;
+  }
+  main section#main__performances-section > a.main__performances-section__performance-block:hover, main section#main__news-section > a.main__news-section__news-block:hover {
+    -webkit-box-shadow: 0 0 1vw 1vw pink;
+            box-shadow: 0 0 1vw 1vw pink;
+  }
+  main section#main__performances-section a.main__performances-section__performance-block {
+    max-width: 90vw;
   }
   main section#main__performances-section a.main__performances-section__performance-block img {
     width: 80%;
   }
   main section#main__performances-section a.main__performances-section__performance-block p {
-    margin: 10px;
+    margin: 3vw 0;
   }
   main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__name {
-    font-size: 30px;
+    font-size: 8vw;
   }
   main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__author {
-    font-size: 18px;
+    font-size: 6vw;
   }
   main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__description {
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 5vw;
+    font-size: 6vw;
   }
   main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__date {
-    margin-top: 20px;
-    font-size: 22px;
+    margin-top: 5vw;
+    font-size: 7vw;
   }
   main section#main__news-section a.main__news-section__news-block {
-    margin: 20px 5px;
-    padding: 10px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   main section#main__news-section a.main__news-section__news-block h2.main__news-section__news-block__title {
-    margin: 10px;
-    font-size: 25px;
-  }
-  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__text {
-    margin: 10px;
-    text-indent: 25px;
-    font-size: 20px;
+    margin: 2vw 0;
+    font-size: 8vw;
   }
   main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__date {
-    margin: 30px 0 0 0;
-    font-size: 25px;
+    font-size: 6vw;
+  }
+  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__text {
+    font-size: 6vw;
   }
   main section#main__about-us-section figure {
-    margin: 10px;
+    margin: -2vw -5vw 3vw -5vw;
   }
   main section#main__about-us-section figure img {
-    width: 80%;
+    width: 100vw;
   }
   main section#main__about-us-section h2.main__about-us__title {
-    margin: 20px;
-    font-size: 25px;
+    font-size: 8vw;
   }
   main section#main__about-us-section article.main__about-us__article {
-    margin: 20px 0;
+    margin: 3vw 0;
   }
   main section#main__about-us-section article.main__about-us__article p {
-    margin: 10px;
-    text-indent: 25px;
-    font-size: 20px;
+    text-indent: 6vw;
+    font-size: 6vw;
   }
 }

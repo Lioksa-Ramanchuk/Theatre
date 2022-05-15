@@ -17,7 +17,7 @@ xmlhttp.send()
 xmlDocNewsList = xmlhttp.responseXML
 
 // Получение шаблона структуры новости
-xmlhttp.open('GET', '../news_news_block.html', false)
+xmlhttp.open('GET', '../html_models/news_news_block.html', false)
 xmlhttp.send()
 newsBlock = xmlhttp.responseText
 

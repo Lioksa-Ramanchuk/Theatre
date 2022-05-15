@@ -1,5 +1,5 @@
 main section.main__performances {
-    margin: 3vw 10vw;
+    margin: 0 10vw 3vw 10vw;
     
     article.main__performances__performance {
         display: flex;
@@ -97,66 +97,128 @@ main section.main__performances {
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     main section.main__performances {
-        margin: 25px 15px;
+        margin: 4vw;
         
         article.main__performances__performance {
             flex-flow: column nowrap;
-            margin: 12px 6px;
-            padding: 12px 0;
+            margin: 2vw 0;
+            padding: 2vw 0;
             
             figure {
                 flex: 1 1 fit-content;
 
                 img {
-                    height: 250px;
-                    width: auto;
+                    width: 40vw;
                 }
             }
 
             div.main__performances__performance__grid {
-                margin: 8px 20px;
+                margin: 1vw;
 
                 p, button {
-                    margin: 7px;
+                    margin: 1.5vw 1vw;
                 }
 
                 p {
                     &.main__performances__performance__grid__name {
-                        font-size: 30px;
+                        font-size: 5.5vw;
                     }
 
                     &.main__performances__performance__grid__description {
-                        font-size: 17px;
+                        font-size: 4vw;
                     }
         
                     &.main__performances__performance__grid__author-before,
-                    &.main__performances__performance__grid__director-before,
-                    &.main__performances__performance__grid__painter-before,
-                    &.main__performances__performance__grid__duration-before,
-                    &.main__performances__performance__grid__price-before,
                     &.main__performances__performance__grid__author,
+                    &.main__performances__performance__grid__director-before,
                     &.main__performances__performance__grid__director,
+                    &.main__performances__performance__grid__painter-before,
                     &.main__performances__performance__grid__painter,
+                    &.main__performances__performance__grid__duration-before,
                     &.main__performances__performance__grid__duration,
+                    &.main__performances__performance__grid__price-before,
                     &.main__performances__performance__grid__price {
-                        font-size: 17px;
+                        font-size: 3.5vw;
                     }
 
                     &.main__performances__performance__grid__date {
-                        font-size: 27px;
+                        font-size: 5vw;
                     }
                 }
 
                 button {
-                    padding: 5px 10px;
+                    padding: 1.5vw;
                 }
             }
         }
 
         hr.main__performances__separator {
-            height: 3px;
+            height: 0.5vw;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main section.main__performances {
+        margin: 5vw;
+        
+        article.main__performances__performance {
+            flex-flow: column nowrap;
+            margin: 2vw 0;
+            padding: 2vw 0;
+            
+            figure {
+                flex: 1 1 fit-content;
+
+                img {
+                    width: 65vw;
+                }
+            }
+
+            div.main__performances__performance__grid {
+                margin: 2vw;
+
+                p, button {
+                    margin: 2.7vw 2vw;
+                }
+
+                p {
+                    &.main__performances__performance__grid__name {
+                        font-size: 9vw;
+                    }
+
+                    &.main__performances__performance__grid__description {
+                        font-size: 6vw;
+                    }
+        
+                    &.main__performances__performance__grid__author-before,
+                    &.main__performances__performance__grid__author,
+                    &.main__performances__performance__grid__director-before,
+                    &.main__performances__performance__grid__director,
+                    &.main__performances__performance__grid__painter-before,
+                    &.main__performances__performance__grid__painter,
+                    &.main__performances__performance__grid__duration-before,
+                    &.main__performances__performance__grid__duration,
+                    &.main__performances__performance__grid__price-before,
+                    &.main__performances__performance__grid__price {
+                        font-size: 5.5vw;
+                    }
+
+                    &.main__performances__performance__grid__date {
+                        font-size: 8vw;
+                    }
+                }
+
+                button {
+                    padding: 1.5vw;
+                }
+            }
+        }
+
+        hr.main__performances__separator {
+            height: 1vw;
         }
     }
 }

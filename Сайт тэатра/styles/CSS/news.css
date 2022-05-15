@@ -1,13 +1,11 @@
 main section.main__news {
-  margin: 3vw 10vw;
+  margin: 0 10vw 3vw 10vw;
 }
 main section.main__news a.main__news__link-to-news {
   display: block;
-  margin-top: -5vw;
-  padding-top: 3vw;
+  margin: -3vw 0 6vw 0;
 }
 main section.main__news article.main__news__news-block {
-  margin: 4vw 0;
   padding: 2vw;
   border: 0.8vw outset;
 }
@@ -27,12 +25,12 @@ main section.main__news article.main__news__news-block h2.main__news__news-block
   color: darkred;
 }
 main section.main__news article.main__news__news-block figure {
-  margin: 0 0 0.5vw 2vw;
+  margin: 0 0 1vw 2vw;
   float: right;
   text-align: center;
 }
 main section.main__news article.main__news__news-block figure img {
-  width: 15vw;
+  width: 20vw;
 }
 main section.main__news article.main__news__news-block p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -41,7 +39,7 @@ main section.main__news article.main__news__news-block p.main__news__news-block_
   margin: 1vw;
   text-indent: 3vw;
   text-align: justify;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
   color: black;
 }
 main section.main__news article.main__news__news-block p.main__news__news-block__date {
@@ -49,41 +47,75 @@ main section.main__news article.main__news__news-block p.main__news__news-block_
   margin: 1.7vw 0 0 0;
   text-align: right;
   text-decoration: overline;
-  font-size: 1.7vw;
+  font-size: 2vw;
   color: #444444;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   main section.main__news {
-    margin: 25px 15px;
+    margin: 4vw;
   }
   main section.main__news a.main__news__link-to-news {
-    margin: -10px 0 -30px 0;
-    padding-top: 20px;
+    margin: 1.5vw 0;
+    height: 1vw;
   }
   main section.main__news article.main__news__news-block {
-    margin: 30px 0;
-    padding: 15px;
-    border-width: 5px;
+    padding: 2vw;
+    border-width: 1.5vw;
   }
   main section.main__news article.main__news__news-block h2.main__news__news-block__title {
-    margin: 10px;
-    font-size: 25px;
+    margin: 1.5vw;
+    font-size: 6vw;
   }
   main section.main__news article.main__news__news-block figure {
-    margin: 10px;
+    margin: 2vw;
     float: none;
   }
   main section.main__news article.main__news__news-block figure img {
-    width: 60%;
+    width: 80%;
   }
   main section.main__news article.main__news__news-block p.main__news__news-block__text {
-    margin: 10px;
-    text-indent: 25px;
-    font-size: 20px;
+    margin: 2.5vw;
+    text-indent: 4vw;
+    font-size: 3.5vw;
   }
   main section.main__news article.main__news__news-block p.main__news__news-block__date {
-    margin: 30px 0 0 0;
-    font-size: 25px;
+    margin: 4vw 1vw 1vw 1vw;
+    font-size: 4vw;
+  }
+}
+@media (max-width: 767px) {
+  main section.main__news {
+    margin: 4vw;
+  }
+  main section.main__news a.main__news__link-to-news {
+    margin: 1.5vw 0;
+    height: 1vw;
+  }
+  main section.main__news article.main__news__news-block {
+    padding: 0;
+    border-width: 1.5vw;
+  }
+  main section.main__news article.main__news__news-block h2.main__news__news-block__title {
+    background-color: lightyellow;
+    margin: 0;
+    padding: 3vw 2vw;
+    font-size: 7.5vw;
+  }
+  main section.main__news article.main__news__news-block figure {
+    margin: 0;
+    float: none;
+  }
+  main section.main__news article.main__news__news-block figure img {
+    width: 100%;
+  }
+  main section.main__news article.main__news__news-block p.main__news__news-block__text {
+    margin: 3vw;
+    text-indent: 6vw;
+    font-size: 6vw;
+  }
+  main section.main__news article.main__news__news-block p.main__news__news-block__date {
+    margin: 7vw 3vw 3vw 3vw;
+    font-size: 7vw;
   }
 }

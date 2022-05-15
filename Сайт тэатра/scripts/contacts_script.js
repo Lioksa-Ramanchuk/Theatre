@@ -57,6 +57,6 @@ for (let i = 0; i < nDepartments; i++) {
 }
 
 // Вставка формы обратной связи
-xmlhttp.open('GET','../feedback_form.html', false)
+xmlhttp.open('GET','../html_models/feedback_form.html', false)
 xmlhttp.send()
 document.querySelector('section.main__feedback').innerHTML = xmlhttp.responseText

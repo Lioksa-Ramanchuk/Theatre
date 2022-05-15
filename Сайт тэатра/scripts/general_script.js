@@ -8,11 +8,11 @@ else
 }
 
 // Вставка шапки
-xmlhttp.open('GET','../nav_menu.html', false)
+xmlhttp.open('GET','../html_models/nav_menu.html', false)
 xmlhttp.send()
 document.querySelector("header").insertAdjacentHTML('afterbegin', xmlhttp.responseText)
 
 // Вставка подвала
-xmlhttp.open('GET','../footer.html', false)
+xmlhttp.open('GET','../html_models/footer.html', false)
 xmlhttp.send()
 document.querySelector("footer").insertAdjacentHTML('afterbegin', xmlhttp.responseText)

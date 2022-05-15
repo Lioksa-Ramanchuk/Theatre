@@ -48,34 +48,66 @@ form.feedback-form {
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     form.feedback-form {
-        grid-template-columns: 80px auto;
-        font-size: 20px;
+        grid-template-columns: 15vw auto;
+        font-size: 3.5vw;
 
         label {
-            margin: 5px;
+            margin: 1vw;
             
             &.main__feedback-section__textarea-label {
-                margin-top: 10px;
+                margin-top: 2vw;
             }
         }
         input {
             &.main__feedback-section__name,
             &.main__feedback-section__e-mail {
-                margin: 5px 0;
-                padding: 5px;
-                font-size: 18px;
+                margin: 1.5vw 0;
+                padding: 2vw;
+                font-size: 3vw;
             }
 
             &[type='submit'] {
-                padding: 5px 25px;
+                padding: 1.5vw 6vw;
             }
         }
         textarea {
-            margin: 5px 0;
-            padding: 5px;
-            font-size: 18px;
+            margin: 2vw 0;
+            padding: 2vw;
+            font-size: 3vw;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    form.feedback-form {
+        grid-template-columns: 22vw auto;
+        font-size: 6vw;
+
+        label {
+            margin: 1vw;
+            
+            &.main__feedback-section__textarea-label {
+                margin-top: 2vw;
+            }
+        }
+        input {
+            &.main__feedback-section__name,
+            &.main__feedback-section__e-mail {
+                margin: 1.5vw 0;
+                padding: 2vw;
+                font-size: 5vw;
+            }
+
+            &[type='submit'] {
+                padding: 2vw 7vw;
+            }
+        }
+        textarea {
+            margin: 2vw 0;
+            padding: 2vw;
+            font-size: 5vw;
         }
     }
 }

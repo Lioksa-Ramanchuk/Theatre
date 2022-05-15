@@ -38,21 +38,39 @@ main section.main__troupe figure figcaption {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   main section.main__troupe {
-    margin: 25px 15px;
+    margin: 4vw;
   }
   main section.main__troupe figure {
-    margin: 20px;
-    width: 196px;
-    border-width: 5px;
+    margin: 3vw;
+    width: 35vw;
+    border-width: 1.5vw;
   }
   main section.main__troupe figure img {
-    height: 280px;
-    width: 196px;
+    height: 50vw;
+    width: 35vw;
   }
   main section.main__troupe figure figcaption {
-    padding: 5px;
-    font-size: 20px;
+    padding: 2vw 1vw;
+    font-size: 4vw;
+  }
+}
+@media (max-width: 767px) {
+  main section.main__troupe {
+    margin: 7vw 4vw;
+  }
+  main section.main__troupe figure {
+    margin: 3vw;
+    width: 63vw;
+    border-width: 2.5vw;
+  }
+  main section.main__troupe figure img {
+    height: 90vw;
+    width: 63vw;
+  }
+  main section.main__troupe figure figcaption {
+    padding: 3vw 1vw;
+    font-size: 7vw;
   }
 }

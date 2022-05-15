@@ -4,12 +4,12 @@ main section.main__history {
 main section.main__history p {
   margin: 1vw;
   text-align: justify;
-  text-indent: 2vw;
+  text-indent: 3vw;
   font-size: 1.5vw;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 main section.main__history figure {
-  margin: 0 0 1vw 1vw;
+  margin: 0 0 1.5vw 1.5vw;
   float: right;
   text-align: center;
 }
@@ -17,8 +17,10 @@ main section.main__history figure img {
   width: 25vw;
 }
 main section.main__history figure figcaption {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 25vw;
-  padding: 0.1vw 1vw;
+  padding: 0.3vw 1vw;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
@@ -28,33 +30,49 @@ main section.main__history figure figcaption {
 
 footer {
   clear: both;
-  margin-top: 5vw;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   main section.main__history {
-    margin: 25px 15px;
+    margin: 5vw 4vw;
   }
   main section.main__history p {
-    margin: 10px;
-    text-indent: 25px;
-    font-size: 20px;
+    margin: 2vw;
+    text-indent: 4vw;
+    font-size: 3vw;
   }
   main section.main__history figure {
     float: none;
-    margin: 15px;
+    margin: 2vw 0;
   }
   main section.main__history figure img {
-    margin: 5px;
-    width: 80%;
+    width: 90%;
   }
   main section.main__history figure figcaption {
     width: 100%;
-    padding: 1px 10px;
-    font-size: 18px;
+    padding: 1vw;
+    font-size: 3.5vw;
   }
-
-  footer {
-    margin-top: 50px;
+}
+@media (max-width: 767px) {
+  main section.main__history {
+    margin: 7vw 4vw;
+  }
+  main section.main__history p {
+    margin: 2vw;
+    text-indent: 6vw;
+    font-size: 5.5vw;
+  }
+  main section.main__history figure {
+    float: none;
+    margin: 7vw -4vw;
+  }
+  main section.main__history figure img {
+    width: 100vw;
+  }
+  main section.main__history figure figcaption {
+    width: 100vw;
+    padding: 1vw;
+    font-size: 6vw;
   }
 }

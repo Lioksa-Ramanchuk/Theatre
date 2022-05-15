@@ -38,7 +38,7 @@ xmlhttp.open('GET','../xml/performances_info.xml', false)
 xmlhttp.send()
 xmlDocPerformancesInfo = xmlhttp.responseXML
 
-xmlhttp.open('GET','../main_perf_block.html', false)
+xmlhttp.open('GET','../html_models/main_perf_block.html', false)
 xmlhttp.send()
 mainPerfBlock = xmlhttp.responseText
 
@@ -71,7 +71,7 @@ xmlhttp.open('GET','../xml/news_list.xml', false)
 xmlhttp.send()
 xmlDocNewsList = xmlhttp.responseXML
 
-xmlhttp.open('GET','../main_news_block.html', false)
+xmlhttp.open('GET','../html_models/main_news_block.html', false)
 xmlhttp.send()
 mainNewsBlock = xmlhttp.responseText
 
@@ -83,18 +83,18 @@ for (let i = nNews - 1, j = 0; (i >= 0) && (j < 2); i--, j++)
     let xmlNewsBlock = xmlDocNewsList.querySelectorAll('news')[i]
     newNewsBlock.querySelector('a.main__news-section__news-block').setAttribute('href',
         `theatre-news.html#news${i}`)
+    newNewsBlock.querySelector('p.main__news-section__news-block__date').innerHTML =
+        xmlNewsBlock.querySelector('date').childNodes[0].nodeValue
     newNewsBlock.querySelector('h2.main__news-section__news-block__title').innerHTML =
         xmlNewsBlock.querySelector('title').childNodes[0].nodeValue
     newNewsBlock.querySelector('p.main__news-section__news-block__text').innerHTML =
         xmlNewsBlock.querySelector('paragraph').childNodes[0].nodeValue
-    newNewsBlock.querySelector('p.main__news-section__news-block__date').innerHTML =
-        xmlNewsBlock.querySelector('date').childNodes[0].nodeValue
     document.querySelector('section#main__news-section').insertBefore(
         newNewsBlock.querySelector('a.main__news-section__news-block'),
         document.querySelector('a#main__news-section__link-to-news'))
 }
 
 // Форма обратной связи
-xmlhttp.open('GET','../feedback_form.html', false)
+xmlhttp.open('GET','../html_models/feedback_form.html', false)
 xmlhttp.send()
 document.querySelector('section#main__feedback-section').innerHTML = xmlhttp.responseText

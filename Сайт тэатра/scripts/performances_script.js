@@ -16,7 +16,7 @@ xmlhttp.open('GET','../xml/performances_info.xml', false)
 xmlhttp.send()
 xmlDocPerformancesInfo = xmlhttp.responseXML
 
-xmlhttp.open('GET', '../performances_perf_block.html', false)
+xmlhttp.open('GET', '../html_models/performances_perf_block.html', false)
 xmlhttp.send()
 perfBlock = xmlhttp.responseText
 
