@@ -3,12 +3,20 @@
     padding: 0;
 }
 
+span.nobr {
+    white-space: nowrap;
+}
+
 header {
     position: sticky;
     top: 0;
     z-index: 1;
 
-    nav > ul.menu {
+    input[type='checkbox']#menu__show-menu {
+        display: none;
+    }
+
+    nav ul.menu {
         display: flex;
         align-items: stretch;
         flex-flow: row nowrap;
@@ -16,10 +24,6 @@ header {
         padding: 0;
         list-style-type: none;
         background-color: #333333;
-
-        input[type="checkbox"]#menu__show-menu {
-            display: none;
-        }
 
         li {
             flex: 1 1 10vw;
@@ -79,7 +83,7 @@ header {
     }
 }
 
-h1.main__heading {
+h1.main__article__heading {
     margin: 1vw;
     padding: 1vw;
 
@@ -90,8 +94,9 @@ h1.main__heading {
     color: darkred;
 }
 
-hr.main__heading-line {
+hr.main__article__heading-line {
     margin: 0 auto;
+    margin-bottom: 3vw;
     width: 25vw;
     height: 0;
     border-width: 0;
@@ -105,6 +110,7 @@ footer {
     align-items: center;
 
     margin: 0;
+    margin-top: 3vw;
     padding: 1.5vw;
     
     background-color: #333333;    
@@ -132,50 +138,9 @@ footer {
     header {
         position: relative;
 
-        nav > ul.menu {
-            flex-wrap: wrap;
-
-            li {
-                height: 8vw;
-                border-width: 0.3vw;
-                
-                &.menu__button-to-show-menu {
-                    display: block;
-                    flex: 1 1 100px;
-                    order: -2;
-                    
-                    label {
-                        cursor: pointer;
-                        display: block;
-                        height: 100%;
-
-                        background-image: url("../../images/menu_button_hidden.svg");
-                        background-size: contain;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                    }
-                }
-
-                &.menu__page-link {
-                    display: none;
-                    
-                    a {
-                        height: 8vw;
-                        padding: 2vw;
-                        font-size: 3.5vw;
-                        line-height: 4vw;
-                    }
-                }
-
-                &.menu__logo {
-                    display: block;
-                    flex: 1 1 100px;
-                    order: -1;
-                }
-            }
-
-            input[type="checkbox"]#menu__show-menu:checked {
-                ~ li {
+        nav {
+            input[type='checkbox']#menu__show-menu:checked {
+                ~ ul li {
                     &.menu__page-link {
                         display: block;
                         flex-basis: 100%;
@@ -185,21 +150,66 @@ footer {
                     }
                 }
             }
+        
+            ul.menu {
+                flex-wrap: wrap;
+
+                li {
+                    height: 8vw;
+                    border-width: 0.3vw;
+                    
+                    &.menu__button-to-show-menu {
+                        display: block;
+                        flex: 1 1 100px;
+                        order: -2;
+                        
+                        label {
+                            cursor: pointer;
+                            display: block;
+                            height: 100%;
+
+                            background-image: url("../../images/menu_button_hidden.svg");
+                            background-size: contain;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+
+                    &.menu__page-link {
+                        display: none;
+                        
+                        a {
+                            height: 8vw;
+                            padding: 2vw;
+                            font-size: 3.5vw;
+                            line-height: 4vw;
+                        }
+                    }
+
+                    &.menu__logo {
+                        display: block;
+                        flex: 1 1 100px;
+                        order: -1;
+                    }
+                }
+            }
         }
     }
 
-    h1.main__heading {
+    h1.main__article__heading {
         margin: 2vw;
         font-size: 7vw;
     }
 
-    hr.main__heading-line {
+    hr.main__article__heading-line {
+        margin-bottom: 4vw;
         width: 50vw;
         box-shadow: 0 0 0.4vw 0.2vw darkred;
     }
 
     footer {
         flex-flow: column nowrap;
+        margin-top: 4vw;
         padding: 2vw 1vw;
     
         figure {
@@ -222,50 +232,9 @@ footer {
     header {
         position: relative;
 
-        nav > ul.menu {
-            flex-wrap: wrap;
-
-            li {
-                height: 12vw;
-                border-width: 0.3vw 0.3vw;
-                
-                &.menu__button-to-show-menu {
-                    display: block;
-                    flex: 1 1 100px;
-                    order: -2;
-                    
-                    label {
-                        cursor: pointer;
-                        display: block;
-                        height: 100%;
-
-                        background-image: url("../../images/menu_button_hidden.svg");
-                        background-size: contain;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                    }
-                }
-
-                &.menu__page-link {
-                    display: none;
-                    
-                    a {
-                        height: 12vw;
-                        padding: 3vw;
-                        font-size: 5.5vw;
-                        line-height: 6vw;
-                    }
-                }
-
-                &.menu__logo {
-                    display: block;
-                    flex: 1 1 100px;
-                    order: -1;
-                }
-            }
-
-            input[type="checkbox"]#menu__show-menu:checked {
-                ~ li {
+        nav {
+            input[type='checkbox']#menu__show-menu:checked {
+                ~ ul li {
                     &.menu__page-link {
                         display: block;
                         flex-basis: 100%;
@@ -275,21 +244,66 @@ footer {
                     }
                 }
             }
+
+            ul.menu {
+                flex-wrap: wrap;
+
+                li {
+                    height: 12vw;
+                    border-width: 0.3vw 0.3vw;
+                    
+                    &.menu__button-to-show-menu {
+                        display: block;
+                        flex: 1 1 100px;
+                        order: -2;
+                        
+                        label {
+                            cursor: pointer;
+                            display: block;
+                            height: 100%;
+
+                            background-image: url("../../images/menu_button_hidden.svg");
+                            background-size: contain;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+
+                    &.menu__page-link {
+                        display: none;
+                        
+                        a {
+                            height: 12vw;
+                            padding: 3vw;
+                            font-size: 5.5vw;
+                            line-height: 6vw;
+                        }
+                    }
+
+                    &.menu__logo {
+                        display: block;
+                        flex: 1 1 100px;
+                        order: -1;
+                    }
+                }
+            }
         }
     }
 
-    h1.main__heading {
+    h1.main__article__heading {
         margin: 4vw;
         font-size: 10vw;
     }
 
-    hr.main__heading-line {
+    hr.main__article__heading-line {
+        margin-bottom: 7vw;
         width: 60vw;
         box-shadow: 0 0 0.5vw 0.3vw darkred;
     }
 
     footer {
         flex-flow: column nowrap;
+        margin-top: 7vw;
         padding: 4vw 1vw;
     
         figure {

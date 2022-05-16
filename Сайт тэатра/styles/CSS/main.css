@@ -41,8 +41,14 @@ figure.gallery > button.gallery__next-button {
   right: 0;
 }
 
-main > h1 {
-  margin: 0;
+main > article {
+  margin: 0vw 10vw;
+  padding: 0vw 0vw 2.5vw 0vw;
+}
+main > article h1 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0vw -10vw;
   border-style: solid none;
   border-width: 0.6vw;
   border-color: #660000;
@@ -53,7 +59,7 @@ main > h1 {
   letter-spacing: 0.1vw;
   color: white;
 }
-main section#main__news-section, main section#main__performances-section {
+main > article.main__news-article div.main__news-article__div, main > article.main__performances-article div.main__performances-article__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,10 +73,7 @@ main section#main__news-section, main section#main__performances-section {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-main section {
-  margin: 1vw 10vw 3vw 10vw;
-}
-main section#main__news-section > a.main__news-section__news-block, main section#main__performances-section > a.main__performances-section__performance-block {
+main > article.main__news-article div.main__news-article__div a.news-block, main > article.main__performances-article div.main__performances-article__div a.performance-block {
   display: block;
   margin: 1.5vw 2vw;
   padding: 1vw;
@@ -83,60 +86,55 @@ main section#main__news-section > a.main__news-section__news-block, main section
   transition: all 0.2s ease-out;
   text-decoration: none;
 }
-main section#main__news-section > a.main__news-section__news-block:hover, main section#main__performances-section > a.main__performances-section__performance-block:hover {
+main > article.main__news-article div.main__news-article__div a.news-block:hover, main > article.main__performances-article div.main__performances-article__div a.performance-block:hover {
   background-color: lightyellow;
   -webkit-box-shadow: 0 0 0.3vw 0.3vw pink;
           box-shadow: 0 0 0.3vw 0.3vw pink;
   border-color: pink;
 }
-main section#main__performances-section > a.main__performances-section__performance-block {
+main > article.main__performances-article div.main__performances-article__div a.performance-block {
   max-width: 25vw;
   min-width: 15vw;
   text-align: center;
 }
-main section#main__performances-section > a.main__performances-section__performance-block:hover img {
+main > article.main__performances-article div.main__performances-article__div a.performance-block:hover figure.performance-block__image img {
   width: 80%;
 }
-main section#main__performances-section > a.main__performances-section__performance-block img {
+main > article.main__performances-article div.main__performances-article__div a.performance-block figure.performance-block__image img {
   width: 70%;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-main section#main__performances-section > a.main__performances-section__performance-block p {
+main > article.main__performances-article div.main__performances-article__div a.performance-block p {
   margin: 1vw 0;
 }
-main section#main__performances-section > a.main__performances-section__performance-block p.main__performances-section__performance-block__name {
+main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__name {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 2vw;
   color: darkred;
 }
-main section#main__performances-section > a.main__performances-section__performance-block p.main__performances-section__performance-block__author {
+main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__author {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5vw;
   font-weight: bold;
   color: black;
 }
-main section#main__performances-section > a.main__performances-section__performance-block p.main__performances-section__performance-block__description {
+main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__description {
   margin-top: 2vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   font-style: italic;
   color: #333333;
 }
-main section#main__performances-section > a.main__performances-section__performance-block p.main__performances-section__performance-block__date {
+main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__date {
   margin-top: 2vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   font-weight: bold;
   color: darkred;
 }
-main section#main__performances-section > a#main__performances-section__link-to-performances {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-}
-main section#main__news-section > a.main__news-section__news-block h2.main__news-section__news-block__title {
+main > article.main__news-article div.main__news-article__div a.news-block h2.news-block__title {
   margin: 1vw 0;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -145,36 +143,34 @@ main section#main__news-section > a.main__news-section__news-block h2.main__news
   text-transform: uppercase;
   color: darkred;
 }
-main section#main__news-section > a.main__news-section__news-block p {
+main > article.main__news-article div.main__news-article__div a.news-block p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-main section#main__news-section > a.main__news-section__news-block p.main__news-section__news-block__date {
+main > article.main__news-article div.main__news-article__div a.news-block p.news-block__date {
   margin: 0;
   text-align: right;
   text-decoration: underline;
   font-size: 1.7vw;
   color: #666666;
 }
-main section#main__news-section > a.main__news-section__news-block p.main__news-section__news-block__text {
+main > article.main__news-article div.main__news-article__div a.news-block p.news-block__text {
   margin: 1vw;
   text-indent: 3vw;
   text-align: justify;
   font-size: 1.7vw;
   color: black;
 }
-main section#main__news-section > a#main__news-section__link-to-news {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-}
-main section#main__about-us-section figure {
+main > article.main__about-us-article figure {
   margin: 1.5vw;
   text-align: center;
 }
-main section#main__about-us-section figure img {
+main > article.main__about-us-article figure img {
   width: 70%;
 }
-main section#main__about-us-section h2.main__about-us__title {
+main > article.main__about-us-article article.main__about-us-article__article {
+  margin: 2vw 0;
+}
+main > article.main__about-us-article article.main__about-us-article__article h2.main__about-us-article__article__title {
   margin: 1.5vw;
   text-align: center;
   font-size: 2.7vw;
@@ -182,16 +178,19 @@ main section#main__about-us-section h2.main__about-us__title {
   font-weight: bold;
   color: darkred;
 }
-main section#main__about-us-section article.main__about-us__article {
-  margin: 2vw;
-}
-main section#main__about-us-section article.main__about-us__article p {
-  margin: 1vw 0;
-  text-indent: 6vw;
+main > article.main__about-us-article article.main__about-us-article__article p {
+  margin: 1vw 0 0 0;
+  text-indent: 3vw;
   text-align: justify;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5vw;
   color: black;
+}
+main > article.main__feedback-article {
+  padding-bottom: 0;
+}
+main > article.main__feedback-article h1 {
+  margin-bottom: 1.5vw;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -215,79 +214,88 @@ main section#main__about-us-section article.main__about-us__article p {
     border-radius: 0;
   }
 
-  main > h1 {
+  main > article {
+    margin: 0 7vw;
+    padding: 0vw 0vw 4vw 0vw;
+  }
+  main > article h1 {
+    margin: 0vw -7vw;
     border-width: 1.3vw;
     font-size: 7vw;
     text-align: center;
   }
-  main section {
-    margin: 2vw 7vw 5vw 7vw;
+  main > article.main__performances-article div.main__performances-article__div, main > article.main__news-article div.main__news-article__div {
+    padding: 2vw 0 1vw 0;
   }
-  main section#main__performances-section > a.main__performances-section__performance-block, main section#main__news-section > a.main__news-section__news-block {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block, main > article.main__news-article div.main__news-article__div a.news-block {
     margin: 2vw;
     padding: 2vw;
     border-width: 0.6vw;
     border-radius: 2.5vw;
   }
-  main section#main__performances-section > a.main__performances-section__performance-block:hover, main section#main__news-section > a.main__news-section__news-block:hover {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block:hover, main > article.main__news-article div.main__news-article__div a.news-block:hover {
     -webkit-box-shadow: 0 0 0.6vw 0.6vw pink;
             box-shadow: 0 0 0.6vw 0.6vw pink;
   }
-  main section#main__performances-section a.main__performances-section__performance-block {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block {
     max-width: 75vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block:hover img {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block:hover figure.performance-block__image img {
     width: 90%;
   }
-  main section#main__performances-section a.main__performances-section__performance-block img {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block figure.performance-block__image img {
     width: 90%;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p {
     margin: 2vw 0;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__name {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__name {
     font-size: 4vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__author {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__author {
     font-size: 2.7vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__description {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__description {
     margin-top: 3vw;
     font-size: 3vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__date {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__date {
     margin-top: 3vw;
     font-size: 3.5vw;
   }
-  main section#main__news-section a.main__news-section__news-block {
+  main > article.main__news-article div.main__news-article__div a.news-block {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  main section#main__news-section a.main__news-section__news-block h2.main__news-section__news-block__title {
+  main > article.main__news-article div.main__news-article__div a.news-block h2.news-block__title {
     margin: 2vw 0;
     font-size: 4.5vw;
   }
-  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__date {
+  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__date {
     font-size: 3.5vw;
   }
-  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__text {
+  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__text {
     font-size: 3vw;
   }
-  main section#main__about-us-section figure {
-    margin: -2vw -7vw 3vw -7vw;
+  main > article.main__about-us-article figure {
+    margin: 0 -7vw;
   }
-  main section#main__about-us-section figure img {
+  main > article.main__about-us-article figure img {
     width: 100vw;
   }
-  main section#main__about-us-section h2.main__about-us__title {
+  main > article.main__about-us-article article.main__about-us-article__article {
+    margin: 4vw 0;
+  }
+  main > article.main__about-us-article article.main__about-us-article__article h2.main__about-us-article__article__title {
     font-size: 6vw;
   }
-  main section#main__about-us-section article.main__about-us__article {
-    margin: 3vw 0;
-  }
-  main section#main__about-us-section article.main__about-us__article p {
+  main > article.main__about-us-article article.main__about-us-article__article p {
+    margin-top: 2vw;
     text-indent: 4vw;
     font-size: 3vw;
+  }
+  main > article.main__feedback-article h1 {
+    margin-bottom: 3vw;
   }
 }
 @media (max-width: 767px) {
@@ -311,75 +319,85 @@ main section#main__about-us-section article.main__about-us__article p {
     border-radius: 0;
   }
 
-  main > h1 {
+  main > article {
+    margin: 0 5vw;
+    padding: 0vw 0vw 6vw 0vw;
+  }
+  main > article h1 {
+    margin: 0vw -5vw;
     border-width: 2vw;
     font-size: 10vw;
     text-align: center;
   }
-  main section {
-    margin: 2vw 5vw 8vw 5vw;
+  main > article.main__performances-article div.main__performances-article__div, main > article.main__news-article div.main__news-article__div {
+    padding: 4vw 0 2vw 0;
   }
-  main section#main__performances-section > a.main__performances-section__performance-block, main section#main__news-section > a.main__news-section__news-block {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block, main > article.main__news-article div.main__news-article__div a.news-block {
     margin: 3vw;
     padding: 3vw;
     border-width: 1vw;
     border-radius: 5vw;
   }
-  main section#main__performances-section > a.main__performances-section__performance-block:hover, main section#main__news-section > a.main__news-section__news-block:hover {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block:hover, main > article.main__news-article div.main__news-article__div a.news-block:hover {
     -webkit-box-shadow: 0 0 1vw 1vw pink;
             box-shadow: 0 0 1vw 1vw pink;
   }
-  main section#main__performances-section a.main__performances-section__performance-block {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block {
     max-width: 90vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block img {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block figure.performance-block__image img {
     width: 80%;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p {
     margin: 3vw 0;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__name {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__name {
     font-size: 8vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__author {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__author {
     font-size: 6vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__description {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__description {
     margin-top: 5vw;
     font-size: 6vw;
   }
-  main section#main__performances-section a.main__performances-section__performance-block p.main__performances-section__performance-block__date {
+  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__date {
     margin-top: 5vw;
     font-size: 7vw;
   }
-  main section#main__news-section a.main__news-section__news-block {
+  main > article.main__news-article div.main__news-article__div a.news-block {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  main section#main__news-section a.main__news-section__news-block h2.main__news-section__news-block__title {
+  main > article.main__news-article div.main__news-article__div a.news-block h2.news-block__title {
     margin: 2vw 0;
     font-size: 8vw;
   }
-  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__date {
+  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__date {
     font-size: 6vw;
   }
-  main section#main__news-section a.main__news-section__news-block p.main__news-section__news-block__text {
-    font-size: 6vw;
-  }
-  main section#main__about-us-section figure {
-    margin: -2vw -5vw 3vw -5vw;
-  }
-  main section#main__about-us-section figure img {
-    width: 100vw;
-  }
-  main section#main__about-us-section h2.main__about-us__title {
-    font-size: 8vw;
-  }
-  main section#main__about-us-section article.main__about-us__article {
-    margin: 3vw 0;
-  }
-  main section#main__about-us-section article.main__about-us__article p {
+  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__text {
     text-indent: 6vw;
     font-size: 6vw;
+  }
+  main > article.main__about-us-article figure {
+    margin: 0vw -5vw;
+  }
+  main > article.main__about-us-article figure img {
+    width: 100vw;
+  }
+  main > article.main__about-us-article article.main__about-us-article__article {
+    margin: 4vw 0;
+  }
+  main > article.main__about-us-article article.main__about-us-article__article h2.main__about-us-article__article__title {
+    font-size: 8vw;
+  }
+  main > article.main__about-us-article article.main__about-us-article__article p {
+    margin-top: 3vw;
+    text-indent: 6vw;
+    font-size: 6vw;
+  }
+  main > article.main__feedback-article h1 {
+    margin-bottom: 4vw;
   }
 }

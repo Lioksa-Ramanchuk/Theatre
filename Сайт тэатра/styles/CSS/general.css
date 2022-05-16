@@ -3,12 +3,19 @@
   padding: 0;
 }
 
+span.nobr {
+  white-space: nowrap;
+}
+
 header {
   position: sticky;
   top: 0;
   z-index: 1;
 }
-header nav > ul.menu {
+header input[type=checkbox]#menu__show-menu {
+  display: none;
+}
+header nav ul.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,10 +31,7 @@ header nav > ul.menu {
   list-style-type: none;
   background-color: #333333;
 }
-header nav > ul.menu input[type=checkbox]#menu__show-menu {
-  display: none;
-}
-header nav > ul.menu li {
+header nav ul.menu li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 10vw;
           flex: 1 1 10vw;
@@ -38,16 +42,16 @@ header nav > ul.menu li {
   border-width: 0.2vw 0.1vw;
   border-color: #444444;
 }
-header nav > ul.menu li.menu__button-to-show-menu {
+header nav ul.menu li.menu__button-to-show-menu {
   display: none;
 }
-header nav > ul.menu li a {
+header nav ul.menu li a {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 4vw;
 }
-header nav > ul.menu li.menu__page-link a {
+header nav ul.menu li.menu__page-link a {
   padding: 1vw;
   -webkit-transition: background-color 0.1s ease-out;
   transition: background-color 0.1s ease-out;
@@ -60,18 +64,18 @@ header nav > ul.menu li.menu__page-link a {
   color: white;
   text-decoration: none;
 }
-header nav > ul.menu li.menu__page-link a.you-are-here {
+header nav ul.menu li.menu__page-link a.you-are-here {
   background-color: darkred;
   color: #AAAAAA;
 }
-header nav > ul.menu li.menu__page-link a.you-are-here:hover {
+header nav ul.menu li.menu__page-link a.you-are-here:hover {
   text-decoration: none;
 }
-header nav > ul.menu li.menu__page-link a:hover {
+header nav ul.menu li.menu__page-link a:hover {
   background-color: #A00000;
   text-decoration: underline;
 }
-header nav > ul.menu li.menu__logo a {
+header nav ul.menu li.menu__logo a {
   height: 100%;
   background-image: url("../../images/logo.svg");
   background-repeat: no-repeat;
@@ -79,7 +83,7 @@ header nav > ul.menu li.menu__logo a {
   background-size: contain;
 }
 
-h1.main__heading {
+h1.main__article__heading {
   margin: 1vw;
   padding: 1vw;
   text-align: center;
@@ -89,8 +93,9 @@ h1.main__heading {
   color: darkred;
 }
 
-hr.main__heading-line {
+hr.main__article__heading-line {
   margin: 0 auto;
+  margin-bottom: 3vw;
   width: 25vw;
   height: 0;
   border-width: 0;
@@ -112,6 +117,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  margin-top: 3vw;
   padding: 1.5vw;
   background-color: #333333;
   color: white;
@@ -135,15 +141,23 @@ footer p {
   header {
     position: relative;
   }
-  header nav > ul.menu {
+  header nav input[type=checkbox]#menu__show-menu:checked ~ ul li.menu__page-link {
+    display: block;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  header nav input[type=checkbox]#menu__show-menu:checked ~ ul li.menu__button-to-show-menu label {
+    background-image: url("../../images/menu_button_shown.svg");
+  }
+  header nav ul.menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  header nav > ul.menu li {
+  header nav ul.menu li {
     height: 8vw;
     border-width: 0.3vw;
   }
-  header nav > ul.menu li.menu__button-to-show-menu {
+  header nav ul.menu li.menu__button-to-show-menu {
     display: block;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100px;
@@ -152,7 +166,7 @@ footer p {
         -ms-flex-order: -2;
             order: -2;
   }
-  header nav > ul.menu li.menu__button-to-show-menu label {
+  header nav ul.menu li.menu__button-to-show-menu label {
     cursor: pointer;
     display: block;
     height: 100%;
@@ -161,16 +175,16 @@ footer p {
     background-position: center center;
     background-repeat: no-repeat;
   }
-  header nav > ul.menu li.menu__page-link {
+  header nav ul.menu li.menu__page-link {
     display: none;
   }
-  header nav > ul.menu li.menu__page-link a {
+  header nav ul.menu li.menu__page-link a {
     height: 8vw;
     padding: 2vw;
     font-size: 3.5vw;
     line-height: 4vw;
   }
-  header nav > ul.menu li.menu__logo {
+  header nav ul.menu li.menu__logo {
     display: block;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100px;
@@ -179,21 +193,14 @@ footer p {
         -ms-flex-order: -1;
             order: -1;
   }
-  header nav > ul.menu input[type=checkbox]#menu__show-menu:checked ~ li.menu__page-link {
-    display: block;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  header nav > ul.menu input[type=checkbox]#menu__show-menu:checked ~ li.menu__button-to-show-menu label {
-    background-image: url("../../images/menu_button_shown.svg");
-  }
 
-  h1.main__heading {
+  h1.main__article__heading {
     margin: 2vw;
     font-size: 7vw;
   }
 
-  hr.main__heading-line {
+  hr.main__article__heading-line {
+    margin-bottom: 4vw;
     width: 50vw;
     -webkit-box-shadow: 0 0 0.4vw 0.2vw darkred;
             box-shadow: 0 0 0.4vw 0.2vw darkred;
@@ -204,6 +211,7 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+    margin-top: 4vw;
     padding: 2vw 1vw;
   }
   footer figure {
@@ -224,15 +232,23 @@ footer p {
   header {
     position: relative;
   }
-  header nav > ul.menu {
+  header nav input[type=checkbox]#menu__show-menu:checked ~ ul li.menu__page-link {
+    display: block;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  header nav input[type=checkbox]#menu__show-menu:checked ~ ul li.menu__button-to-show-menu label {
+    background-image: url("../../images/menu_button_shown.svg");
+  }
+  header nav ul.menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  header nav > ul.menu li {
+  header nav ul.menu li {
     height: 12vw;
     border-width: 0.3vw 0.3vw;
   }
-  header nav > ul.menu li.menu__button-to-show-menu {
+  header nav ul.menu li.menu__button-to-show-menu {
     display: block;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100px;
@@ -241,7 +257,7 @@ footer p {
         -ms-flex-order: -2;
             order: -2;
   }
-  header nav > ul.menu li.menu__button-to-show-menu label {
+  header nav ul.menu li.menu__button-to-show-menu label {
     cursor: pointer;
     display: block;
     height: 100%;
@@ -250,16 +266,16 @@ footer p {
     background-position: center center;
     background-repeat: no-repeat;
   }
-  header nav > ul.menu li.menu__page-link {
+  header nav ul.menu li.menu__page-link {
     display: none;
   }
-  header nav > ul.menu li.menu__page-link a {
+  header nav ul.menu li.menu__page-link a {
     height: 12vw;
     padding: 3vw;
     font-size: 5.5vw;
     line-height: 6vw;
   }
-  header nav > ul.menu li.menu__logo {
+  header nav ul.menu li.menu__logo {
     display: block;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100px;
@@ -268,21 +284,14 @@ footer p {
         -ms-flex-order: -1;
             order: -1;
   }
-  header nav > ul.menu input[type=checkbox]#menu__show-menu:checked ~ li.menu__page-link {
-    display: block;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  header nav > ul.menu input[type=checkbox]#menu__show-menu:checked ~ li.menu__button-to-show-menu label {
-    background-image: url("../../images/menu_button_shown.svg");
-  }
 
-  h1.main__heading {
+  h1.main__article__heading {
     margin: 4vw;
     font-size: 10vw;
   }
 
-  hr.main__heading-line {
+  hr.main__article__heading-line {
+    margin-bottom: 7vw;
     width: 60vw;
     -webkit-box-shadow: 0 0 0.5vw 0.3vw darkred;
             box-shadow: 0 0 0.5vw 0.3vw darkred;
@@ -293,6 +302,7 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+    margin-top: 7vw;
     padding: 4vw 1vw;
   }
   footer figure {

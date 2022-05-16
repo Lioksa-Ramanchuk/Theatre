@@ -27,27 +27,27 @@ for (let i = nNews - 1; i >= 0; i--) {
     // Метка перед новостью
     let newsLink = document.createElement('a')
     newsLink.setAttribute('name', `news${i}`)
-    newsLink.classList.add('main__news__link-to-news')
-    document.querySelector('section.main__news').appendChild(newsLink)
+    newsLink.classList.add('main__news-article__link-to-news')
+    document.querySelector('article.main__news-article').appendChild(newsLink)
     // Заполнение новостного блока
     let xmlNewsBlock = xmlDocNewsList.querySelectorAll('news')[i]
     let newNewsBlock = document.createElement('div')
     newNewsBlock.innerHTML = newsBlock
-    newNewsBlock.querySelector('h2.main__news__news-block__title').innerHTML =
+    newNewsBlock.querySelector('h2.news-block__title').innerHTML =
         xmlNewsBlock.querySelector('title').childNodes[0].nodeValue
-    newNewsBlock.querySelector('img').setAttribute('src',
+    newNewsBlock.querySelector('figure.news-block__image img').setAttribute('src',
         xmlNewsBlock.querySelector('image').childNodes[0].nodeValue)
-    newNewsBlock.querySelector('p.main__news__news-block__date').innerHTML =
+    newNewsBlock.querySelector('p.news-block__date').innerHTML =
         xmlNewsBlock.querySelector('date').childNodes[0].nodeValue
-    let newsDate = newNewsBlock.querySelector('p.main__news__news-block__date')
+    let newsDate = newNewsBlock.querySelector('p.news-block__date')
     let nParagraphs = xmlNewsBlock.querySelectorAll('paragraph').length
     for (let j = 0; j < nParagraphs; j++) {
         let pPar = document.createElement('p')
-        pPar.classList.add('main__news__news-block__text')
+        pPar.classList.add('news-block__text')
         pPar.innerHTML = xmlNewsBlock.querySelectorAll('paragraph')[j].childNodes[0].nodeValue
-        newNewsBlock.querySelector('article.main__news__news-block').insertBefore(pPar, newsDate)
+        newNewsBlock.querySelector('article.news-block').insertBefore(pPar, newsDate)
     }
     // Вставка новостного блока на страницу
-    document.querySelector('section.main__news').appendChild(
-        newNewsBlock.querySelector('article.main__news__news-block'))
+    document.querySelector('article.main__news-article').appendChild(
+        newNewsBlock.querySelector('article.news-block'))
 }

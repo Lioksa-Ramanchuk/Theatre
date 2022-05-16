@@ -1,14 +1,18 @@
-main section.main__performances {
-    margin: 0 10vw 3vw 10vw;
+main article.main__performances-article {
+    margin: 0 10vw;
     
-    article.main__performances__performance {
+    hr.main__article__heading-line {
+        margin-bottom: 1vw;
+    }
+
+    div.performance-block {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
         margin: -3vw 1vw 1vw 1vw;
         padding: 5vw 1vw 1vw 1vw;
         
-        figure {
+        figure.performance-block__image {
             flex: 1 1 250px;
             margin: 1.5vw;
             text-align: center;
@@ -18,7 +22,7 @@ main section.main__performances {
             }
         }
 
-        div.main__performances__performance__grid {
+        div.performance-block__grid {
             flex: 5 1 250px;
             margin: 1vw 2vw;
             display: grid;
@@ -29,7 +33,7 @@ main section.main__performances {
             }
 
             p {
-                &.main__performances__performance__grid__name {
+                &.performance-block__grid__name {
                     grid-column-start: 1;
                     grid-column-end: 3;
                     text-align: center;
@@ -39,7 +43,7 @@ main section.main__performances {
                     color: darkred;
                 }
 
-                &.main__performances__performance__grid__description {
+                &.performance-block__grid__description {
                     grid-column-start: 1;
                     grid-column-end: 3;
                     text-align: center;
@@ -49,29 +53,29 @@ main section.main__performances {
                     color: #333333;
                 }
     
-                &.main__performances__performance__grid__author-before,
-                &.main__performances__performance__grid__director-before,
-                &.main__performances__performance__grid__painter-before,
-                &.main__performances__performance__grid__duration-before,
-                &.main__performances__performance__grid__price-before {
+                &.performance-block__grid__author-before,
+                &.performance-block__grid__director-before,
+                &.performance-block__grid__painter-before,
+                &.performance-block__grid__duration-before,
+                &.performance-block__grid__price-before {
                     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                     font-size: 1.6vw;
                     font-style: italic;
                     color: #444444;
                 }
 
-                &.main__performances__performance__grid__author,
-                &.main__performances__performance__grid__director,
-                &.main__performances__performance__grid__painter,
-                &.main__performances__performance__grid__duration,
-                &.main__performances__performance__grid__price {
+                &.performance-block__grid__author,
+                &.performance-block__grid__director,
+                &.performance-block__grid__painter,
+                &.performance-block__grid__duration,
+                &.performance-block__grid__price {
                     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                     font-size: 1.6vw;
                     font-weight: bold;
                     color: black;
                 }
 
-                &.main__performances__performance__grid__date {
+                &.performance-block__grid__date {
                     grid-column-start: 1;
                     grid-column-end: 3;
                     font-size: 2vw;
@@ -91,22 +95,26 @@ main section.main__performances {
         }
     }
 
-    hr.main__performances__separator {
+    hr.main__performances-article__separator {
         height: 0.3vw;
         background-color: #444444;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    main section.main__performances {
-        margin: 4vw;
+    main article.main__performances-article {
+        margin: 0 4vw;
+
+        hr.main__article__heading-line {
+            margin-bottom: 1vw;
+        }
         
-        article.main__performances__performance {
+        div.performance-block {
             flex-flow: column nowrap;
             margin: 2vw 0;
             padding: 2vw 0;
             
-            figure {
+            figure.performance-block__image {
                 flex: 1 1 fit-content;
 
                 img {
@@ -114,7 +122,7 @@ main section.main__performances {
                 }
             }
 
-            div.main__performances__performance__grid {
+            div.performance-block__grid {
                 margin: 1vw;
 
                 p, button {
@@ -122,28 +130,28 @@ main section.main__performances {
                 }
 
                 p {
-                    &.main__performances__performance__grid__name {
+                    &.performance-block__grid__name {
                         font-size: 5.5vw;
                     }
 
-                    &.main__performances__performance__grid__description {
+                    &.performance-block__grid__description {
                         font-size: 4vw;
                     }
         
-                    &.main__performances__performance__grid__author-before,
-                    &.main__performances__performance__grid__author,
-                    &.main__performances__performance__grid__director-before,
-                    &.main__performances__performance__grid__director,
-                    &.main__performances__performance__grid__painter-before,
-                    &.main__performances__performance__grid__painter,
-                    &.main__performances__performance__grid__duration-before,
-                    &.main__performances__performance__grid__duration,
-                    &.main__performances__performance__grid__price-before,
-                    &.main__performances__performance__grid__price {
+                    &.performance-block__grid__author-before,
+                    &.performance-block__grid__author,
+                    &.performance-block__grid__director-before,
+                    &.performance-block__grid__director,
+                    &.performance-block__grid__painter-before,
+                    &.performance-block__grid__painter,
+                    &.performance-block__grid__duration-before,
+                    &.performance-block__grid__duration,
+                    &.performance-block__grid__price-before,
+                    &.performance-block__grid__price {
                         font-size: 3.5vw;
                     }
 
-                    &.main__performances__performance__grid__date {
+                    &.performance-block__grid__date {
                         font-size: 5vw;
                     }
                 }
@@ -154,22 +162,26 @@ main section.main__performances {
             }
         }
 
-        hr.main__performances__separator {
+        hr.main__performances-article__separator {
             height: 0.5vw;
         }
     }
 }
 
 @media (max-width: 768px) {
-    main section.main__performances {
-        margin: 5vw;
+    main article.main__performances-article {
+        margin: 0 5vw;
+
+        hr.main__article__heading-line {
+            margin-bottom: 5vw;
+        }
         
-        article.main__performances__performance {
+        div.performance-block {
             flex-flow: column nowrap;
             margin: 2vw 0;
             padding: 2vw 0;
             
-            figure {
+            figure.performance-block__image {
                 flex: 1 1 fit-content;
 
                 img {
@@ -177,7 +189,7 @@ main section.main__performances {
                 }
             }
 
-            div.main__performances__performance__grid {
+            div.performance-block__grid {
                 margin: 2vw;
 
                 p, button {
@@ -185,28 +197,28 @@ main section.main__performances {
                 }
 
                 p {
-                    &.main__performances__performance__grid__name {
+                    &.performance-block__grid__name {
                         font-size: 9vw;
                     }
 
-                    &.main__performances__performance__grid__description {
+                    &.performance-block__grid__description {
                         font-size: 6vw;
                     }
         
-                    &.main__performances__performance__grid__author-before,
-                    &.main__performances__performance__grid__author,
-                    &.main__performances__performance__grid__director-before,
-                    &.main__performances__performance__grid__director,
-                    &.main__performances__performance__grid__painter-before,
-                    &.main__performances__performance__grid__painter,
-                    &.main__performances__performance__grid__duration-before,
-                    &.main__performances__performance__grid__duration,
-                    &.main__performances__performance__grid__price-before,
-                    &.main__performances__performance__grid__price {
+                    &.performance-block__grid__author-before,
+                    &.performance-block__grid__author,
+                    &.performance-block__grid__director-before,
+                    &.performance-block__grid__director,
+                    &.performance-block__grid__painter-before,
+                    &.performance-block__grid__painter,
+                    &.performance-block__grid__duration-before,
+                    &.performance-block__grid__duration,
+                    &.performance-block__grid__price-before,
+                    &.performance-block__grid__price {
                         font-size: 5.5vw;
                     }
 
-                    &.main__performances__performance__grid__date {
+                    &.performance-block__grid__date {
                         font-size: 8vw;
                     }
                 }
@@ -217,7 +229,7 @@ main section.main__performances {
             }
         }
 
-        hr.main__performances__separator {
+        hr.main__performances-article__separator {
             height: 1vw;
         }
     }

@@ -25,7 +25,7 @@ function showImage(n) {
     if (n > images.length) {imageIndex = 1}
     if (n < 1) {imageIndex = images.length}
     imgSource = images[imageIndex - 1].childNodes[0].nodeValue
-    document.querySelector('.gallery').setAttribute('style', `background-image: url(${imgSource});`)
+    document.querySelector('figure.gallery').setAttribute('style', `background-image: url(${imgSource});`)
 }
 
 // Функция для получения следующего (предыдущего) фонового изображения
@@ -48,22 +48,21 @@ for (let i = 0; (i < 6) && (i < nPerformances); i++)
     let newPerfBlock = document.createElement('div')
     newPerfBlock.innerHTML = mainPerfBlock
     let xmlPerfBlock = xmlDocPerformancesInfo.querySelectorAll('performance')[i]
-    newPerfBlock.querySelector('a.main__performances-section__performance-block').setAttribute('href',
+    newPerfBlock.querySelector('a.performance-block').setAttribute('href',
         `theatre-performances.html#performance${i}`)
-    newPerfBlock.querySelector('a.main__performances-section__performance-block img').setAttribute('src',
+    newPerfBlock.querySelector('figure.performance-block__image img').setAttribute('src',
         xmlPerfBlock.querySelector('image').childNodes[0].nodeValue)
-    newPerfBlock.querySelector('p.main__performances-section__performance-block__name').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__name').innerHTML =
         xmlPerfBlock.querySelector('name').childNodes[0].nodeValue +
         " (" + xmlPerfBlock.querySelector('age').childNodes[0].nodeValue + "+)"
-    newPerfBlock.querySelector('p.main__performances-section__performance-block__author').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__author').innerHTML =
         xmlPerfBlock.querySelector('author').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances-section__performance-block__description').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__description').innerHTML =
         xmlPerfBlock.querySelector('description').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances-section__performance-block__date').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__date').innerHTML =
         xmlPerfBlock.querySelector('date').childNodes[0].nodeValue
-    document.querySelector('section#main__performances-section').insertBefore(
-        newPerfBlock.querySelector('a.main__performances-section__performance-block'),
-        document.querySelector('a#main__performances-section__link-to-performances'))
+    document.querySelector('div.main__performances-article__div').appendChild(
+        newPerfBlock.querySelector('a.performance-block'))
 }
 
 // Новости
@@ -81,20 +80,19 @@ for (let i = nNews - 1, j = 0; (i >= 0) && (j < 2); i--, j++)
     let newNewsBlock = document.createElement('div')
     newNewsBlock.innerHTML = mainNewsBlock
     let xmlNewsBlock = xmlDocNewsList.querySelectorAll('news')[i]
-    newNewsBlock.querySelector('a.main__news-section__news-block').setAttribute('href',
+    newNewsBlock.querySelector('a.news-block').setAttribute('href',
         `theatre-news.html#news${i}`)
-    newNewsBlock.querySelector('p.main__news-section__news-block__date').innerHTML =
+    newNewsBlock.querySelector('p.news-block__date').innerHTML =
         xmlNewsBlock.querySelector('date').childNodes[0].nodeValue
-    newNewsBlock.querySelector('h2.main__news-section__news-block__title').innerHTML =
+    newNewsBlock.querySelector('h2.news-block__title').innerHTML =
         xmlNewsBlock.querySelector('title').childNodes[0].nodeValue
-    newNewsBlock.querySelector('p.main__news-section__news-block__text').innerHTML =
+    newNewsBlock.querySelector('p.news-block__text').innerHTML =
         xmlNewsBlock.querySelector('paragraph').childNodes[0].nodeValue
-    document.querySelector('section#main__news-section').insertBefore(
-        newNewsBlock.querySelector('a.main__news-section__news-block'),
-        document.querySelector('a#main__news-section__link-to-news'))
+    document.querySelector('div.main__news-article__div').appendChild(
+        newNewsBlock.querySelector('a.news-block'))
 }
 
 // Форма обратной связи
 xmlhttp.open('GET','../html_models/feedback_form.html', false)
 xmlhttp.send()
-document.querySelector('section#main__feedback-section').innerHTML = xmlhttp.responseText
+document.querySelector('article.main__feedback-article').innerHTML += xmlhttp.responseText

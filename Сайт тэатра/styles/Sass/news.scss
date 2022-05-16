@@ -1,13 +1,18 @@
-main section.main__news {
-    margin: 0 10vw 3vw 10vw;
+main article.main__news-article {
+    margin: 0 10vw;
 
-    a.main__news__link-to-news {
-        display: block;
-        margin: -3vw 0 6vw 0;
+    hr.main__article__heading-line {
+        margin-bottom: 0;
     }
 
-    article.main__news__news-block {
-        padding: 2vw;
+    a.main__news-article__link-to-news {
+        display: block;
+        margin: -3vw 0 6vw 0;
+        height: 0.1vw;
+    }
+
+    article.news-block {
+        padding: 1vw;
         border: 0.8vw outset;
 
         &:nth-of-type(even) {
@@ -17,7 +22,7 @@ main section.main__news {
             border-color: cornflowerblue;
         }
 
-        h2.main__news__news-block__title {
+        h2.news-block__title {
             margin: 1vw;
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +32,7 @@ main section.main__news {
             color: darkred;
         }
         
-        figure {
+        figure.news-block__image {
             margin: 0 0 1vw 2vw;
             float: right;
             text-align: center;
@@ -40,7 +45,7 @@ main section.main__news {
         p {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-            &.main__news__news-block__text {
+            &.news-block__text {
                 margin: 1vw;
                 text-indent: 3vw;
                 text-align: justify;
@@ -48,7 +53,7 @@ main section.main__news {
                 color: black;
             }
 
-            &.main__news__news-block__date {
+            &.news-block__date {
                 clear: both;
                 margin: 1.7vw 0 0 0;
                 text-align: right;
@@ -61,24 +66,28 @@ main section.main__news {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    main section.main__news {
-        margin: 4vw;
+    main article.main__news-article {
+        margin: 0 4vw;
 
-        a.main__news__link-to-news {
-            margin: 1.5vw 0;
-            height: 1vw;
+        hr.main__article__heading-line {
+            margin-bottom: 4vw;
         }
 
-        article.main__news__news-block {
+        a.main__news-article__link-to-news {
+            margin: 2vw 0;
+            height: 0.1vw;
+        }
+
+        article.news-block {
             padding: 2vw;
             border-width: 1.5vw;
 
-            h2.main__news__news-block__title {
+            h2.news-block__title {
                 margin: 1.5vw;
                 font-size: 6vw;
             }
     
-            figure {
+            figure.news-block__image {
                 margin: 2vw;
                 float: none;
     
@@ -88,13 +97,13 @@ main section.main__news {
             }
     
             p {
-                &.main__news__news-block__text {
+                &.news-block__text {
                     margin: 2.5vw;
                     text-indent: 4vw;
                     font-size: 3.5vw;
                 }
     
-                &.main__news__news-block__date {
+                &.news-block__date {
                     margin: 4vw 1vw 1vw 1vw;
                     font-size: 4vw;
                 }
@@ -104,26 +113,30 @@ main section.main__news {
 }
 
 @media (max-width: 767px) {
-    main section.main__news {
-        margin: 4vw;
+    main article.main__news-article {
+        margin: 0 4vw;
 
-        a.main__news__link-to-news {
-            margin: 1.5vw 0;
-            height: 1vw;
+        hr.main__article__heading-line {
+            margin-bottom: 7vw;
         }
 
-        article.main__news__news-block {
+        a.main__news-article__link-to-news {
+            margin: 3vw 0;
+            height: 0.1vw;
+        }
+
+        article.news-block {
             padding: 0;
             border-width: 1.5vw;
 
-            h2.main__news__news-block__title {
+            h2.news-block__title {
                 background-color: lightyellow;
                 margin: 0;
                 padding: 3vw 2vw;
                 font-size: 7.5vw;
             }
     
-            figure {
+            figure.news-block__image {
                 margin: 0;
                 float: none;
     
@@ -133,13 +146,13 @@ main section.main__news {
             }
     
             p {
-                &.main__news__news-block__text {
+                &.news-block__text {
                     margin: 3vw;
                     text-indent: 6vw;
                     font-size: 6vw;
                 }
     
-                &.main__news__news-block__date {
+                &.news-block__date {
                     margin: 7vw 3vw 3vw 3vw;
                     font-size: 7vw;
                 }

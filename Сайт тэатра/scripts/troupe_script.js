@@ -28,5 +28,5 @@ for (let i = 0; i < nPersons; i++) {
     newPerson.querySelector('figcaption').innerHTML =
         xmlPerson.querySelector('name').childNodes[0].nodeValue
     // Вставка блока на страницу
-    document.querySelector('section.main__troupe').appendChild(newPerson)
+    document.querySelector('div.main__troupe-article__div').appendChild(newPerson)
 }

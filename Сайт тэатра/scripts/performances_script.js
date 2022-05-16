@@ -25,43 +25,42 @@ let nPerformances = xmlDocPerformancesInfo.querySelectorAll('performance').lengt
 for (let i = 0; i < nPerformances; i++) {
     if (i) {
         let hrSeparator = document.createElement('hr')
-        hrSeparator.classList.add('main__performances__separator')
-        document.querySelector('section.main__performances').appendChild(hrSeparator)
+        hrSeparator.classList.add('main__performances-article__separator')
+        document.querySelector('article.main__performances-article').appendChild(hrSeparator)
     }
-    
     let newPerfBlock = document.createElement('div')
     newPerfBlock.innerHTML = perfBlock
     let xmlPerfBlock = xmlDocPerformancesInfo.querySelectorAll('performance')[i]
-    newPerfBlock.querySelector('article.main__performances__performance').setAttribute('id', `performance${i}`)
-    newPerfBlock.querySelector('img').setAttribute('src',
+    newPerfBlock.querySelector('div.performance-block').setAttribute('id', `performance${i}`)
+    newPerfBlock.querySelector('figure.performance-block__image img').setAttribute('src',
         xmlDocPerformancesInfo.querySelectorAll('performance')[i].querySelector('image').childNodes[0].nodeValue)
-    newPerfBlock.querySelector('p.main__performances__performance__grid__name').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__name').innerHTML =
         xmlPerfBlock.querySelector('name').childNodes[0].nodeValue +
         ' (' + xmlPerfBlock.querySelector('age').childNodes[0].nodeValue + '+)'
-    newPerfBlock.querySelector('p.main__performances__performance__grid__description').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__description').innerHTML =
         xmlPerfBlock.querySelector('description').childNodes[0].nodeValue                                                                                                        
-    newPerfBlock.querySelector('p.main__performances__performance__grid__author-before').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__author-before').innerHTML =
         xmlPerfBlock.querySelector('author-before').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__author').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__author').innerHTML =
         xmlPerfBlock.querySelector('author').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__director-before').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__director-before').innerHTML =
         xmlPerfBlock.querySelector('director-before').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__director').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__director').innerHTML =
         xmlPerfBlock.querySelector('director').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__painter-before').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__painter-before').innerHTML =
         xmlPerfBlock.querySelector('painter-before').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__painter').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__painter').innerHTML =
         xmlPerfBlock.querySelector('painter').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__duration').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__duration').innerHTML =
         xmlPerfBlock.querySelector('duration').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__price').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__price').innerHTML =
         xmlPerfBlock.querySelector('price').childNodes[0].nodeValue
-    newPerfBlock.querySelector('p.main__performances__performance__grid__date').innerHTML =
+    newPerfBlock.querySelector('p.performance-block__grid__date').innerHTML =
         xmlPerfBlock.querySelector('date').childNodes[0].nodeValue
     newPerfBlock.querySelector('button').setAttribute('onclick', `buyTicket(${i})`)
     // Вставка блока представления
-    document.querySelector('section.main__performances').appendChild(
-        newPerfBlock.querySelector('article.main__performances__performance'))
+    document.querySelector('article.main__performances-article').appendChild(
+        newPerfBlock.querySelector('div.performance-block'))
 }
 
 // Функция кнопки заказа билета 

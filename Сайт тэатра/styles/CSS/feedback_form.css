@@ -12,7 +12,7 @@ form.feedback-form label {
   margin: 0.5vw;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-form.feedback-form label.main__feedback-section__textarea-label {
+form.feedback-form label.feedback-form__textarea-label {
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
@@ -26,7 +26,7 @@ form.feedback-form input {
   padding: 0.5vw;
   width: 100%;
 }
-form.feedback-form input.main__feedback-section__name, form.feedback-form input.main__feedback-section__e-mail {
+form.feedback-form input#feedback-form__name, form.feedback-form input#feedback-form__e-mail {
   -ms-grid-column: 2;
       grid-column-start: 2;
   -ms-grid-column-span: 1;
@@ -64,10 +64,10 @@ form.feedback-form textarea {
   form.feedback-form label {
     margin: 1vw;
   }
-  form.feedback-form label.main__feedback-section__textarea-label {
+  form.feedback-form label.feedback-form__textarea-label {
     margin-top: 2vw;
   }
-  form.feedback-form input.main__feedback-section__name, form.feedback-form input.main__feedback-section__e-mail {
+  form.feedback-form input#feedback-form__name, form.feedback-form input#feedback-form__e-mail {
     margin: 1.5vw 0;
     padding: 2vw;
     font-size: 3vw;
@@ -90,10 +90,10 @@ form.feedback-form textarea {
   form.feedback-form label {
     margin: 1vw;
   }
-  form.feedback-form label.main__feedback-section__textarea-label {
-    margin-top: 2vw;
+  form.feedback-form label.feedback-form__textarea-label {
+    margin-top: 3vw;
   }
-  form.feedback-form input.main__feedback-section__name, form.feedback-form input.main__feedback-section__e-mail {
+  form.feedback-form input#feedback-form__name, form.feedback-form input#feedback-form__e-mail {
     margin: 1.5vw 0;
     padding: 2vw;
     font-size: 5vw;
@@ -102,7 +102,7 @@ form.feedback-form textarea {
     padding: 2vw 7vw;
   }
   form.feedback-form textarea {
-    margin: 2vw 0;
+    margin: 3vw 0;
     padding: 2vw;
     font-size: 5vw;
   }

@@ -10,31 +10,33 @@ main {
         letter-spacing: 0.1vw;
         font-size: 2vw;
     }
-    section {
-        margin: 3vw 10vw;
-        &.main__contacts {
-            iframe.main__contacts__map {
+
+    article {
+        margin: 0 10vw;
+        h2 {
+            margin-left: -10vw;
+        }
+
+        &.main__contacts-article {
+            iframe.main__contacts-article__map {
                 float: right;
                 width: 50%;
                 height: 15vw;
                 border: none;
             }
-            div.main__contacts__div_clear_both {
+            div.main__contacts-article__div_clear_both {
                 clear: both;
-            }
-            h2 {
-                margin-left: -10vw;
             }
             p {
                 margin: 1vw;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 font-size: 1.5vw;
-                &.main__contacts__post {
+                &.main__contacts-article__post {
                     margin: 2vw 0 0.5vw 0;
                 }
-                &.main__contacts__person {
+                &.main__contacts-article__person {
                     margin: 0.5vw 0 2vw 0;
-                    span.main__contacts__person__name {
+                    span.main__contacts-article__person__name {
                         font-weight: bold;
                     }
                 }
@@ -55,30 +57,31 @@ main {
             font-size: 6vw;
         }
 
-        section {
-            &.main__contacts {
-                margin: 7vw 4vw;
-                iframe.main__contacts__map {
+        article {
+            margin: 0 4vw;
+            h2 {
+                margin-left: -4vw;
+            }
+
+            &.main__contacts-article {
+                iframe.main__contacts-article__map {
                     float: none;
                     margin: 0;
                     width: 100%;
                     height: 50vw;
                 }
-                h2 {
-                    margin-left: -4vw;
-                }
                 p {
                     margin: 3vw 1vw;
                     font-size: 4vw;
-                    &.main__contacts__post {
+                    &.main__contacts-article__post {
                         margin: 4vw 0 1vw 0;
                     }
-                    &.main__contacts__person {
+                    &.main__contacts-article__person {
                         margin: 1vw 0 4vw 0;
                     }
                 }
             }
-            &.main__feedback {
+            &.main__feedback-article {
                 margin: 5vw 4vw;
             }
         }
@@ -97,30 +100,31 @@ main {
             font-size: 8vw;
         }
 
-        section {
-            &.main__contacts {
-                margin: 7vw 4vw;
-                iframe.main__contacts__map {
+        article {
+            margin: 0 4vw;
+            h2 {
+                margin-left: -4vw;
+            }
+            
+            &.main__contacts-article {
+                iframe.main__contacts-article__map {
                     float: none;
                     margin: 0 -4vw;
                     width: 100vw;
                     height: 60vw;
                 }
-                h2 {
-                    margin-left: -4vw;
-                }
                 p {
                     margin: 5vw 2vw;
                     font-size: 5.5vw;
-                    &.main__contacts__post {
+                    &.main__contacts-article__post {
                         margin: 6vw 0 1vw 0;
                     }
-                    &.main__contacts__person {
+                    &.main__contacts-article__person {
                         margin: 1vw 0 6vw 0;
                     }
                 }
             }
-            &.main__feedback {
+            &.main__feedback-article {
                 margin: 5vw 4vw;
             }
         }

@@ -23,7 +23,7 @@ for (let i = 0; i < nDepartments; i++) {
     let newDepartment = document.createElement('h2')
     newDepartment.innerHTML = xmlDepartment.querySelector('department-name').childNodes[0].nodeValue
     // Вставка названия отдела на страницу
-    document.querySelector('section.main__contacts').appendChild(newDepartment)
+    document.querySelector('article.main__contacts-article').appendChild(newDepartment)
     
     let nContacts = xmlDepartment.querySelectorAll('contact').length
     for (let j = 0; j < nContacts; j++) {
@@ -31,32 +31,32 @@ for (let i = 0; i < nDepartments; i++) {
         // Должность
         if (xmlContact.querySelector('post')) {
             let pPost = document.createElement('p')
-            pPost.classList.add('main__contacts__post')
+            pPost.classList.add('main__contacts-article__post')
             pPost.innerHTML = xmlContact.querySelector('post').childNodes[0].nodeValue
             // Вставка должности на страницу
-            document.querySelector('section.main__contacts').appendChild(pPost)
+            document.querySelector('article.main__contacts-article').appendChild(pPost)
         }
         // Имя
         let pPerson = document.createElement('p')
-        pPerson.classList.add('main__contacts__person')
-        pPerson.innerHTML = "<span class='main__contacts__person__name'>" +
+        pPerson.classList.add('main__contacts-article__person')
+        pPerson.innerHTML = "<span class='main__contacts-article__person__name'>" +
             xmlContact.querySelector('name').childNodes[0].nodeValue + '</span'
         // Номер телефона
         if (xmlContact.querySelector('phone')) {
             if (xmlContact.querySelector('post')) pPerson.innerHTML += ','
             else pPerson.innerHTML += ':'
-            pPerson.innerHTML += ' <nobr>' + xmlContact.querySelector('phone').childNodes[0].nodeValue + '</nobr>'
+            pPerson.innerHTML += " <span class='nobr'>" + xmlContact.querySelector('phone').childNodes[0].nodeValue + '</span>'
         }
         // Музыкальный инструмент
         if (xmlContact.querySelector('instrument')) {
-            pPerson.innerHTML += ' — ' + xmlContact.querySelector('instrument').childNodes[0].nodeValue + '</nobr>'
+            pPerson.innerHTML += ' — ' + xmlContact.querySelector('instrument').childNodes[0].nodeValue
         }
         // Вставка контакта на страницу
-        document.querySelector('section.main__contacts').appendChild(pPerson)
+        document.querySelector('article.main__contacts-article').appendChild(pPerson)
     }
 }
 
 // Вставка формы обратной связи
 xmlhttp.open('GET','../html_models/feedback_form.html', false)
 xmlhttp.send()
-document.querySelector('section.main__feedback').innerHTML = xmlhttp.responseText
+document.querySelector('article.main__feedback-article').innerHTML += xmlhttp.responseText
