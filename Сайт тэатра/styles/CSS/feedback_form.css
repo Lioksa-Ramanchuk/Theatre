@@ -19,6 +19,11 @@ form.feedback-form label.feedback-form__textarea-label {
   grid-column-end: 3;
   margin-top: 1vw;
 }
+form.feedback-form label::after {
+  content: "*";
+  font-weight: bold;
+  color: red;
+}
 form.feedback-form input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -83,8 +88,8 @@ form.feedback-form textarea {
 }
 @media (max-width: 767px) {
   form.feedback-form {
-    -ms-grid-columns: 22vw auto;
-    grid-template-columns: 22vw auto;
+    -ms-grid-columns: 25vw auto;
+    grid-template-columns: 25vw auto;
     font-size: 6vw;
   }
   form.feedback-form label {

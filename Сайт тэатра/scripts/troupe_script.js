@@ -23,8 +23,7 @@ for (let i = 0; i < nPersons; i++) {
     let newPerson = document.createElement('figure')
     newPerson.appendChild(document.createElement('img'))
     newPerson.appendChild(document.createElement('figcaption'))
-    newPerson.querySelector('img').setAttribute('style',
-        `background-image: url("${xmlPerson.querySelector('image').childNodes[0].nodeValue}");`)
+    newPerson.querySelector('img').setAttribute('src', xmlPerson.querySelector('image').childNodes[0].nodeValue)
     newPerson.querySelector('figcaption').innerHTML =
         xmlPerson.querySelector('name').childNodes[0].nodeValue
     // Вставка блока на страницу

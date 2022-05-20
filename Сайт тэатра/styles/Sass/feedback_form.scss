@@ -13,6 +13,12 @@ form.feedback-form {
             grid-column-end: 3;
             margin-top: 1vw;
         }
+
+        &::after {
+            content: '*';
+            font-weight: bold;
+            color: red;
+        }
     }
     input {
         box-sizing: border-box;
@@ -82,7 +88,7 @@ form.feedback-form {
 
 @media (max-width: 767px) {
     form.feedback-form {
-        grid-template-columns: 22vw auto;
+        grid-template-columns: 25vw auto;
         font-size: 6vw;
 
         label {

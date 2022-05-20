@@ -23,9 +23,8 @@ main div.main__troupe-article__div figure img {
   display: block;
   height: 20vw;
   width: 14vw;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main div.main__troupe-article__div figure figcaption {
   -webkit-box-sizing: border-box;

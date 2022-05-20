@@ -53,8 +53,8 @@ header nav ul.menu li a {
 }
 header nav ul.menu li.menu__page-link a {
   padding: 1vw;
-  -webkit-transition: background-color 0.1s ease-out;
-  transition: background-color 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.6vw;

@@ -46,7 +46,7 @@ header {
 
             &.menu__page-link a {
                 padding: 1vw;
-                transition: background-color 0.1s ease-out;
+                transition: all 0.1s ease-out;
                 
                 text-align: center;
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -56,6 +56,11 @@ header {
                 line-height: 2vw;
                 color: white;
                 text-decoration: none;
+                
+                &:hover {
+                    background-color: #A00000;
+                    text-decoration: underline;
+                }
 
                 &.you-are-here {
                     background-color: darkred;
@@ -64,11 +69,6 @@ header {
                     &:hover {
                         text-decoration: none;
                     }
-                }
-                
-                &:hover {
-                    background-color: #A00000;
-                    text-decoration: underline;
                 }
             }
 
