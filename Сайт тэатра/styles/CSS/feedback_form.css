@@ -6,37 +6,28 @@ form.feedback-form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.5vw;
 }
 form.feedback-form label {
   margin: 0.5vw;
+  font-size: 1.5vw;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-form.feedback-form label.feedback-form__textarea-label {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  -ms-grid-column-span: 2;
-  grid-column-end: 3;
-  margin-top: 1vw;
 }
 form.feedback-form label::after {
   content: "*";
   font-weight: bold;
   color: red;
 }
-form.feedback-form input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+form.feedback-form textarea, form.feedback-form input[type=text], form.feedback-form input[type=email] {
   margin: 0.5vw 0;
   padding: 0.5vw;
-  width: 100%;
+  width: auto;
+  font-size: 1.3vw;
 }
-form.feedback-form input#feedback-form__name, form.feedback-form input#feedback-form__e-mail {
+form.feedback-form input[type=text], form.feedback-form input[type=email] {
   -ms-grid-column: 2;
       grid-column-start: 2;
   -ms-grid-column-span: 1;
   grid-column-end: 3;
-  font-size: 1.3vw;
 }
 form.feedback-form input[type=submit] {
   -ms-grid-column: 1;
@@ -48,15 +39,19 @@ form.feedback-form input[type=submit] {
   width: fit-content;
   padding: 0.5vw 2vw;
 }
+form.feedback-form .feedback-form__textarea-label {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+  margin-top: 1vw;
+}
 form.feedback-form textarea {
-  margin: 0.5vw 0;
-  padding: 0.5vw;
   resize: none;
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
   grid-column-end: 3;
-  font-size: 1.3vw;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -64,15 +59,12 @@ form.feedback-form textarea {
   form.feedback-form {
     -ms-grid-columns: 15vw auto;
     grid-template-columns: 15vw auto;
-    font-size: 3.5vw;
   }
   form.feedback-form label {
     margin: 1vw;
+    font-size: 3.5vw;
   }
-  form.feedback-form label.feedback-form__textarea-label {
-    margin-top: 2vw;
-  }
-  form.feedback-form input#feedback-form__name, form.feedback-form input#feedback-form__e-mail {
+  form.feedback-form input[type=text], form.feedback-form input[type=email], form.feedback-form textarea {
     margin: 1.5vw 0;
     padding: 2vw;
     font-size: 3vw;
@@ -80,25 +72,20 @@ form.feedback-form textarea {
   form.feedback-form input[type=submit] {
     padding: 1.5vw 6vw;
   }
-  form.feedback-form textarea {
-    margin: 2vw 0;
-    padding: 2vw;
-    font-size: 3vw;
+  form.feedback-form .feedback-form__textarea-label {
+    margin-top: 2vw;
   }
 }
 @media (max-width: 767px) {
   form.feedback-form {
     -ms-grid-columns: 25vw auto;
     grid-template-columns: 25vw auto;
-    font-size: 6vw;
   }
   form.feedback-form label {
     margin: 1vw;
+    font-size: 6vw;
   }
-  form.feedback-form label.feedback-form__textarea-label {
-    margin-top: 3vw;
-  }
-  form.feedback-form input#feedback-form__name, form.feedback-form input#feedback-form__e-mail {
+  form.feedback-form input[type=text], form.feedback-form input[type=email], form.feedback-form textarea {
     margin: 1.5vw 0;
     padding: 2vw;
     font-size: 5vw;
@@ -106,9 +93,7 @@ form.feedback-form textarea {
   form.feedback-form input[type=submit] {
     padding: 2vw 7vw;
   }
-  form.feedback-form textarea {
-    margin: 3vw 0;
-    padding: 2vw;
-    font-size: 5vw;
+  form.feedback-form .feedback-form__textarea-label {
+    margin-top: 3vw;
   }
 }

@@ -2,17 +2,11 @@ form.feedback-form {
     display: grid;
     grid-template-columns: 6vw auto;
     align-items: center;
-    font-size: 1.5vw;
 
     label {
         margin: 0.5vw;
+        font-size: 1.5vw;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-        &.feedback-form__textarea-label {
-            grid-column-start: 1;
-            grid-column-end: 3;
-            margin-top: 1vw;
-        }
 
         &::after {
             content: '*';
@@ -20,17 +14,20 @@ form.feedback-form {
             color: red;
         }
     }
-    input {
-        box-sizing: border-box;
+
+    %input-area {
         margin: 0.5vw 0;
         padding: 0.5vw;
-        width: 100%;
-        
-        &#feedback-form__name,
-        &#feedback-form__e-mail {
+        width: auto;
+        font-size: 1.3vw;
+    }
+
+    input {
+        &[type='text'],
+        &[type='email'] {
             grid-column-start: 2;
             grid-column-end: 3;
-            font-size: 1.3vw;
+            @extend %input-area;
         }
 
         &[type='submit'] {
@@ -41,15 +38,19 @@ form.feedback-form {
             padding: 0.5vw 2vw;
         }
     }
+
+    .feedback-form__textarea-label {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 1vw;
+    }
+
     textarea {
-        margin: 0.5vw 0;
-        padding: 0.5vw;
+        @extend %input-area;
         resize: none;
 
         grid-column-start: 1;
         grid-column-end: 3;
-
-        font-size: 1.3vw;
         font-family: Arial, Helvetica, sans-serif;
     }
 }
@@ -57,31 +58,25 @@ form.feedback-form {
 @media (min-width: 768px) and (max-width: 1023px) {
     form.feedback-form {
         grid-template-columns: 15vw auto;
-        font-size: 3.5vw;
 
         label {
             margin: 1vw;
+            font-size: 3.5vw;
             
-            &.feedback-form__textarea-label {
-                margin-top: 2vw;
-            }
         }
-        input {
-            &#feedback-form__name,
-            &#feedback-form__e-mail {
-                margin: 1.5vw 0;
-                padding: 2vw;
-                font-size: 3vw;
-            }
 
-            &[type='submit'] {
-                padding: 1.5vw 6vw;
-            }
-        }
-        textarea {
-            margin: 2vw 0;
+        %input-area {
+            margin: 1.5vw 0;
             padding: 2vw;
             font-size: 3vw;
+        }
+
+        input[type='submit'] {
+            padding: 1.5vw 6vw;
+        }
+
+        .feedback-form__textarea-label {
+            margin-top: 2vw;
         }
     }
 }
@@ -89,31 +84,24 @@ form.feedback-form {
 @media (max-width: 767px) {
     form.feedback-form {
         grid-template-columns: 25vw auto;
-        font-size: 6vw;
 
         label {
             margin: 1vw;
-            
-            &.feedback-form__textarea-label {
-                margin-top: 3vw;
-            }
+            font-size: 6vw;
         }
-        input {
-            &#feedback-form__name,
-            &#feedback-form__e-mail {
-                margin: 1.5vw 0;
-                padding: 2vw;
-                font-size: 5vw;
-            }
 
-            &[type='submit'] {
-                padding: 2vw 7vw;
-            }
-        }
-        textarea {
-            margin: 3vw 0;
+        %input-area {
+            margin: 1.5vw 0;
             padding: 2vw;
             font-size: 5vw;
+        }
+
+        input[type='submit'] {
+            padding: 2vw 7vw;
+        }
+
+        .feedback-form__textarea-label {
+            margin-top: 3vw;
         }
     }
 }

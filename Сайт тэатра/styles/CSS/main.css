@@ -30,6 +30,7 @@ figure.gallery > button {
   transition: background-color 0.1s linear;
 }
 figure.gallery > button:hover {
+  background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
 }
 figure.gallery > button.gallery__prev-button {
@@ -42,13 +43,12 @@ figure.gallery > button.gallery__next-button {
 }
 
 main > article {
-  margin: 0vw 10vw;
-  padding: 0vw 0vw 2.5vw 0vw;
+  margin: 0 10vw;
+  padding: 0 0 2.5vw 0;
 }
-main > article h1 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0vw -10vw;
+
+.main__article__heading {
+  margin: 0 -10vw;
   border-style: solid none;
   border-width: 0.6vw;
   border-color: #660000;
@@ -59,7 +59,8 @@ main > article h1 {
   letter-spacing: 0.1vw;
   color: white;
 }
-main > article.main__news-article div.main__news-article__div, main > article.main__performances-article div.main__performances-article__div {
+
+.main__news-article__div, .main__performances-article__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,7 +74,8 @@ main > article.main__news-article div.main__news-article__div, main > article.ma
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-main > article.main__news-article div.main__news-article__div a.news-block, main > article.main__performances-article div.main__performances-article__div a.performance-block {
+
+.main__news-article__div .news-block, .main__performances-article__div .performance-block {
   display: block;
   margin: 1.5vw 2vw;
   padding: 1vw;
@@ -86,55 +88,60 @@ main > article.main__news-article div.main__news-article__div a.news-block, main
   transition: all 0.2s ease-out;
   text-decoration: none;
 }
-main > article.main__news-article div.main__news-article__div a.news-block:hover, main > article.main__performances-article div.main__performances-article__div a.performance-block:hover {
+.main__news-article__div .news-block:hover, .main__performances-article__div .performance-block:hover {
   background-color: lightyellow;
   -webkit-box-shadow: 0 0 0.3vw 0.3vw pink;
           box-shadow: 0 0 0.3vw 0.3vw pink;
   border-color: pink;
 }
-main > article.main__performances-article div.main__performances-article__div a.performance-block {
+
+.main__performances-article__div .performance-block {
   max-width: 25vw;
   min-width: 15vw;
   text-align: center;
 }
-main > article.main__performances-article div.main__performances-article__div a.performance-block:hover figure.performance-block__image img {
+.main__performances-article__div .performance-block:hover .performance-block__figure img {
   width: 80%;
 }
-main > article.main__performances-article div.main__performances-article__div a.performance-block figure.performance-block__image img {
+.main__performances-article__div .performance-block > p {
+  margin: 1vw 0;
+}
+.main__performances-article__div .performance-block__figure img {
   width: 70%;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-main > article.main__performances-article div.main__performances-article__div a.performance-block p {
-  margin: 1vw 0;
-}
-main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__name {
+.main__performances-article__div .performance-block__name {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 2vw;
   color: darkred;
 }
-main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__author {
+.main__performances-article__div .performance-block__author {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5vw;
   font-weight: bold;
   color: black;
 }
-main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__description {
+.main__performances-article__div .performance-block__description {
   margin-top: 2vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   font-style: italic;
   color: #333333;
 }
-main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__date {
+.main__performances-article__div .performance-block__date {
   margin-top: 2vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   font-weight: bold;
   color: darkred;
 }
-main > article.main__news-article div.main__news-article__div a.news-block h2.news-block__title {
+
+.main__news-article__div .news-block > p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.main__news-article__div .news-block__title {
   margin: 1vw 0;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -143,42 +150,40 @@ main > article.main__news-article div.main__news-article__div a.news-block h2.ne
   text-transform: uppercase;
   color: darkred;
 }
-main > article.main__news-article div.main__news-article__div a.news-block p {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-main > article.main__news-article div.main__news-article__div a.news-block p.news-block__date {
+.main__news-article__div .news-block__date {
   margin: 0;
   text-align: right;
   text-decoration: underline;
   font-size: 1.7vw;
   color: #666666;
 }
-main > article.main__news-article div.main__news-article__div a.news-block p.news-block__text {
+.main__news-article__div .news-block__text {
   margin: 1vw;
   text-indent: 3vw;
   text-align: justify;
   font-size: 1.7vw;
   color: black;
 }
-main > article.main__about-us-article figure {
+
+.main__about-us-article figure {
   margin: 1.5vw;
   text-align: center;
 }
-main > article.main__about-us-article figure img {
+.main__about-us-article figure img {
   width: 70%;
 }
-main > article.main__about-us-article article.main__about-us-article__article {
+
+.main__feedback-article {
+  padding-bottom: 0;
+}
+.main__feedback-article .main__article__heading {
+  margin-bottom: 1.5vw;
+}
+
+.main__about-us-article__article {
   margin: 2vw 0;
 }
-main > article.main__about-us-article article.main__about-us-article__article h2.main__about-us-article__article__title {
-  margin: 1.5vw;
-  text-align: center;
-  font-size: 2.7vw;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  color: darkred;
-}
-main > article.main__about-us-article article.main__about-us-article__article p {
+.main__about-us-article__article > p {
   margin: 1vw 0 0 0;
   text-indent: 3vw;
   text-align: justify;
@@ -186,11 +191,14 @@ main > article.main__about-us-article article.main__about-us-article__article p 
   font-size: 1.5vw;
   color: black;
 }
-main > article.main__feedback-article {
-  padding-bottom: 0;
-}
-main > article.main__feedback-article h1 {
-  margin-bottom: 1.5vw;
+
+.main__about-us-article__article__title {
+  margin: 1.5vw;
+  text-align: center;
+  font-size: 2.7vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: darkred;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -208,6 +216,7 @@ main > article.main__feedback-article h1 {
     font-size: 5.5vw;
   }
   figure.gallery > button:hover {
+    background-color: black;
     background-color: rgba(0, 0, 0, 0);
   }
   figure.gallery > button.gallery__prev-button, figure.gallery > button.gallery__next-button {
@@ -216,86 +225,96 @@ main > article.main__feedback-article h1 {
 
   main > article {
     margin: 0 7vw;
-    padding: 0vw 0vw 4vw 0vw;
+    padding: 0 0 4vw 0;
   }
-  main > article h1 {
-    margin: 0vw -7vw;
+
+  .main__article__heading {
+    margin: 0 -7vw;
     border-width: 1.3vw;
     font-size: 7vw;
     text-align: center;
   }
-  main > article.main__performances-article div.main__performances-article__div, main > article.main__news-article div.main__news-article__div {
+
+  .main__performances-article__div, .main__news-article__div {
     padding: 2vw 0 1vw 0;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block, main > article.main__news-article div.main__news-article__div a.news-block {
+
+  .main__performances-article__div .performance-block, .main__news-article__div .news-block {
     margin: 2vw;
     padding: 2vw;
     border-width: 0.6vw;
     border-radius: 2.5vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block:hover, main > article.main__news-article div.main__news-article__div a.news-block:hover {
+  .main__performances-article__div .performance-block:hover, .main__news-article__div .news-block:hover {
     -webkit-box-shadow: 0 0 0.6vw 0.6vw pink;
             box-shadow: 0 0 0.6vw 0.6vw pink;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block {
+
+  .main__performances-article__div .performance-block {
     max-width: 75vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block:hover figure.performance-block__image img {
+  .main__performances-article__div .performance-block:hover .performance-block__figure img {
     width: 90%;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block figure.performance-block__image img {
-    width: 90%;
-  }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p {
+  .main__performances-article__div .performance-block > p {
     margin: 2vw 0;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__name {
+  .main__performances-article__div .performance-block__figure img {
+    width: 90%;
+  }
+  .main__performances-article__div .performance-block__name {
     font-size: 4vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__author {
+  .main__performances-article__div .performance-block__author {
     font-size: 2.7vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__description {
+  .main__performances-article__div .performance-block__description {
     margin-top: 3vw;
     font-size: 3vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__date {
+  .main__performances-article__div .performance-block__date {
     margin-top: 3vw;
     font-size: 3.5vw;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block {
+
+  .main__news-article__div .news-block {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block h2.news-block__title {
+  .main__news-article__div .news-block__title {
     margin: 2vw 0;
     font-size: 4.5vw;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__date {
+  .main__news-article__div .news-block__date {
     font-size: 3.5vw;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__text {
+  .main__news-article__div .news-block__text {
+    text-indent: 3vw;
     font-size: 3vw;
   }
-  main > article.main__about-us-article figure {
+
+  .main__about-us-article figure {
     margin: 0 -7vw;
   }
-  main > article.main__about-us-article figure img {
+  .main__about-us-article figure img {
     width: 100vw;
   }
-  main > article.main__about-us-article article.main__about-us-article__article {
+
+  .main__feedback-article .main__article__heading {
+    margin-bottom: 3vw;
+  }
+
+  .main__about-us-article__article {
     margin: 4vw 0;
   }
-  main > article.main__about-us-article article.main__about-us-article__article h2.main__about-us-article__article__title {
-    font-size: 6vw;
-  }
-  main > article.main__about-us-article article.main__about-us-article__article p {
+  .main__about-us-article__article > p {
     margin-top: 2vw;
     text-indent: 4vw;
     font-size: 3vw;
   }
-  main > article.main__feedback-article h1 {
-    margin-bottom: 3vw;
+
+  .main__about-us-article__article__title {
+    font-size: 6vw;
   }
 }
 @media (max-width: 767px) {
@@ -313,6 +332,7 @@ main > article.main__feedback-article h1 {
     font-size: 6vw;
   }
   figure.gallery > button:hover {
+    background-color: black;
     background-color: rgba(0, 0, 0, 0);
   }
   figure.gallery > button.gallery__prev-button, figure.gallery > button.gallery__next-button {
@@ -321,83 +341,92 @@ main > article.main__feedback-article h1 {
 
   main > article {
     margin: 0 5vw;
-    padding: 0vw 0vw 6vw 0vw;
+    padding: 0 0 6vw 0;
   }
-  main > article h1 {
-    margin: 0vw -5vw;
+
+  .main__article__heading {
+    margin: 0 -5vw;
     border-width: 2vw;
     font-size: 10vw;
     text-align: center;
   }
-  main > article.main__performances-article div.main__performances-article__div, main > article.main__news-article div.main__news-article__div {
+
+  .main__performances-article__div, .main__news-article__div {
     padding: 4vw 0 2vw 0;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block, main > article.main__news-article div.main__news-article__div a.news-block {
+
+  .main__performances-article__div .performance-block, .main__news-article__div .news-block {
     margin: 3vw;
     padding: 3vw;
     border-width: 1vw;
     border-radius: 5vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block:hover, main > article.main__news-article div.main__news-article__div a.news-block:hover {
+  .main__performances-article__div .performance-block:hover, .main__news-article__div .news-block:hover {
     -webkit-box-shadow: 0 0 1vw 1vw pink;
             box-shadow: 0 0 1vw 1vw pink;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block {
+
+  div.main__performances-article__div .performance-block {
     max-width: 90vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block figure.performance-block__image img {
-    width: 80%;
-  }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p {
+  div.main__performances-article__div .performance-block > p {
     margin: 3vw 0;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__name {
+  div.main__performances-article__div .performance-block__figure img {
+    width: 80%;
+  }
+  div.main__performances-article__div .performance-block__name {
     font-size: 8vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__author {
+  div.main__performances-article__div .performance-block__author {
     font-size: 6vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__description {
+  div.main__performances-article__div .performance-block__description {
     margin-top: 5vw;
     font-size: 6vw;
   }
-  main > article.main__performances-article div.main__performances-article__div a.performance-block p.performance-block__date {
+  div.main__performances-article__div .performance-block__date {
     margin-top: 5vw;
     font-size: 7vw;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block {
+
+  .main__news-article__div .news-block {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block h2.news-block__title {
+  .main__news-article__div .news-block__title {
     margin: 2vw 0;
     font-size: 8vw;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__date {
+  .main__news-article__div .news-block__date {
     font-size: 6vw;
   }
-  main > article.main__news-article div.main__news-article__div a.news-block p.news-block__text {
+  .main__news-article__div .news-block__text {
     text-indent: 6vw;
     font-size: 6vw;
   }
-  main > article.main__about-us-article figure {
-    margin: 0vw -5vw;
+
+  .main__about-us-article figure {
+    margin: 0 -5vw;
   }
-  main > article.main__about-us-article figure img {
+  .main__about-us-article figure img {
     width: 100vw;
   }
-  main > article.main__about-us-article article.main__about-us-article__article {
+
+  .main__feedback-article .main__article__heading {
+    margin-bottom: 4vw;
+  }
+
+  .main__about-us-article__article {
     margin: 4vw 0;
   }
-  main > article.main__about-us-article article.main__about-us-article__article h2.main__about-us-article__article__title {
-    font-size: 8vw;
-  }
-  main > article.main__about-us-article article.main__about-us-article__article p {
+  .main__about-us-article__article > p {
     margin-top: 3vw;
     text-indent: 6vw;
     font-size: 6vw;
   }
-  main > article.main__feedback-article h1 {
-    margin-bottom: 4vw;
+
+  .main__about-us-article__article__title {
+    font-size: 8vw;
   }
 }

@@ -1,10 +1,12 @@
-main article.main__performances-article {
+.main__performances-article {
   margin: 0 10vw;
 }
-main article.main__performances-article hr.main__article__heading-line {
+
+.main__article__heading-line {
   margin-bottom: 1vw;
 }
-main article.main__performances-article div.performance-block {
+
+.performance-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,17 +19,19 @@ main article.main__performances-article div.performance-block {
   margin: -3vw 1vw 1vw 1vw;
   padding: 5vw 1vw 1vw 1vw;
 }
-main article.main__performances-article div.performance-block figure.performance-block__image {
+
+.performance-block__figure {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 250px;
           flex: 1 1 250px;
   margin: 1.5vw;
   text-align: center;
 }
-main article.main__performances-article div.performance-block figure.performance-block__image img {
+.performance-block__figure img {
   width: 20vw;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid {
+
+.performance-block__grid {
   -webkit-box-flex: 5;
       -ms-flex: 5 1 250px;
           flex: 5 1 250px;
@@ -37,10 +41,11 @@ main article.main__performances-article div.performance-block div.performance-bl
   -ms-grid-columns: auto auto;
   grid-template-columns: auto auto;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid p, main article.main__performances-article div.performance-block div.performance-block__grid button {
+.performance-block__grid p, .performance-block__grid button {
   margin: 0.65vw;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__name {
+
+.performance-block__grid__name {
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
@@ -51,7 +56,8 @@ main article.main__performances-article div.performance-block div.performance-bl
   font-style: italic;
   color: darkred;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__description {
+
+.performance-block__grid__description {
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
@@ -62,19 +68,30 @@ main article.main__performances-article div.performance-block div.performance-bl
   font-style: italic;
   color: #333333;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__author-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__director-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__painter-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__duration-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__price-before {
+
+.performance-block__grid__author-before,
+.performance-block__grid__director-before,
+.performance-block__grid__painter-before,
+.performance-block__grid__duration-before,
+.performance-block__grid__price-before {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.6vw;
   font-style: italic;
   color: #444444;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__author, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__director, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__painter, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__duration, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__price {
+
+.performance-block__grid__author,
+.performance-block__grid__director,
+.performance-block__grid__painter,
+.performance-block__grid__duration,
+.performance-block__grid__price {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.6vw;
   font-weight: bold;
   color: black;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__date {
+
+.performance-block__grid__date {
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
@@ -85,7 +102,8 @@ main article.main__performances-article div.performance-block div.performance-bl
   font-weight: bold;
   color: darkred;
 }
-main article.main__performances-article div.performance-block div.performance-block__grid button {
+
+.performance-block__grid__button {
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: 2;
@@ -94,19 +112,22 @@ main article.main__performances-article div.performance-block div.performance-bl
       align-self: center;
   padding: 0.5vw 2vw;
 }
-main article.main__performances-article hr.main__performances-article__separator {
+
+.main__performances-article__separator {
   height: 0.3vw;
   background-color: #444444;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  main article.main__performances-article {
+  .main__performances-article {
     margin: 0 4vw;
   }
-  main article.main__performances-article hr.main__article__heading-line {
+
+  .main__article__heading-line {
     margin-bottom: 1vw;
   }
-  main article.main__performances-article div.performance-block {
+
+  .performance-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -114,47 +135,66 @@ main article.main__performances-article hr.main__performances-article__separator
     margin: 2vw 0;
     padding: 2vw 0;
   }
-  main article.main__performances-article div.performance-block figure.performance-block__image {
+
+  .performance-block__figure {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 fit-content;
             flex: 1 1 fit-content;
   }
-  main article.main__performances-article div.performance-block figure.performance-block__image img {
+  .performance-block__figure img {
     width: 40vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid {
+
+  .performance-block__grid {
     margin: 1vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p, main article.main__performances-article div.performance-block div.performance-block__grid button {
+  .performance-block__grid p, .performance-block__grid button {
     margin: 1.5vw 1vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__name {
+
+  .performance-block__grid__name {
     font-size: 5.5vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__description {
+
+  .performance-block__grid__description {
     font-size: 4vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__author-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__author, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__director-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__director, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__painter-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__painter, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__duration-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__duration, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__price-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__price {
+
+  .performance-block__grid__author-before,
+.performance-block__grid__author,
+.performance-block__grid__director-before,
+.performance-block__grid__director,
+.performance-block__grid__painter-before,
+.performance-block__grid__painter,
+.performance-block__grid__duration-before,
+.performance-block__grid__duration,
+.performance-block__grid__price-before,
+.performance-block__grid__price {
     font-size: 3.5vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__date {
+
+  .performance-block__grid__date {
     font-size: 5vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid button {
+
+  .performance-block__grid__button {
     padding: 1.5vw;
   }
-  main article.main__performances-article hr.main__performances-article__separator {
+
+  .main__performances-article__separator {
     height: 0.5vw;
   }
 }
 @media (max-width: 768px) {
-  main article.main__performances-article {
+  .main__performances-article {
     margin: 0 5vw;
   }
-  main article.main__performances-article hr.main__article__heading-line {
+
+  .main__article__heading-line {
     margin-bottom: 5vw;
   }
-  main article.main__performances-article div.performance-block {
+
+  .performance-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -162,36 +202,53 @@ main article.main__performances-article hr.main__performances-article__separator
     margin: 2vw 0;
     padding: 2vw 0;
   }
-  main article.main__performances-article div.performance-block figure.performance-block__image {
+
+  .performance-block__figure {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 fit-content;
             flex: 1 1 fit-content;
   }
-  main article.main__performances-article div.performance-block figure.performance-block__image img {
+  .performance-block__figure img {
     width: 65vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid {
+
+  .performance-block__grid {
     margin: 2vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p, main article.main__performances-article div.performance-block div.performance-block__grid button {
+  .performance-block__grid p, .performance-block__grid button {
     margin: 2.7vw 2vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__name {
+
+  .performance-block__grid__name {
     font-size: 9vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__description {
+
+  .performance-block__grid__description {
     font-size: 6vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__author-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__author, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__director-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__director, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__painter-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__painter, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__duration-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__duration, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__price-before, main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__price {
+
+  .performance-block__grid__author-before,
+.performance-block__grid__author,
+.performance-block__grid__director-before,
+.performance-block__grid__director,
+.performance-block__grid__painter-before,
+.performance-block__grid__painter,
+.performance-block__grid__duration-before,
+.performance-block__grid__duration,
+.performance-block__grid__price-before,
+.performance-block__grid__price {
     font-size: 5.5vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid p.performance-block__grid__date {
+
+  .performance-block__grid__date {
     font-size: 8vw;
   }
-  main article.main__performances-article div.performance-block div.performance-block__grid button {
+
+  .performance-block__grid__button {
     padding: 1.5vw;
   }
-  main article.main__performances-article hr.main__performances-article__separator {
+
+  .main__performances-article__separator {
     height: 1vw;
   }
 }

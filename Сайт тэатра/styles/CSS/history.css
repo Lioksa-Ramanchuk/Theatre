@@ -1,25 +1,23 @@
-main article.main__history-article {
+.main__history-article {
   margin: 0 10vw;
 }
-main article.main__history-article p {
+.main__history-article p {
   margin: 1vw;
   text-align: justify;
   text-indent: 3vw;
   font-size: 1.5vw;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-main article.main__history-article figure {
+.main__history-article figure {
   margin: 0 0 1.5vw 1.5vw;
   float: right;
   text-align: center;
 }
-main article.main__history-article figure img {
+.main__history-article figure img {
   width: 25vw;
 }
-main article.main__history-article figure figcaption {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 25vw;
+.main__history-article figure figcaption {
+  width: 23vw;
   padding: 0.3vw 1vw;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +47,7 @@ footer {
     width: 90%;
   }
   main article.main__history-article figure figcaption {
-    width: 100%;
+    width: auto;
     padding: 1vw;
     font-size: 3.5vw;
   }
@@ -71,7 +69,7 @@ footer {
     width: 100vw;
   }
   main article.main__history-article figure figcaption {
-    width: 100vw;
+    width: 98vw;
     padding: 1vw;
     font-size: 6vw;
   }

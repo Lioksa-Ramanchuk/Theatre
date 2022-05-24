@@ -1,8 +1,5 @@
 .button-style {
   display: block;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
   border: 0.4vw solid darkred;
   border-radius: 100vw;
   padding: 1vw;
@@ -15,9 +12,7 @@
   text-decoration: none;
   color: white;
   -webkit-transition: all 0.2s ease-out;
-     -moz-transition: all 0.2s ease-out;
-       -o-transition: all 0.2s ease-out;
-          transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   cursor: pointer;
 }
 .button-style:hover {
